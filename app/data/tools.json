@@ -1,25 +1,25 @@
 [
   {
-    "name": "Pump Bot",
-    "twitter": "pumpbot",
-    "description": "Automated trading bot for Pump.fun ecosystem",
-    "url": "https://pumpbot.io",
-    "chatLink": "http://t.me/pumpbot",
+    "name": "DexScreener",
+    "twitter": "dexscreener",
+    "description": "Real-time DEX trading charts and analytics platform",
+    "url": "https://dexscreener.com",
+    "chatLink": "https://t.me/dexscreener_official",
     "profileImage": "/placeholder.svg?height=100&width=100",
-    "tags": ["bot", "trading", "automation"],
+    "tags": ["analytics", "trading", "charts", "defi"],
     "blockchain": "Multi-chain",
-    "relation": "Automates trading strategies within the Pump.fun ecosystem"
+    "relation": "Provides real-time trading data, charts, and analytics across multiple blockchains including NEAR, Solana, Base"
   },
   {
-    "name": "Pump Explorer",
-    "twitter": "pumpexplorer",
-    "description": "Blockchain explorer tailored for Pump.fun ecosystem",
-    "url": "https://pumpexplorer.com",
-    "chatLink": "http://t.me/pumpexplorer",
+    "name": "BonkBot",
+    "twitter": "dexscreener",
+    "description": "Multi-chain token and pair explorer with detailed analytics",
+    "url": "https://dexscreener.com/explorer",
+    "chatLink": "https://t.me/dexscreener_official",
     "profileImage": "/placeholder.svg?height=100&width=100",
-    "tags": ["explorer", "blockchain"],
+    "tags": ["explorer", "analytics", "defi"],
     "blockchain": "Multi-chain",
-    "relation": "Provides detailed transaction and contract information for Pump.fun projects"
+    "relation": "Comprehensive explorer for tracking tokens, pairs, and market data across multiple blockchains"
   }
 ]
 
