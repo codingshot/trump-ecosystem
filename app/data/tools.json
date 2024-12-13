@@ -5,21 +5,32 @@
     "description": "Real-time DEX trading charts and analytics platform",
     "url": "https://dexscreener.com",
     "chatLink": "https://t.me/dexscreener_official",
-    "profileImage": "/placeholder.svg?height=100&width=100",
+    "profileImage": "/https://pbs.twimg.com/profile_images/1462287879565201409/5UYqudVs_400x400.jpg",
     "tags": ["analytics", "trading", "charts", "defi"],
     "blockchain": "Multi-chain",
-    "relation": "Provides real-time trading data, charts, and analytics across multiple blockchains including NEAR, Solana, Base"
+    "relation": "Provides real-time trading data, charts, and analytics across multiple blockchains including NEAR, Solana, Base, and buy Pump fun tokens directly"
+  },
+  {
+    "name": "Raydium",
+    "twitter": "RaydiumProtocol",
+    "description": "An on-chain order book AMM - leading dex on Solana that pump.fun liquidity is seeded on",
+    "url": "https://raydium.io/swap/",
+    "chatLink": "",
+    "profileImage": "https://pbs.twimg.com/profile_images/1742621757230678016/_Av2hYEY_400x400.jpg",
+    "tags": ["Dex", "Solana"],
+    "blockchain": "Solana",
+    "relation": "pump.fun pools launch on rayd"
   },
   {
     "name": "BonkBot",
-    "twitter": "dexscreener",
+    "twitter": "bonkbot_io",
     "description": "Multi-chain token and pair explorer with detailed analytics",
-    "url": "https://dexscreener.com/explorer",
-    "chatLink": "https://t.me/dexscreener_official",
-    "profileImage": "/placeholder.svg?height=100&width=100",
-    "tags": ["explorer", "analytics", "defi"],
-    "blockchain": "Multi-chain",
-    "relation": "Comprehensive explorer for tracking tokens, pairs, and market data across multiple blockchains"
+    "url": "https://bonkbot.io",
+    "chatLink": "https://t.co/PGuKJcKFhe",
+    "profileImage": "https://pbs.twimg.com/profile_images/1815387457698816000/PyEwzA2J_400x400.jpg",
+    "tags": ["telegram", "bot", "trading"],
+    "blockchain": "Solana",
+    "relation": "Trade pump fun tokens"
   }
 ]
 
