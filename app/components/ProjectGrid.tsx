@@ -3,7 +3,7 @@
 import { useState, useMemo, useEffect } from 'react'
 import { ProjectCard } from './ProjectCard'
 import { AISearchBar } from './AISearchBar'
-import { Slider } from '@/components/ui/slider'
+import { Slider } from './ui/slider'
 import { X } from 'lucide-react'
 import {
   Select,
@@ -11,7 +11,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select"
+} from "./ui/select"
 import projectsData from '../data/projects.json'
 import { AndOrToggle } from './AndOrToggle'
 
@@ -29,21 +29,33 @@ export function ProjectGrid({ globalSearchQuery, setGlobalSearchQuery }: Project
 
   const allTags = useMemo(() => {
     const tagSet = new Set<string>()
-    projectsData.forEach(item => item.tags.forEach(tag => tagSet.add(tag)))
+    projectsData.forEach(item => item.tags.forEach(tag => {
+      if (typeof tag === 'string' && tag.trim() !== '') {
+        tagSet.add(tag.trim())
+      }
+    }))
     return Array.from(tagSet)
   }, [])
 
   const allBlockchains = useMemo(() => {
     const blockchainSet = new Set<string>()
     projectsData.forEach(item => {
-      if (item.blockchain) blockchainSet.add(item.blockchain)
+      if (typeof item.blockchain === 'string' && item.blockchain.trim() !== '') {
+        blockchainSet.add(item.blockchain.trim())
+      } else if (Array.isArray(item.blockchain)) {
+        item.blockchain.forEach(chain => {
+          if (typeof chain === 'string' && chain.trim() !== '') {
+            blockchainSet.add(chain.trim())
+          }
+        })
+      }
     })
     return Array.from(blockchainSet)
   }, [])
 
   const tvlValues = useMemo(() => {
     return projectsData.map(item => {
-      if (item.tvl) {
+      if (item.tvl && typeof item.tvl === 'string') {
         return parseFloat(item.tvl.replace('$', '').replace('M', ''))
       }
       return 0
@@ -60,8 +72,10 @@ export function ProjectGrid({ globalSearchQuery, setGlobalSearchQuery }: Project
       ? selectedTags.every(tag => item.tags.includes(tag))
       : selectedTags.some(tag => item.tags.includes(tag)))) &&
     (selectedBlockchains.length === 0 || (isAndLogic
-      ? selectedBlockchains.every(blockchain => item.blockchain === blockchain)
-      : selectedBlockchains.some(blockchain => item.blockchain === blockchain))) &&
+      ? (typeof item.blockchain === 'string' && selectedBlockchains.includes(item.blockchain)) ||
+        (Array.isArray(item.blockchain) && selectedBlockchains.every(chain => item.blockchain.includes(chain)))
+      : (typeof item.blockchain === 'string' && selectedBlockchains.includes(item.blockchain)) ||
+        (Array.isArray(item.blockchain) && selectedBlockchains.some(chain => item.blockchain.includes(chain))))) &&
     (!item.tvl || (parseFloat(item.tvl.replace('$', '').replace('M', '')) >= tvlRange[0] &&
                    parseFloat(item.tvl.replace('$', '').replace('M', '')) <= tvlRange[1]))
   )
@@ -173,7 +187,7 @@ export function ProjectGrid({ globalSearchQuery, setGlobalSearchQuery }: Project
               max={maxTVL}
               step={0.1}
               value={tvlValues.length === 1 ? [minTVL, minTVL] : tvlRange}
-              onValueChange={setTvlRange}
+              onValueChange={(value: number[]) => setTvlRange(value as [number, number])}
               disabled={tvlValues.length === 1}
               className="w-full"
             />

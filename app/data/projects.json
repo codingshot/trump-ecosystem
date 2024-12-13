@@ -5,7 +5,7 @@
     "description": "A decentralized investment platform focused on meme coins and community-driven token launches",
     "url": "https://daos.fun",
     "chatLink": "http://t.me/daosfun",
-    "profileImage": "/placeholder.svg?height=100&width=100",
+    "profileImage": "https://pbs.twimg.com/profile_images/1838070559051300864/4vmoeUAj_400x400.png",
     "tags": ["investment", "dao", "bonding curves", "meme coins"],
     "blockchain": "Solana",
     "tvl": "",
@@ -13,7 +13,35 @@
     "contractAddress": "7YarqDFjkZk8TJxK.....(SOL)",
     "relation": "Inspired by Pump.fun's bonding curve model and focuses on community-driven token launches."
   },
-    {
+  {
+    "name": "Virtuals",
+    "twitter": "virtuals_io",
+    "description": "Society of AI Agents",
+    "url": "https://virtuals.io",
+    "chatLink": "https://t.me/virtuals",
+    "profileImage": "https://pbs.twimg.com/profile_images/1759593486674972672/kh5ynoMH_400x400.jpg",
+    "tags": ["AI", "launchpad", "bonding curves"],
+    "blockchain": "Base",
+    "tvl": "",
+    "github": "",
+    "contractAddress": null,
+    "relation": "Pump.fun with ai agent kol launchpad on base. They have their own launchpad and agent launchpad app. Vvaifu.fun on Base"
+  },
+  {
+    "name": "Raydium",
+    "twitter": "RaydiumProtocol",
+    "description": "An on-chain order book AMM - leading dex on Solana that pump.fun liquidity is seeded on",
+    "url": "https://raydium.io/swap/",
+    "chatLink": "",
+    "profileImage": "https://pbs.twimg.com/profile_images/1742621757230678016/_Av2hYEY_400x400.jpg",
+    "tags": ["Dex", "Solana"],
+    "blockchain": "Solana",
+    "tvl": "",
+    "github": "",
+    "contractAddress": null,
+    "relation": "pump.fun pools launch on rayd"
+  },
+  {
     "name": "VVaifu.fun",
     "twitter": "daosdotfun",
     "description": "A decentralized investment platform focused on meme coins and community-driven token launches",
@@ -27,21 +55,21 @@
     "contractAddress": null,
     "relation": "Pump/fun for ai agents on Solana built on Eliza framework"
   },
-    {
+  {
     "name": "Time.fun",
     "twitter": "timedotfun",
     "description": "A decentralized investment platform focused on meme coins and community-driven token launches",
     "url": "https://time.fun",
     "chatLink": "",
     "profileImage": "https://pbs.twimg.com/profile_images/1840758823113445376/TOlW_BuG_400x400.jpg",
-    "tags": ["investment", "social" , "bonding curves", "meme coins"],
+    "tags": ["investment", "social", "bonding curves", "meme coins"],
     "blockchain": "Solana",
     "tvl": "",
     "github": "",
     "contractAddress": "",
     "relation": "Inspired by Pump.fun's bonding curve model and focuses on paying creators for time."
   },
-      {
+  {
     "name": "maps.fun",
     "twitter": "mapsdotfun",
     "description": "A decentralized investment platform focused on meme coins and community-driven token launches",
@@ -55,7 +83,7 @@
     "contractAddress": "",
     "relation": "Inspired by Pump.fun's bonding curve model and focuses buying parts of cities."
   },
-        {
+  {
     "name": "pump.science",
     "twitter": "pumpdotscience",
     "description": "pump.fun for desci",
@@ -69,13 +97,13 @@
     "contractAddress": "",
     "relation": "Inspired by Pump.fun's bonding curve model but for desci tokens"
   },
-          {
+  {
     "name": "cookie.fun",
     "twitter": "cookiedotfun",
-    "description": "AI agent token date",
+    "description": "AI agent token data",
     "url": "https://cookie.fun",
     "chatLink": "",
-    "profileImage": "https://pbs.twimg.com/profile_images/1840773234251161600/Fewrz0s7_400x400.jpg",
+    "profileImage": "https://pbs.twimg.com/profile_images/1863484151715758080/dQPdhDM4_400x400.png",
     "tags": ["AI", "analytics", "dev-tooling"],
     "blockchain": ["Solana", "Base"],
     "tvl": "",
@@ -83,7 +111,7 @@
     "contractAddress": "",
     "relation": "Tracks bonding curve tokens in pump fun but also virtuals"
   },
-            {
+  {
     "name": "$INTERN internosaur",
     "twitter": "internosaur",
     "description": "AI agent on twitter that deploy pump fun token",
@@ -97,21 +125,21 @@
     "contractAddress": "",
     "relation": "Agent that deploys token from twitter"
   },
-              {
+  {
     "name": "meme.cooking",
     "twitter": "memedotcooking",
     "description": "fair launchpad on NEAR",
     "url": "https://meme.cooking",
     "chatLink": "",
-    "profileImage": "https://pbs.twimg.com/profile_images/1861530427011297280/auEmIc2O_400x400.jpg",
-    "tags": [ "token", "bonding curves"],
+    "profileImage": "https://pbs.twimg.com/profile_images/1821495508336087040/TJP-jO6V_400x400.jpg",
+    "tags": ["token", "bonding curves"],
     "blockchain": "NEAR",
     "tvl": "",
     "github": "",
     "contractAddress": "",
     "relation": "Pump.fun of NEAR"
   },
-    {
+  {
     "name": "Vector.fun",
     "twitter": "vectordotfun",
     "description": "APE MEMES WITH FRENS • LIVE ON APPLE + GOOGLE PLAY STORES: ",

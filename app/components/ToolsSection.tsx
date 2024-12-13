@@ -9,7 +9,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select"
+} from "./ui/select"
 import toolsData from '../data/tools.json'
 import { AndOrToggle } from './AndOrToggle'
 
@@ -67,7 +67,7 @@ export function ToolsSection({ globalSearchQuery, setGlobalSearchQuery }: ToolsS
               <SelectValue placeholder="Select tags" />
             </SelectTrigger>
             <SelectContent>
-              {allTags.map((tag) => (
+              {allTags.filter(tag => tag.trim() !== '').map((tag) => (
                 <SelectItem key={tag} value={tag}>
                   {tag}
                 </SelectItem>

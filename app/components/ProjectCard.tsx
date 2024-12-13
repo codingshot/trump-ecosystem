@@ -12,7 +12,7 @@ interface Project {
   chatLink: string
   profileImage: string
   tags: string[]
-  blockchain?: string
+  blockchain?: string | string[]
   tvl?: string
   github?: string
   contractAddress?: string
@@ -65,7 +65,12 @@ export function ProjectCard({ project }: { project: Project }) {
         </button>
         {showMore && (
           <div className="mt-4 text-sm text-[#9DA3AE]">
-            {project.blockchain && <p>Blockchain: {project.blockchain}</p>}
+            {project.blockchain && (
+              <p>Blockchain: {Array.isArray(project.blockchain) 
+                ? project.blockchain.join(', ') 
+                : project.blockchain}
+              </p>
+            )}
             {project.tvl && <p>TVL: {project.tvl}</p>}
             {project.github && (
               <p>
