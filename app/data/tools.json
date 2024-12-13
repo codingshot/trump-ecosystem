@@ -1,0 +1,25 @@
+[
+  {
+    "name": "Pump Bot",
+    "twitter": "pumpbot",
+    "description": "Automated trading bot for Pump.fun ecosystem",
+    "url": "https://pumpbot.io",
+    "chatLink": "http://t.me/pumpbot",
+    "profileImage": "/placeholder.svg?height=100&width=100",
+    "tags": ["bot", "trading", "automation"],
+    "blockchain": "Multi-chain",
+    "relation": "Automates trading strategies within the Pump.fun ecosystem"
+  },
+  {
+    "name": "Pump Explorer",
+    "twitter": "pumpexplorer",
+    "description": "Blockchain explorer tailored for Pump.fun ecosystem",
+    "url": "https://pumpexplorer.com",
+    "chatLink": "http://t.me/pumpexplorer",
+    "profileImage": "/placeholder.svg?height=100&width=100",
+    "tags": ["explorer", "blockchain"],
+    "blockchain": "Multi-chain",
+    "relation": "Provides detailed transaction and contract information for Pump.fun projects"
+  }
+]
+
