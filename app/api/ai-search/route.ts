@@ -1,6 +1,6 @@
 import { Configuration, OpenAIApi } from 'openai-edge'
 import { OpenAIStream, StreamingTextResponse } from 'ai'
-import { AnthropicStream, StreamingTextResponse as AnthropicStreamingTextResponse } from '@anthropic-ai/sdk'
+import Anthropic from '@anthropic-ai/sdk'
 import projectsData from '../../data/projects.json'
 import toolsData from '../../data/tools.json'
 
@@ -8,6 +8,9 @@ const openaiConfig = new Configuration({
   apiKey: process.env.OPENAI_API_KEY
 })
 const openai = new OpenAIApi(openaiConfig)
+const anthropic = new Anthropic({
+  apiKey: process.env.ANTHROPIC_API_KEY,
+})
 
 export const runtime = 'edge'
 
@@ -45,22 +48,14 @@ export async function POST(req: Request) {
     const stream = OpenAIStream(response)
     return new StreamingTextResponse(stream)
   } else if (provider === 'anthropic') {
-    const response = await fetch('https://api.anthropic.com/v1/complete', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'X-API-Key': process.env.ANTHROPIC_API_KEY!,
-      },
-      body: JSON.stringify({
-        prompt: `Human: ${prompt}\n\nAssistant:`,
-        model: 'claude-v1',
-        max_tokens_to_sample: 300,
-        stream: true,
-      }),
+    const response = await anthropic.messages.create({
+      model: 'claude-3-sonnet-20240229',
+      max_tokens: 300,
+      messages: [{ role: 'user', content: prompt }],
+      stream: true,
     })
 
-    const stream = AnthropicStream(response)
-    return new AnthropicStreamingTextResponse(stream)
+    return new Response(response.content[0].text)
   } else {
     return new Response('Invalid AI provider specified', { status: 400 })
   }
