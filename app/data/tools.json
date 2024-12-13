@@ -5,9 +5,9 @@
     "description": "Real-time DEX trading charts and analytics platform",
     "url": "https://dexscreener.com",
     "chatLink": "https://t.me/dexscreener_official",
-    "profileImage": "/https://pbs.twimg.com/profile_images/1462287879565201409/5UYqudVs_400x400.jpg",
+    "profileImage": "https://pbs.twimg.com/profile_images/1462287879565201409/5UYqudVs_400x400.jpg",
     "tags": ["analytics", "trading", "charts", "defi"],
-    "blockchain": "Multi-chain",
+    "blockchain": "Multi-chain, Solana, NEAR, Base",
     "relation": "Provides real-time trading data, charts, and analytics across multiple blockchains including NEAR, Solana, Base, and buy Pump fun tokens directly"
   },
   {

@@ -29,6 +29,7 @@ export function ProjectGrid({ globalSearchQuery, setGlobalSearchQuery }: Project
 
   const allTags = useMemo(() => {
     const tagSet = new Set<string>()
+    tagSet.add("inactive")
     projectsData.forEach(item => item.tags.forEach(tag => {
       if (typeof tag === 'string' && tag.trim() !== '') {
         tagSet.add(tag.trim())
@@ -65,20 +66,36 @@ export function ProjectGrid({ globalSearchQuery, setGlobalSearchQuery }: Project
   const minTVL = Math.min(...tvlValues)
   const maxTVL = Math.max(...tvlValues)
 
-  const filteredProjects = projectsData.filter(item =>
-    (item.name.toLowerCase().includes(globalSearchQuery.toLowerCase()) ||
-     item.description.toLowerCase().includes(globalSearchQuery.toLowerCase())) &&
-    (selectedTags.length === 0 || (isAndLogic
-      ? selectedTags.every(tag => item.tags.includes(tag))
-      : selectedTags.some(tag => item.tags.includes(tag)))) &&
-    (selectedBlockchains.length === 0 || (isAndLogic
-      ? (typeof item.blockchain === 'string' && selectedBlockchains.includes(item.blockchain)) ||
-        (Array.isArray(item.blockchain) && selectedBlockchains.every(chain => item.blockchain.includes(chain)))
-      : (typeof item.blockchain === 'string' && selectedBlockchains.includes(item.blockchain)) ||
-        (Array.isArray(item.blockchain) && selectedBlockchains.some(chain => item.blockchain.includes(chain))))) &&
-    (!item.tvl || (parseFloat(item.tvl.replace('$', '').replace('M', '')) >= tvlRange[0] &&
-                   parseFloat(item.tvl.replace('$', '').replace('M', '')) <= tvlRange[1]))
-  )
+  const filteredProjects = projectsData.filter(item => {
+    const matchesSearch = (
+      item.name.toLowerCase().includes(globalSearchQuery.toLowerCase()) ||
+      item.description.toLowerCase().includes(globalSearchQuery.toLowerCase())
+    )
+    
+    const matchesTags = selectedTags.length === 0 || (
+      isAndLogic
+        ? selectedTags.every(tag => 
+            tag === "inactive" 
+              ? !item.active 
+              : item.tags.includes(tag)
+          )
+        : selectedTags.some(tag => 
+            tag === "inactive" 
+              ? !item.active 
+              : item.tags.includes(tag)
+          )
+    )
+
+    const matchesBlockchains = selectedBlockchains.length === 0 || (
+      isAndLogic
+        ? (typeof item.blockchain === 'string' && selectedBlockchains.includes(item.blockchain)) ||
+          (Array.isArray(item.blockchain) && selectedBlockchains.every(chain => item.blockchain.includes(chain)))
+        : (typeof item.blockchain === 'string' && selectedBlockchains.includes(item.blockchain)) ||
+          (Array.isArray(item.blockchain) && selectedBlockchains.some(chain => item.blockchain.includes(chain)))
+    )
+
+    return matchesSearch && matchesTags && matchesBlockchains
+  })
 
   const handleAISearchResult = (description: string, itemName: string) => {
     setAiSearchResult({ description, itemName })

@@ -52,6 +52,13 @@ export function ProjectCard({ project }: { project: Project }) {
               {tag}
             </span>
           ))}
+          {project.blockchain && (
+            <span className="bg-[#4A5568] text-white text-xs px-2 py-1">
+              {Array.isArray(project.blockchain) 
+                ? project.blockchain.join(', ') 
+                : project.blockchain}
+            </span>
+          )}
         </div>
         <div className="flex space-x-4 mb-4">
           <a href={`https://twitter.com/${project.twitter}`} target="_blank" rel="noopener noreferrer" className="text-[#9DC4F8] hover:text-[#1FD978]">
