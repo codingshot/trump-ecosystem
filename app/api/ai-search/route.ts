@@ -8,9 +8,7 @@ const openaiConfig = new Configuration({
   apiKey: process.env.OPENAI_API_KEY
 })
 const openai = new OpenAIApi(openaiConfig)
-const anthropic = new Anthropic({
-  apiKey: process.env.ANTHROPIC_API_KEY,
-})
+const anthropic = new (Anthropic as any)({apiKey: process.env.ANTHROPIC_API_KEY!})
 
 export const runtime = 'edge'
 
@@ -55,7 +53,18 @@ export async function POST(req: Request) {
       stream: true,
     })
 
-    return new Response(response.content[0].text)
+    const stream = new ReadableStream({
+      async start(controller) {
+        for await (const chunk of response) {
+          if (chunk.type === 'content_block_delta') {
+            controller.enqueue(new TextEncoder().encode(chunk.delta.text))
+          }
+        }
+        controller.close()
+      },
+    })
+
+    return new StreamingTextResponse(stream)
   } else {
     return new Response('Invalid AI provider specified', { status: 400 })
   }

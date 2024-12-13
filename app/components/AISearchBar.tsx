@@ -18,12 +18,20 @@ interface AISearchBarProps {
 
 export function AISearchBar({ onSearchResult }: AISearchBarProps) {
   const [isOpen, setIsOpen] = useState(false)
-  const { messages, input, handleInputChange, handleSubmit, isLoading } = useChat({
+  const { messages, input, handleInputChange, handleSubmit, isLoading, error } = useChat({
     api: '/api/ai-search',
     onFinish: (message) => {
-      const [description, projectName] = message.content.split('|')
-      onSearchResult(description.trim(), projectName.trim())
-      setIsOpen(false)
+      try {
+        const [description, projectName] = message.content.split('|')
+        if (!description || !projectName) {
+          throw new Error('Invalid response format')
+        }
+        onSearchResult(description.trim(), projectName.trim())
+        setIsOpen(false)
+      } catch (err) {
+        console.error('Error processing AI response:', err)
+        // Handle error appropriately
+      }
     },
   })
 

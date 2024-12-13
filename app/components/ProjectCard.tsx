@@ -35,7 +35,14 @@ export function ProjectCard({ project }: { project: Project }) {
     }`}>
       <div className="p-4">
         <div className="flex items-center mb-4">
-          <Image src={project.profileImage} alt={project.name} width={50} height={50} className="rounded-full" />
+          <Image 
+            src={project.profileImage} 
+            alt={project.name} 
+            width={50} 
+            height={50} 
+            className="rounded-full"
+            unoptimized={project.profileImage.startsWith('http')}
+          />
           <h3 className="ml-4 text-lg font-medium">{project.name}</h3>
         </div>
         <p className="text-sm text-[#9DA3AE] mb-4">{project.description}</p>
