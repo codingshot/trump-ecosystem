@@ -38,10 +38,21 @@
     "description": "Every token, every chain, one app. Make your first deposit with Apple Pay / Venmo!",
     "url": "https://slingshot.finance/",
     "chatLink": "",
-    "profileImage": "https://pbs.twimg.com/profile_images/1742621757230678016/_Av2hYEY_400x400.jpg",
+    "profileImage": "https://pbs.twimg.com/profile_images/1837343014529945603/99c-r2yz_400x400.jpg",
     "tags": [ "Solana", "App", "trading"],
     "blockchain": ["Solana", "Ethereum", "Base"],
     "relation": "user can trade meme coins more easily from pump"
+  },
+  {
+    "name": "Solana Scripts",
+    "twitter": "",
+    "description": "open source tools to perform solana defi / trading operations including pump.fun bundler and comment bots",
+    "url": "https://solana-scripts.com/",
+    "chatLink": "https://discord.gg/solana-scripts",
+    "profileImage": "https://solana-scripts.com/img/logo-Photoroom.png",
+    "tags": [ "dev tooling"],
+    "blockchain": ["Solana"],
+    "relation": "An open-source bundler for Pump.Fun. Allows you to create a token and bundle it with 25 buys. Also a comment bot"
   },
   {
     "name": "BonkBot",

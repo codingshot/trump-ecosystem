@@ -239,6 +239,21 @@
     "active": true
   },
   {
+    "name": "sunpump.meme",
+    "twitter": "sunpumpmeme",
+    "description": "pump.fun on TRON (EVM), when bonding curve reaches $69,420, $12k TRX liquidity burned on Sunwap.",
+    "url": "https://sunpump.me",
+    "chatLink": "https://t.me/officialsunpumpmeme",
+    "profileImage": "",
+    "tags": [ "bonding curves", "meme coins"],
+    "blockchain": ["Tron"],
+    "tvl": "",
+    "github": "",
+    "contractAddress": "",
+    "relation": "Tron version of pump.fun",
+    "active": true
+  },
+  {
     "name": "etherfun.app",
     "twitter": "ethervista",
     "description": "Ethereum + Base Version of Pump.fun by Ethervista",
