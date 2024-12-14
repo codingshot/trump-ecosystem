@@ -18,10 +18,9 @@ import { AndOrToggle } from './AndOrToggle'
 interface ProjectGridProps {
   globalSearchQuery: string
   setGlobalSearchQuery: (query: string) => void
-  selectedTag: string | null
 }
 
-export function ProjectGrid({ globalSearchQuery, setGlobalSearchQuery, selectedTag }: ProjectGridProps) {
+export function ProjectGrid({ globalSearchQuery, setGlobalSearchQuery }: ProjectGridProps) {
   const [selectedTags, setSelectedTags] = useState<string[]>([])
   const [selectedBlockchains, setSelectedBlockchains] = useState<string[]>([])
   const [tvlRange, setTvlRange] = useState<[number, number]>([0, 100])
@@ -137,10 +136,21 @@ export function ProjectGrid({ globalSearchQuery, setGlobalSearchQuery, selectedT
       {aiSearchResult && (
         <div className="mb-4 p-4 bg-[#2A2D3A]">
           <h3 className="text-lg font-semibold mb-2">AI Search Result:</h3>
-          <p className="mb-4">{aiSearchResult.description}</p>
-          {projectsData.find(item => item.name === aiSearchResult.itemName) && (
-            <ProjectCard project={projectsData.find(item => item.name === aiSearchResult.itemName)!} />
-          )}
+          <p className="mb-4 typewriter">
+            {aiSearchResult.description}
+          </p>
+          <div className="flex flex-col items-center">
+            {aiSearchResult.itemName.split(',').map(name => {
+              const project = projectsData.find(
+                item => item.name.trim().toLowerCase() === name.trim().toLowerCase()
+              )
+              return project ? (
+                <div key={project.name} className="w-full max-w-md mb-4">
+                  <ProjectCard project={project} />
+                </div>
+              ) : null
+            })}
+          </div>
         </div>
       )}
       <div className="mb-4 space-y-4">
