@@ -11,6 +11,18 @@
     "relation": "Provides real-time trading data, charts, and analytics across multiple blockchains including NEAR, Solana, Base, and buy Pump fun tokens directly"
   },
   {
+    "name": "MakeNow.meme",
+    "twitter": "makenowmeme",
+    "description": "Makenow.meme let's anyone make and launch a memecoin directly from their favorite social media for free",
+    "url": "https://makenow.meme",
+    "chatLink": "",
+    "profileImage": "https://pbs.twimg.com/profile_images/1823007043814637568/WqJPGvN__400x400.png",
+    "tags": ["tool", "trading"],
+    "blockchain": "Solana",
+    "relation": "Launch a coin directly from socials"
+  },
+  
+  {
     "name": "Rugcheck.xyz",
     "twitter": "Rugcheckxyz",
     "description": "Solana's most trusted Anti-Rug tool. Now supporting Token Extensions.",
