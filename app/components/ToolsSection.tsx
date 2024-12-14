@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 import { ProjectCard } from './ProjectCard'
 import { X } from 'lucide-react'
 import {
@@ -16,9 +16,10 @@ import { AndOrToggle } from './AndOrToggle'
 interface ToolsSectionProps {
   globalSearchQuery: string
   setGlobalSearchQuery: (query: string) => void
+  selectedTag: string | null
 }
 
-export function ToolsSection({ globalSearchQuery, setGlobalSearchQuery }: ToolsSectionProps) {
+export function ToolsSection({ globalSearchQuery, setGlobalSearchQuery, selectedTag }: ToolsSectionProps) {
   const [selectedTags, setSelectedTags] = useState<string[]>([])
   const [isAndLogic, setIsAndLogic] = useState(true)
 
@@ -45,6 +46,14 @@ export function ToolsSection({ globalSearchQuery, setGlobalSearchQuery }: ToolsS
   const removeTag = (tag: string) => {
     setSelectedTags(prev => prev.filter(t => t !== tag))
   }
+
+  useEffect(() => {
+    if (selectedTag) {
+      setSelectedTags([selectedTag])
+    } else {
+      setSelectedTags([])
+    }
+  }, [selectedTag])
 
   return (
     <section className="mt-12">

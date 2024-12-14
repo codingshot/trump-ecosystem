@@ -3,6 +3,8 @@
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { Twitter, Globe, MessageCircle } from 'lucide-react'
+import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 
 interface Project {
   name: string
@@ -22,6 +24,7 @@ interface Project {
 export function ProjectCard({ project }: { project: Project }) {
   const [showMore, setShowMore] = useState(false)
   const [animate, setAnimate] = useState(false)
+  const router = useRouter()
 
   useEffect(() => {
     setAnimate(true)
@@ -29,26 +32,46 @@ export function ProjectCard({ project }: { project: Project }) {
     return () => clearTimeout(timer)
   }, [])
 
+  const handleMoreInfoClick = (e: React.MouseEvent) => {
+    e.preventDefault() // Prevent the Link navigation
+    setShowMore(!showMore)
+  }
+
+  const handleTagClick = (e: React.MouseEvent, tag: string) => {
+    e.preventDefault() // Prevent the Link navigation
+    e.stopPropagation() // Prevent bubbling
+    router.push(`/?q=${encodeURIComponent(tag)}`)
+  }
+
   return (
     <div className={`bg-[#2A2D3A] overflow-hidden shadow-lg transition-all duration-300 hover:border hover:border-white ${
       animate ? 'animate-shake bg-yellow-400' : ''
     }`}>
       <div className="p-4">
-        <div className="flex items-center mb-4">
-          <Image 
-            src={project.profileImage} 
-            alt={project.name} 
-            width={50} 
-            height={50} 
-            className="rounded-full"
-            unoptimized={project.profileImage.startsWith('http')}
-          />
-          <h3 className="ml-4 text-lg font-medium">{project.name}</h3>
-        </div>
-        <p className="text-sm text-[#9DA3AE] mb-4">{project.description}</p>
+        <Link href={`/projects/${encodeURIComponent(project.name.toLowerCase().replaceAll('.', '-').replaceAll(' ', '-'))}`}>
+          <div className="cursor-pointer">
+            <div className="flex items-center mb-4">
+              <Image 
+                src={project.profileImage} 
+                alt={project.name} 
+                width={50} 
+                height={50} 
+                className="rounded-full"
+                unoptimized={project.profileImage.startsWith('http')}
+              />
+              <h3 className="ml-4 text-lg font-medium">{project.name}</h3>
+            </div>
+            <p className="text-sm text-[#9DA3AE] mb-4">{project.description}</p>
+          </div>
+        </Link>
+        
         <div className="flex flex-wrap gap-2 mb-4">
           {project.tags.map((tag, index) => (
-            <span key={index} className="bg-[#1FD978] text-primary text-xs px-2 py-1">
+            <span 
+              key={index} 
+              className="bg-[#1FD978] text-primary text-xs px-2 py-1 cursor-pointer hover:bg-green-400"
+              onClick={(e) => handleTagClick(e, tag)}
+            >
               {tag}
             </span>
           ))}
@@ -62,23 +85,41 @@ export function ProjectCard({ project }: { project: Project }) {
         </div>
         <div className="flex space-x-4 mb-4">
           {project.twitter && (
-            <a href={`https://twitter.com/${project.twitter}`} target="_blank" rel="noopener noreferrer" className="text-[#9DC4F8] hover:text-[#1FD978]">
+            <a 
+              href={`https://twitter.com/${project.twitter}`} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-[#9DC4F8] hover:text-[#1FD978]"
+              onClick={(e) => e.stopPropagation()}
+            >
               <Twitter size={20} />
             </a>
           )}
           {project.url && (
-            <a href={project.url} target="_blank" rel="noopener noreferrer" className="text-[#9DC4F8] hover:text-[#1FD978]">
+            <a 
+              href={project.url} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-[#9DC4F8] hover:text-[#1FD978]"
+              onClick={(e) => e.stopPropagation()}
+            >
               <Globe size={20} />
             </a>
           )}
           {project.chatLink && (
-            <a href={project.chatLink} target="_blank" rel="noopener noreferrer" className="text-[#9DC4F8] hover:text-[#1FD978]">
+            <a 
+              href={project.chatLink} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-[#9DC4F8] hover:text-[#1FD978]"
+              onClick={(e) => e.stopPropagation()}
+            >
               <MessageCircle size={20} />
             </a>
           )}
         </div>
         <button
-          onClick={() => setShowMore(!showMore)}
+          onClick={handleMoreInfoClick}
           className="text-[#1FD978] hover:underline focus:outline-none"
         >
           {showMore ? 'Less Info' : 'More Info'}
@@ -89,7 +130,13 @@ export function ProjectCard({ project }: { project: Project }) {
             {project.github && (
               <p>
                 GitHub:{' '}
-                <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-[#9DC4F8] hover:underline">
+                <a 
+                  href={project.github} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-[#9DC4F8] hover:underline"
+                  onClick={(e) => e.stopPropagation()}
+                >
                   {project.github}
                 </a>
               </p>

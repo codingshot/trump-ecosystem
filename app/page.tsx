@@ -11,6 +11,8 @@ import { useSearchParams, useRouter } from 'next/navigation'
 export default function Home() {
   const [isSearchOpen, setIsSearchOpen] = useState(false)
   const [globalSearchQuery, setGlobalSearchQuery] = useState('')
+  const [selectedTags, setSelectedTags] = useState<string[]>([])
+  const [isOrFilter, setIsOrFilter] = useState(false)
   const searchParams = useSearchParams()
   const router = useRouter()
   
@@ -21,11 +23,51 @@ export default function Home() {
     }
   }, [searchParams])
 
+  useEffect(() => {
+    const tagParam = searchParams.get('tags')
+    const orParam = searchParams.get('filter') === 'or'
+    
+    if (tagParam) {
+      setSelectedTags(tagParam.split(','))
+      setGlobalSearchQuery('')  // Clear the search query when filtering by tag
+    } else {
+      setSelectedTags([])
+    }
+    
+    setIsOrFilter(orParam)
+  }, [searchParams])
+
   const handleSearch = (query: string) => {
     setGlobalSearchQuery(query)
     setIsSearchOpen(false)
-    // Update URL when search changes
+    setSelectedTags([])  // Clear tag filter when searching
     const newUrl = query ? `?q=${encodeURIComponent(query)}` : '/'
+    router.push(newUrl)
+  }
+
+  const handleTagToggle = (tag: string) => {
+    const newTags = selectedTags.includes(tag)
+      ? selectedTags.filter(t => t !== tag)
+      : [...selectedTags, tag]
+    
+    updateUrlWithTags(newTags)
+  }
+
+  const handleFilterToggle = () => {
+    const newIsOrFilter = !isOrFilter
+    setIsOrFilter(newIsOrFilter)
+    updateUrlWithTags(selectedTags, newIsOrFilter)
+  }
+
+  const updateUrlWithTags = (tags: string[], orFilter: boolean = isOrFilter) => {
+    const params = new URLSearchParams()
+    if (tags.length > 0) {
+      params.set('tags', tags.join(','))
+    }
+    if (orFilter) {
+      params.set('filter', 'or')
+    }
+    const newUrl = tags.length > 0 ? `?${params.toString()}` : '/'
     router.push(newUrl)
   }
 
@@ -52,10 +94,14 @@ export default function Home() {
         <ProjectGrid 
           globalSearchQuery={globalSearchQuery} 
           setGlobalSearchQuery={handleSearch}
+          selectedTags={selectedTags}
+          isOrFilter={isOrFilter}
         />
         <ToolsSection 
           globalSearchQuery={globalSearchQuery} 
           setGlobalSearchQuery={handleSearch}
+          selectedTags={selectedTags}
+          isOrFilter={isOrFilter}
         />
       </main>
       <Footer />

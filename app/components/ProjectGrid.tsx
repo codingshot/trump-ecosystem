@@ -18,9 +18,10 @@ import { AndOrToggle } from './AndOrToggle'
 interface ProjectGridProps {
   globalSearchQuery: string
   setGlobalSearchQuery: (query: string) => void
+  selectedTag: string | null
 }
 
-export function ProjectGrid({ globalSearchQuery, setGlobalSearchQuery }: ProjectGridProps) {
+export function ProjectGrid({ globalSearchQuery, setGlobalSearchQuery, selectedTag }: ProjectGridProps) {
   const [selectedTags, setSelectedTags] = useState<string[]>([])
   const [selectedBlockchains, setSelectedBlockchains] = useState<string[]>([])
   const [tvlRange, setTvlRange] = useState<[number, number]>([0, 100])
@@ -121,6 +122,14 @@ export function ProjectGrid({ globalSearchQuery, setGlobalSearchQuery }: Project
   const removeBlockchain = (blockchain: string) => {
     setSelectedBlockchains(prev => prev.filter(b => b !== blockchain))
   }
+
+  useEffect(() => {
+    if (selectedTag) {
+      setSelectedTags([selectedTag])
+    } else {
+      setSelectedTags([])
+    }
+  }, [selectedTag])
 
   return (
     <div>

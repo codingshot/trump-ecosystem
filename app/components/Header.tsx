@@ -25,7 +25,7 @@ export function Header({ onSearchClick }: { onSearchClick: () => void }) {
             <Github className="w-6 h-6" />
           </a>
           <a
-            href="https://github.com/PotLock/awesome-pump"
+            href="https://github.com/PotLock/awesome-pump/tree/main/app/data"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-[#1FD978] text-primary px-4 py-2 hover:bg-green-400 focus:outline-none focus:ring-2 focus:ring-green-300"
