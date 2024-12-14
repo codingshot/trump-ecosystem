@@ -26,6 +26,7 @@ export function ProjectGrid({ globalSearchQuery, setGlobalSearchQuery }: Project
   const [tvlRange, setTvlRange] = useState<[number, number]>([0, 100])
   const [aiSearchResult, setAiSearchResult] = useState<{ description: string, itemName: string } | null>(null)
   const [isAndLogic, setIsAndLogic] = useState(true)
+  const [isBlockchainAndLogic, setIsBlockchainAndLogic] = useState(true)
 
   const allTags = useMemo(() => {
     const tagSet = new Set<string>()
@@ -87,10 +88,10 @@ export function ProjectGrid({ globalSearchQuery, setGlobalSearchQuery }: Project
     )
 
     const matchesBlockchains = selectedBlockchains.length === 0 || (
-      isAndLogic
-        ? (typeof item.blockchain === 'string' && selectedBlockchains.includes(item.blockchain)) ||
+      isBlockchainAndLogic
+        ? (typeof item.blockchain === 'string' && selectedBlockchains.every(chain => chain === item.blockchain)) ||
           (Array.isArray(item.blockchain) && selectedBlockchains.every(chain => item.blockchain.includes(chain)))
-        : (typeof item.blockchain === 'string' && selectedBlockchains.includes(item.blockchain)) ||
+        : (typeof item.blockchain === 'string' && selectedBlockchains.some(chain => chain === item.blockchain)) ||
           (Array.isArray(item.blockchain) && selectedBlockchains.some(chain => item.blockchain.includes(chain)))
     )
 
@@ -171,7 +172,10 @@ export function ProjectGrid({ globalSearchQuery, setGlobalSearchQuery }: Project
             </div>
           </div>
           <div className="flex-1">
-            <label className="block text-sm font-medium text-gray-300 mb-2">Blockchains</label>
+            <div className="flex items-center justify-between mb-2">
+              <label className="text-sm font-medium text-gray-300">Blockchains</label>
+              <AndOrToggle isAnd={isBlockchainAndLogic} onToggle={setIsBlockchainAndLogic} />
+            </div>
             <Select onValueChange={handleBlockchainSelect}>
               <SelectTrigger className="w-full bg-[#1FD978] text-primary">
                 <SelectValue placeholder="Select blockchains" />

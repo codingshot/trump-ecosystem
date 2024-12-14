@@ -1,19 +1,32 @@
 'use client'
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Header } from './components/Header'
 import { ProjectGrid } from './components/ProjectGrid'
 import { Footer } from './components/Footer'
 import { SearchOverlay } from './components/SearchOverlay'
 import { ToolsSection } from './components/ToolsSection'
+import { useSearchParams, useRouter } from 'next/navigation'
 
 export default function Home() {
   const [isSearchOpen, setIsSearchOpen] = useState(false)
   const [globalSearchQuery, setGlobalSearchQuery] = useState('')
+  const searchParams = useSearchParams()
+  const router = useRouter()
   
+  useEffect(() => {
+    const queryParam = searchParams.get('q')
+    if (queryParam) {
+      setGlobalSearchQuery(queryParam)
+    }
+  }, [searchParams])
+
   const handleSearch = (query: string) => {
     setGlobalSearchQuery(query)
     setIsSearchOpen(false)
+    // Update URL when search changes
+    const newUrl = query ? `?q=${encodeURIComponent(query)}` : '/'
+    router.push(newUrl)
   }
 
   return (
@@ -38,11 +51,11 @@ export default function Home() {
         )}
         <ProjectGrid 
           globalSearchQuery={globalSearchQuery} 
-          setGlobalSearchQuery={setGlobalSearchQuery} 
+          setGlobalSearchQuery={handleSearch}
         />
         <ToolsSection 
           globalSearchQuery={globalSearchQuery} 
-          setGlobalSearchQuery={setGlobalSearchQuery} 
+          setGlobalSearchQuery={handleSearch}
         />
       </main>
       <Footer />

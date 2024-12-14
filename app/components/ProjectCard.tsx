@@ -61,15 +61,21 @@ export function ProjectCard({ project }: { project: Project }) {
           )}
         </div>
         <div className="flex space-x-4 mb-4">
-          <a href={`https://twitter.com/${project.twitter}`} target="_blank" rel="noopener noreferrer" className="text-[#9DC4F8] hover:text-[#1FD978]">
-            <Twitter size={20} />
-          </a>
-          <a href={project.url} target="_blank" rel="noopener noreferrer" className="text-[#9DC4F8] hover:text-[#1FD978]">
-            <Globe size={20} />
-          </a>
-          <a href={project.chatLink} target="_blank" rel="noopener noreferrer" className="text-[#9DC4F8] hover:text-[#1FD978]">
-            <MessageCircle size={20} />
-          </a>
+          {project.twitter && (
+            <a href={`https://twitter.com/${project.twitter}`} target="_blank" rel="noopener noreferrer" className="text-[#9DC4F8] hover:text-[#1FD978]">
+              <Twitter size={20} />
+            </a>
+          )}
+          {project.url && (
+            <a href={project.url} target="_blank" rel="noopener noreferrer" className="text-[#9DC4F8] hover:text-[#1FD978]">
+              <Globe size={20} />
+            </a>
+          )}
+          {project.chatLink && (
+            <a href={project.chatLink} target="_blank" rel="noopener noreferrer" className="text-[#9DC4F8] hover:text-[#1FD978]">
+              <MessageCircle size={20} />
+            </a>
+          )}
         </div>
         <button
           onClick={() => setShowMore(!showMore)}
@@ -79,12 +85,6 @@ export function ProjectCard({ project }: { project: Project }) {
         </button>
         {showMore && (
           <div className="mt-4 text-sm text-[#9DA3AE]">
-            {project.blockchain && (
-              <p>Blockchain: {Array.isArray(project.blockchain) 
-                ? project.blockchain.join(', ') 
-                : project.blockchain}
-              </p>
-            )}
             {project.tvl && <p>TVL: {project.tvl}</p>}
             {project.github && (
               <p>

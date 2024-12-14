@@ -4,11 +4,22 @@
     "twitter": "dexscreener",
     "description": "Real-time DEX trading charts and analytics platform",
     "url": "https://dexscreener.com",
-    "chatLink": "https://t.me/dexscreener_official",
+    "chatLink": "",
     "profileImage": "https://pbs.twimg.com/profile_images/1462287879565201409/5UYqudVs_400x400.jpg",
     "tags": ["analytics", "trading", "charts", "defi"],
     "blockchain": "Multi-chain, Solana, NEAR, Base",
     "relation": "Provides real-time trading data, charts, and analytics across multiple blockchains including NEAR, Solana, Base, and buy Pump fun tokens directly"
+  },
+  {
+    "name": "Rugcheck.xyz",
+    "twitter": "Rugcheckxyz",
+    "description": "Solana's most trusted Anti-Rug tool. Now supporting Token Extensions.",
+    "url": "https://rugcheck.xyz",
+    "chatLink": "",
+    "profileImage": "https://pbs.twimg.com/profile_images/1659290984293756928/VeEo1KYz_400x400.jpg",
+    "tags": ["tools", "security"],
+    "blockchain": "Solana",
+    "relation": "Can check if pump.fun tokens are made by ruggers"
   },
   {
     "name": "Raydium",
@@ -22,9 +33,20 @@
     "relation": "pump.fun pools launch on rayd"
   },
   {
+    "name": "Slingshot",
+    "twitter": "SlingshotCrypto",
+    "description": "Every token, every chain, one app. Make your first deposit with Apple Pay / Venmo!",
+    "url": "https://slingshot.finance/",
+    "chatLink": "",
+    "profileImage": "https://pbs.twimg.com/profile_images/1742621757230678016/_Av2hYEY_400x400.jpg",
+    "tags": [ "Solana", "App", "trading"],
+    "blockchain": ["Solana", "Ethereum", "Base"],
+    "relation": "user can trade meme coins more easily from pump"
+  },
+  {
     "name": "BonkBot",
     "twitter": "bonkbot_io",
-    "description": "Multi-chain token and pair explorer with detailed analytics",
+    "description": "Solana's fastest and most secure Telegram trading bot.",
     "url": "https://bonkbot.io",
     "chatLink": "https://t.co/PGuKJcKFhe",
     "profileImage": "https://pbs.twimg.com/profile_images/1815387457698816000/PyEwzA2J_400x400.jpg",

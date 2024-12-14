@@ -12,6 +12,31 @@ const anthropic = new (Anthropic as any)({apiKey: process.env.ANTHROPIC_API_KEY!
 
 export const runtime = 'edge'
 
+function stringSimilarity(str1: string, str2: string): number {
+  const longer = str1.length > str2.length ? str1 : str2;
+  const shorter = str1.length > str2.length ? str2 : str1;
+  
+  if (longer.length === 0) return 1.0;
+  
+  const costs = new Array();
+  for (let i = 0; i <= longer.length; i++) {
+    costs[i] = i;
+  }
+
+  for (let i = 1; i <= shorter.length; i++) {
+    costs[i] = i;
+    let nw = i - 1;
+    for (let j = 1; j <= longer.length; j++) {
+      const cj = Math.min(1 + Math.min(costs[j], costs[j - 1]),
+        shorter[i - 1] === longer[j - 1] ? nw : nw + 1);
+      nw = costs[j];
+      costs[j] = cj;
+    }
+  }
+
+  return (longer.length - costs[longer.length]) / longer.length;
+}
+
 export async function POST(req: Request) {
   const { messages } = await req.json()
   const lastMessage = messages[messages.length - 1].content
