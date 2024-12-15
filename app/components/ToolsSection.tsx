@@ -79,10 +79,7 @@ export function ToolsSection({
             <label className="text-sm font-medium text-gray-300">Tags</label>
             <AndOrToggle isAnd={isAndLogic} onToggle={setIsAndLogic} />
           </div>
-          <Select 
-            onValueChange={handleTagSelect}
-            value=""
-          >
+          <Select onValueChange={handleTagSelect}>
             <SelectTrigger className="w-full bg-[#1FD978] text-primary">
               <SelectValue placeholder="Select tags" />
             </SelectTrigger>
