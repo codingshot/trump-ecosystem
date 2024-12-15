@@ -194,6 +194,20 @@
     "active": true
   },
   {
+    "name": "Vader AI Fun",
+    "twitter": "Vader_AI_",
+    "description": "daos.fun on base, investment DAOs that hold virtual agents. ",
+    "url": "https://vaderai.ai/app",
+    "chatLink": "https://t.me/+RvRL6fEpCQY3YTQ0",
+    "profileImage": "https://cdn4.cdn-telegram.org/file/L7wXMPCyAF7s5zVd7jElg2sYBVkrcDpt448s5iI4F3MiENhqbnge059Ul9u12lQL0c2YBQpwC8By0emSL8b6BI11NXD0UI2sW1Aelh3wAAyiJPVvgrFkpR0Iga62auIyQkmlwXwpEVsg-I4xSXIn6Hf2sPPOG8SAERIsjwyPwkb_KVkM-kP0qwPpP98UUV5fj3MoyUpzTKPVmUgDAQOKIMGJaAet99ew-JRCUQ8HfISFgxCjnvRLSVcFpTWtLUns1NhN60wts-mOM67ayr81ZbIPQzlWBZiyy3-X9eml6t2tRURjDmBmZ9iVVjY2cJ7ChJSgS_EOn3wfzP2V9sZrnw.jpg",
+    "tags": ["investment", "bonding curves", "dao", "ai"],
+    "blockchain": "Base",
+    "tvl": "",
+    "github": "",
+    "relation": "daos.fun on base, investment DAOs that hold virtual agents.",
+    "active": true
+  },
+  {
     "name": "pump.science",
     "twitter": "pumpdotscience",
     "description": "pump.fun for desci",
