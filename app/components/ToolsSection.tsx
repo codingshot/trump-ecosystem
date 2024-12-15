@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useMemo, useEffect } from 'react'
-import { ProjectCard } from './ProjectCard'
+import { ToolCard } from './ToolCard'
 import { X } from 'lucide-react'
 import {
   Select,
@@ -13,6 +13,7 @@ import {
 import toolsData from '../data/tools.json'
 import { AndOrToggle } from './AndOrToggle'
 import { areStringsEqual } from '../utils/stringUtils'
+import Link from 'next/link'
 
 interface ToolsSectionProps {
   globalSearchQuery: string
@@ -78,16 +79,21 @@ export function ToolsSection({
             <label className="text-sm font-medium text-gray-300">Tags</label>
             <AndOrToggle isAnd={isAndLogic} onToggle={setIsAndLogic} />
           </div>
-          <Select onValueChange={handleTagSelect}>
+          <Select 
+            onValueChange={handleTagSelect}
+            value=""
+          >
             <SelectTrigger className="w-full bg-[#1FD978] text-primary">
               <SelectValue placeholder="Select tags" />
             </SelectTrigger>
             <SelectContent>
-              {allTags.filter(tag => tag.trim() !== '').map((tag) => (
-                <SelectItem key={tag} value={tag}>
-                  {tag}
-                </SelectItem>
-              ))}
+              {allTags
+                .filter(tag => tag.trim() !== '' && !internalSelectedTags.includes(tag))
+                .map((tag) => (
+                  <SelectItem key={tag} value={tag}>
+                    {tag}
+                  </SelectItem>
+                ))}
             </SelectContent>
           </Select>
           <div className="flex flex-wrap gap-2 mt-2">
@@ -105,7 +111,12 @@ export function ToolsSection({
       {filteredTools.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredTools.map((tool, index) => (
-            <ProjectCard key={index} project={tool} />
+            <Link 
+              key={index}
+              href={`/tools/${encodeURIComponent(tool.name.toLowerCase().replaceAll('.', '-').replaceAll(' ', '-'))}`}
+            >
+              <ToolCard tool={tool} />
+            </Link>
           ))}
         </div>
       ): (

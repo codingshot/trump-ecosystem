@@ -178,7 +178,7 @@ export function ProjectGrid({ globalSearchQuery, setGlobalSearchQuery, selectedT
               )
               return project ? (
                 <div key={project.name} className="w-full max-w-md mb-4">
-                  <ProjectCard project={project} />
+                  <ProjectCard project={{ ...project, type: 'project' }} />
                 </div>
               ) : null
             })}
@@ -273,7 +273,7 @@ export function ProjectGrid({ globalSearchQuery, setGlobalSearchQuery, selectedT
       {filteredProjects.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredProjects.map((item, index) => (
-            <ProjectCard key={index} project={item} />
+            <ProjectCard key={index} project={{ ...item, type: 'project' }} />
           ))}
         </div>
       ) : (

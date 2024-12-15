@@ -7,9 +7,24 @@ export function JsonLd() {
     "url": "https://awesomepump.fun",
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://awesomepump.fun/search?q={search_term_string}",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://awesomepump.fun/search?q={search_term_string}"
+      },
       "query-input": "required name=search_term_string"
-    }
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Potluck Labs",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://awesomepump.fun/logo.png"
+      }
+    },
+    "sameAs": [
+      "https://twitter.com/awesomepump",
+      "https://github.com/PotLock/awesome-pump"
+    ]
   }
 
   return (

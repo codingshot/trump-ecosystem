@@ -5,20 +5,36 @@ import Image from 'next/image'
 import { Twitter, Globe, MessageCircle } from 'lucide-react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
+import { getExplorerUrl } from '../utils/chainExplorers'
+
+interface Contract {
+  address: string;
+  chain: string;
+  type: string;
+}
+
+interface Token {
+  symbol: string;
+  address: string;
+  chain: string;
+}
 
 interface Project {
-  name: string
-  twitter: string
-  description: string
-  url: string
-  chatLink: string
-  profileImage: string
-  tags: string[]
-  blockchain?: string | string[]
-  tvl?: string
-  github?: string
-  contractAddress?: string
-  relation: string
+  name: string;
+  twitter: string;
+  description: string;
+  url: string;
+  chatLink: string;
+  profileImage: string;
+  tags: string[];
+  blockchain?: string | string[];
+  tvl?: string;
+  github?: string;
+  contracts?: Contract[];
+  tokens?: Token[];
+  relation: string;
+  active: boolean;
+  type: 'tool' | 'project';
 }
 
 export function ProjectCard({ project }: { project: Project }) {
@@ -85,7 +101,7 @@ export function ProjectCard({ project }: { project: Project }) {
       animate ? 'animate-shake bg-yellow-400' : ''
     }`}>
       <div className="p-4">
-        <Link href={`/projects/${encodeURIComponent(project.name.toLowerCase().replaceAll('.', '-').replaceAll(' ', '-'))}`}>
+        <Link href={`/${project.type === 'tool' ? 'tools' : 'projects'}/${encodeURIComponent(project.name.toLowerCase().replaceAll('.', '-').replaceAll(' ', '-'))}`}>
           <div className="cursor-pointer">
             <div className="flex items-center mb-4">
               <Image 
@@ -183,7 +199,38 @@ export function ProjectCard({ project }: { project: Project }) {
                 </a>
               </p>
             )}
-            {project.contractAddress && <p>Contract Address: {project.contractAddress}</p>}
+            {project.contracts && project.contracts.length > 0 && (
+              <div className="mt-2">
+                <p className="font-medium">Contracts:</p>
+                {project.contracts.map((contract, index) => (
+                  <a 
+                    key={index}
+                    href={getExplorerUrl(contract.chain, contract.address)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#9DC4F8] hover:underline block"
+                  >
+                    {contract.type} on {contract.chain}
+                  </a>
+                ))}
+              </div>
+            )}
+            {project.tokens && project.tokens.length > 0 && (
+              <div className="mt-2">
+                <p className="font-medium">Tokens:</p>
+                {project.tokens.map((token, index) => (
+                  <a 
+                    key={index}
+                    href={getExplorerUrl(token.chain, token.address, 'token')}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#9DC4F8] hover:underline block"
+                  >
+                    {token.symbol} on {token.chain}
+                  </a>
+                ))}
+              </div>
+            )}
             <p className="mt-2">Relation to Pump.fun: {project.relation}</p>
           </div>
         )}
