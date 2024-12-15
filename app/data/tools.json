@@ -87,6 +87,17 @@
     "tags": ["telegram", "bot", "trading"],
     "blockchain": "Solana",
     "relation": "Trade pump fun tokens"
+  },
+  {
+    "name": "BettearBot",
+    "twitter": "intelnear",
+    "description": "The fastest Telegram trading bot and buybot on NEAR.",
+    "url": "https://t.me/BettearBot",
+    "chatLink": "https://t.me/intearchat",
+    "profileImage": "https://pbs.twimg.com/profile_images/1770460349591937024/6axoBz9g_400x400.jpg",
+    "tags": ["telegram", "bot", "trading", "buybot", "tools", "charts", "defi"],
+    "blockchain": "NEAR",
+    "relation": "Trade meme.cooking tokens or create your own meme, set up buybot for meme.cooking"
   }
 ]
 
