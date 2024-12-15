@@ -9,22 +9,14 @@ export function Header({ onSearchClick }: { onSearchClick: () => void }) {
           <span className="text-2xl mr-2">💊</span>
           <span className="text-lg font-medium">awesome pump</span>
         </Link>
-        <button
-          onClick={onSearchClick}
-          className="text-white hover:text-green-300 focus:outline-none"
-        >
-          <SearchIcon className="w-6 h-6" />
-        </button>
         <div className="flex items-center space-x-4">
-          <a
-            href="https://github.com/PotLock/awesome-pump"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white hover:text-green-300"
+          <button
+            onClick={onSearchClick}
+            className="text-white hover:text-green-300 focus:outline-none"
           >
-            <Github className="w-6 h-6" />
-          </a>
-          <a
+            <SearchIcon className="w-6 h-6" />
+          </button>
+         { false && <a
             href="https://github.com/PotLock/awesome-pump/tree/main/app/data"
             target="_blank"
             rel="noopener noreferrer"
@@ -32,6 +24,7 @@ export function Header({ onSearchClick }: { onSearchClick: () => void }) {
           >
             Submit Project
           </a>
+}
         </div>
       </div>
     </header>

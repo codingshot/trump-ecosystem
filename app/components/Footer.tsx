@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { Github } from 'lucide-react'
 
 export function Footer() {
   return (
@@ -18,9 +19,14 @@ export function Footer() {
             </p>
           </div>
           <div>
-            <a href="https://github.com/pump-fun/ecosystem" target="_blank" rel="noopener noreferrer" className="text-[#9DA3AE] hover:text-white">
-              GitHub
-            </a>
+          <a
+            href="https://github.com/PotLock/awesome-pump"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white hover:text-green-300"
+          >
+            <Github className="w-6 h-6" />
+          </a>
           </div>
         </div>
       </div>
