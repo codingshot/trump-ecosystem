@@ -60,6 +60,14 @@ export default function ProjectPage({ params }: { params: { name: string } }) {
     return () => document.removeEventListener('mousedown', handleClickOutside)
   }, [isSharePopupOpen])
 
+  const handleBlockchainClick = (e: React.MouseEvent, blockchain: string) => {
+    e.preventDefault()
+    e.stopPropagation()
+    const params = new URLSearchParams()
+    params.set('blockchains', blockchain)
+    router.push(`/?${params.toString()}`)
+  }
+
   if (!project) {
     return (
       <div className="min-h-screen bg-primary text-white">
@@ -186,12 +194,19 @@ export default function ProjectPage({ params }: { params: { name: string } }) {
                 <div className="flex flex-wrap gap-2">
                   {Array.isArray(project.blockchain) 
                     ? project.blockchain.map((chain, index) => (
-                        <span key={index} className="bg-[#4A5568] text-white text-sm px-3 py-1 rounded">
+                        <span 
+                          key={index} 
+                          className="bg-[#4A5568] text-white text-sm px-3 py-1 rounded cursor-pointer hover:bg-gray-600"
+                          onClick={(e) => handleBlockchainClick(e, chain)}
+                        >
                           {chain}
                         </span>
                       ))
                     : (
-                        <span className="bg-[#4A5568] text-white text-sm px-3 py-1 rounded">
+                        <span 
+                          className="bg-[#4A5568] text-white text-sm px-3 py-1 rounded cursor-pointer hover:bg-gray-600"
+                          onClick={(e) => handleBlockchainClick(e, project.blockchain as string)}
+                        >
                           {project.blockchain}
                         </span>
                       )

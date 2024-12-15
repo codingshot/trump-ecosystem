@@ -48,8 +48,35 @@ export function ProjectCard({ project }: { project: Project }) {
   const handleBlockchainClick = (e: React.MouseEvent, blockchain: string) => {
     e.preventDefault()
     e.stopPropagation()
-    const params = new URLSearchParams()
-    params.set('blockchains', blockchain)
+    const params = new URLSearchParams(window.location.search)
+    
+    // Get existing blockchains if any
+    const existingBlockchains = params.get('blockchains')?.split(',') || []
+    
+    // Add new blockchain if not already present
+    if (!existingBlockchains.includes(blockchain)) {
+      existingBlockchains.push(blockchain)
+      params.set('blockchains', existingBlockchains.join(','))
+    }
+    
+    // Keep existing search query if present
+    const query = params.get('q')
+    if (query) {
+      params.set('q', query)
+    }
+    
+    // Keep existing tags if present
+    const tags = params.get('tags')
+    if (tags) {
+      params.set('tags', tags)
+    }
+    
+    // Keep filter type if present
+    const filter = params.get('filter')
+    if (filter) {
+      params.set('filter', filter)
+    }
+    
     router.push(`/?${params.toString()}`)
   }
 
