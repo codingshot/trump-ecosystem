@@ -160,9 +160,25 @@ export default function Home() {
       />
       <main className="container mx-auto px-4 py-8">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h1 className="text-4xl font-medium mb-4">[pump.fun ecosystem]</h1>
+          <h1 className="text-4xl font-medium mb-4">[
+            <a 
+              href="https://pump.fun" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="rainbow-text"
+            >
+              pump.fun
+            </a> ecosystem]</h1>
           <p className="text-lg text-[#9DA3AE]">
-            Your intro to the [trenches] tooling, copy cats, forks, and innovations in the pump.fun ecosystem
+            Your intro to the [trenches] tooling, copy cats, forks, and innovations in the 
+            <a 
+              href="https://pump.fun" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="rainbow-text ml-1 mr-1"
+            >
+              pump.fun
+            </a> ecosystem
           </p>
         </div>
         {globalSearchQuery && (
