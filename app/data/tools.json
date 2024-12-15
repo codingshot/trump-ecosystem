@@ -23,16 +23,15 @@
   },
   {
     "name": "ElizaOS",
-    "twitter": "si16zdao",
+    "twitter": "ai16zdao",
     "description": "Fastest growing github repo, intersection of crypto x ai agents.",
     "url": "https://elizaos.ai/",
     "chatLink": "https://discord.gg/ai16z",
     "profileImage": "https://avatars.githubusercontent.com/u/186240462?s=200&v=4",
     "tags": ["tool", "ai", "bot", "dev-tooling"],
-    "blockchain": ["Solana", "NEAR", "Base", "Multichain"],
+    "blockchain": ["Solana", "NEAR", "Base", "Multi-chain"],
     "relation": "Launch agent with integrations into pump.fun"
   },
-  
   {
     "name": "Rugcheck.xyz",
     "twitter": "Rugcheckxyz",
@@ -41,7 +40,7 @@
     "chatLink": "",
     "profileImage": "https://pbs.twimg.com/profile_images/1659290984293756928/VeEo1KYz_400x400.jpg",
     "tags": ["tools", "security"],
-    "blockchain": "Solana",
+    "blockchain": ["Solana"],
     "relation": "Can check if pump.fun tokens are made by ruggers"
   },
   {
@@ -52,7 +51,7 @@
     "chatLink": "",
     "profileImage": "https://pbs.twimg.com/profile_images/1742621757230678016/_Av2hYEY_400x400.jpg",
     "tags": ["dex", "solana"],
-    "blockchain": "Solana",
+    "blockchain": ["Solana"],
     "relation": "pump.fun pools launch on rayd"
   },
   {
@@ -62,7 +61,7 @@
     "url": "https://slingshot.finance/",
     "chatLink": "",
     "profileImage": "https://pbs.twimg.com/profile_images/1837343014529945603/99c-r2yz_400x400.jpg",
-    "tags": [ "solana", "app", "trading"],
+    "tags": ["solana", "app", "trading"],
     "blockchain": ["Solana", "Ethereum", "Base"],
     "relation": "user can trade meme coins more easily from pump"
   },
@@ -73,7 +72,7 @@
     "url": "https://solana-scripts.com/",
     "chatLink": "https://discord.gg/solana-scripts",
     "profileImage": "https://solana-scripts.com/img/logo-Photoroom.png",
-    "tags": [ "dev-tooling"],
+    "tags": ["dev-tooling"],
     "blockchain": ["Solana"],
     "relation": "An open-source bundler for Pump.Fun. Allows you to create a token and bundle it with 25 buys. Also a comment bot"
   },
@@ -85,7 +84,7 @@
     "chatLink": "https://t.co/PGuKJcKFhe",
     "profileImage": "https://pbs.twimg.com/profile_images/1815387457698816000/PyEwzA2J_400x400.jpg",
     "tags": ["telegram", "bot", "trading"],
-    "blockchain": "Solana",
+    "blockchain": ["Solana"],
     "relation": "Trade pump fun tokens"
   }
 ]
