@@ -48,15 +48,11 @@ export function ProjectGrid({ globalSearchQuery, setGlobalSearchQuery, selectedT
   const allBlockchains = useMemo(() => {
     const blockchainSet = new Set<string>()
     projectsData.forEach(item => {
-      if (typeof item.blockchain === 'string' && item.blockchain.trim() !== '') {
-        blockchainSet.add(item.blockchain.trim())
-      } else if (Array.isArray(item.blockchain)) {
-        item.blockchain.forEach(chain => {
-          if (typeof chain === 'string' && chain.trim() !== '') {
-            blockchainSet.add(chain.trim())
-          }
-        })
-      }
+      item.blockchain.forEach(chain => {
+        if (typeof chain === 'string' && chain.trim() !== '') {
+          blockchainSet.add(chain.trim())
+        }
+      })
     })
     return Array.from(blockchainSet)
   }, [])
@@ -95,10 +91,8 @@ export function ProjectGrid({ globalSearchQuery, setGlobalSearchQuery, selectedT
 
     const matchesBlockchains = selectedBlockchains.length === 0 || (
       isBlockchainAndLogic
-        ? (typeof item.blockchain === 'string' && selectedBlockchains.every(chain => chain === item.blockchain)) ||
-          (Array.isArray(item.blockchain) && selectedBlockchains.every(chain => item.blockchain.includes(chain)))
-        : (typeof item.blockchain === 'string' && selectedBlockchains.some(chain => chain === item.blockchain)) ||
-          (Array.isArray(item.blockchain) && selectedBlockchains.some(chain => item.blockchain.includes(chain)))
+        ? selectedBlockchains.every(chain => item.blockchain.includes(chain))
+        : selectedBlockchains.some(chain => item.blockchain.includes(chain))
     )
 
     return matchesSearch && matchesTags && matchesBlockchains
@@ -290,7 +284,7 @@ export function ProjectGrid({ globalSearchQuery, setGlobalSearchQuery, selectedT
             Try adjusting your filters or search terms to find more results.
           </p>
           <a
-            href="https://github.com/PotLock/awesome-pump"
+            href="https://github.com/PotLock/awesome-pump/tree/main/app/data/projects.json"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block mt-4 px-6 py-2 bg-[#1FD978] text-primary hover:bg-green-400 focus:outline-none focus:ring-2 focus:ring-green-300"

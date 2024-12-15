@@ -205,9 +205,9 @@ export default function ProjectPage({ params }: { params: { name: string } }) {
                     : (
                         <span 
                           className="bg-[#4A5568] text-white text-sm px-3 py-1 rounded cursor-pointer hover:bg-gray-600"
-                          onClick={(e) => handleBlockchainClick(e, project.blockchain as string)}
+                          onClick={(e) => handleBlockchainClick(e, project.blockchain[0])}
                         >
-                          {project.blockchain}
+                          {project.blockchain[0]}
                         </span>
                       )
                   }
