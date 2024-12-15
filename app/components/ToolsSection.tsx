@@ -12,6 +12,7 @@ import {
 } from "./ui/select"
 import toolsData from '../data/tools.json'
 import { AndOrToggle } from './AndOrToggle'
+import { areStringsEqual } from '../utils/stringUtils'
 
 interface ToolsSectionProps {
   globalSearchQuery: string
