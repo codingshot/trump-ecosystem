@@ -254,6 +254,36 @@
     "active": true
   },
   {
+    "name": "hypurr.fun",
+    "twitter": "",
+    "description": "pump.fun on Hyperliquid with telegram bot for trading, sniping",
+    "url": "https://app.hypurr.fun",
+    "chatLink": "https://t.me/HypurrFunBot",
+    "profileImage": "https://cdn4.cdn-telegram.org/file/gjrqgkiWZuu2nM6tdUJOx9N68jspHOq8ZXaWwDooe-o9Sj7IkClKFz9hJE5lXOTcYHAXcplYm0Iixo5QwSeyc0dyjM_zkLmDWXR6q3_ZcofiO39Ou_EkiRqteXic5JzkTOvNfz5jWN2tAoiwF2ZK7p16LP1iIEek482PlkqrEC-VWH2s4TrFbM5jbkH_kmxPaRySST7ufsHuAc8qPgfgiNNASI8v1sTl1u0exxeXIBIYh_FekBVbnTaPi6_8YOn0MShuW4pjgQtTCfL4wwLr_6s-F9mFpRL0JzHMMv9Gbw1lMMOp24NCvU_boCHMKhc7EHcz1PccHmpllOF_Eic2iQ.jpg",
+    "tags": [ "bonding curves", "meme coins", "investment"],
+    "blockchain": ["Hyperliquid"],
+    "tvl": "",
+    "github": "",
+    "contractAddress": "",
+    "relation": "Hyperliquid version of pump.fun",
+    "active": true
+  },
+  {
+    "name": "bellum.exchange",
+    "twitter": "BellumExchange",
+    "description": "pump.fun on Avalance (EVM) with staking for community LP tokens.",
+    "url": "https://bellum.exchange",
+    "chatLink": "https://t.co/bcRyoxMGRv",
+    "profileImage": "https://pbs.twimg.com/profile_images/1821633445178830850/i-pVW3p9_400x400.jpg",
+    "tags": [ "bonding curves", "meme coins", "investment"],
+    "blockchain": ["Avalanche"],
+    "tvl": "",
+    "github": "",
+    "contractAddress": "0x4274f80635183e9bE3c16E1313a16f929B61E00e",
+    "relation": "Avalanche version of pump.fun",
+    "active": true
+  },
+  {
     "name": "etherfun.app",
     "twitter": "ethervista",
     "description": "Ethereum + Base Version of Pump.fun by Ethervista",

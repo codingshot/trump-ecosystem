@@ -16,11 +16,17 @@ import { AndOrToggle } from './AndOrToggle'
 interface ToolsSectionProps {
   globalSearchQuery: string
   setGlobalSearchQuery: (query: string) => void
-  selectedTag: string | null
+  selectedTags: string[]
+  isOrFilter: boolean
 }
 
-export function ToolsSection({ globalSearchQuery, setGlobalSearchQuery, selectedTag }: ToolsSectionProps) {
-  const [selectedTags, setSelectedTags] = useState<string[]>([])
+export function ToolsSection({ 
+  globalSearchQuery, 
+  setGlobalSearchQuery, 
+  selectedTags: externalSelectedTags,
+  isOrFilter 
+}: ToolsSectionProps) {
+  const [internalSelectedTags, setInternalSelectedTags] = useState<string[]>([])
   const [isAndLogic, setIsAndLogic] = useState(true)
 
   const allTags = useMemo(() => {
@@ -32,28 +38,28 @@ export function ToolsSection({ globalSearchQuery, setGlobalSearchQuery, selected
   const filteredTools = toolsData.filter(tool =>
     (tool.name.toLowerCase().includes(globalSearchQuery.toLowerCase()) ||
      tool.description.toLowerCase().includes(globalSearchQuery.toLowerCase())) &&
-    (selectedTags.length === 0 || (isAndLogic
-      ? selectedTags.every(tag => tool.tags.includes(tag))
-      : selectedTags.some(tag => tool.tags.includes(tag))))
+    (internalSelectedTags.length === 0 || (isAndLogic
+      ? internalSelectedTags.every(tag => tool.tags.includes(tag))
+      : internalSelectedTags.some(tag => tool.tags.includes(tag))))
   )
 
   const handleTagSelect = (tag: string) => {
-    setSelectedTags(prev => 
+    setInternalSelectedTags(prev => 
       prev.includes(tag) ? prev.filter(t => t !== tag) : [...prev, tag]
     )
   }
 
   const removeTag = (tag: string) => {
-    setSelectedTags(prev => prev.filter(t => t !== tag))
+    setInternalSelectedTags(prev => prev.filter(t => t !== tag))
   }
 
   useEffect(() => {
-    if (selectedTag) {
-      setSelectedTags([selectedTag])
+    if (externalSelectedTags.length > 0) {
+      setInternalSelectedTags(externalSelectedTags)
     } else {
-      setSelectedTags([])
+      setInternalSelectedTags([])
     }
-  }, [selectedTag])
+  }, [externalSelectedTags])
 
   return (
     <section className="mt-12">
@@ -84,7 +90,7 @@ export function ToolsSection({ globalSearchQuery, setGlobalSearchQuery, selected
             </SelectContent>
           </Select>
           <div className="flex flex-wrap gap-2 mt-2">
-            {selectedTags.map((tag) => (
+            {internalSelectedTags.map((tag) => (
               <span key={tag} className="bg-[#1FD978] text-primary text-xs px-2 py-1 flex items-center">
                 {tag}
                 <button onClick={() => removeTag(tag)} className="ml-1 focus:outline-none">
@@ -109,7 +115,7 @@ export function ToolsSection({ globalSearchQuery, setGlobalSearchQuery, selected
             Try adjusting your filters or search terms to find more results.
           </p>
           <a
-            href="https://github.com/PotLock/awesome-pump"
+            href="https://github.com/PotLock/awesome-pump/tree/main/app/data/tools.json"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block mt-4 px-6 py-2 bg-[#1FD978] text-primary hover:bg-green-400 focus:outline-none focus:ring-2 focus:ring-green-300"

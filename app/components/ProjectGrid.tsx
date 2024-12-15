@@ -14,18 +14,24 @@ import {
 } from "./ui/select"
 import projectsData from '../data/projects.json'
 import { AndOrToggle } from './AndOrToggle'
+import { useRouter } from 'next/navigation'
 
 interface ProjectGridProps {
   globalSearchQuery: string
   setGlobalSearchQuery: (query: string) => void
+  selectedTags: string[]
+  setSelectedTags: (tags: string[]) => void
+  isOrFilter: boolean
+  onFilterToggle: () => void
+  selectedBlockchains: string[]
+  setSelectedBlockchains: (chains: string[]) => void
+  updateUrlWithFilters: (tags: string[], blockchains: string[], orFilter: boolean) => void
+  router: any
 }
-
-export function ProjectGrid({ globalSearchQuery, setGlobalSearchQuery }: ProjectGridProps) {
-  const [selectedTags, setSelectedTags] = useState<string[]>([])
-  const [selectedBlockchains, setSelectedBlockchains] = useState<string[]>([])
+  
+export function ProjectGrid({ globalSearchQuery, setGlobalSearchQuery, selectedTags, setSelectedTags, isOrFilter, onFilterToggle, selectedBlockchains, setSelectedBlockchains, updateUrlWithFilters, router }: ProjectGridProps) {
   const [tvlRange, setTvlRange] = useState<[number, number]>([0, 100])
   const [aiSearchResult, setAiSearchResult] = useState<{ description: string, itemName: string } | null>(null)
-  const [isAndLogic, setIsAndLogic] = useState(true)
   const [isBlockchainAndLogic, setIsBlockchainAndLogic] = useState(true)
 
   const allTags = useMemo(() => {
@@ -74,13 +80,13 @@ export function ProjectGrid({ globalSearchQuery, setGlobalSearchQuery }: Project
     )
     
     const matchesTags = selectedTags.length === 0 || (
-      isAndLogic
-        ? selectedTags.every(tag => 
+      isOrFilter
+        ? selectedTags.some(tag => 
             tag === "inactive" 
               ? !item.active 
               : item.tags.includes(tag)
           )
-        : selectedTags.some(tag => 
+        : selectedTags.every(tag => 
             tag === "inactive" 
               ? !item.active 
               : item.tags.includes(tag)
@@ -103,32 +109,64 @@ export function ProjectGrid({ globalSearchQuery, setGlobalSearchQuery }: Project
   }
 
   const handleTagSelect = (tag: string) => {
-    setSelectedTags(prev => 
-      prev.includes(tag) ? prev.filter(t => t !== tag) : [...prev, tag]
-    )
+    setGlobalSearchQuery('')
+    const newTags = selectedTags.includes(tag)
+      ? selectedTags.filter(t => t !== tag)
+      : [...selectedTags, tag]
+    setSelectedTags(newTags)
+    updateUrlWithFilters(newTags, selectedBlockchains, isOrFilter)
   }
 
   const handleBlockchainSelect = (blockchain: string) => {
-    setSelectedBlockchains(prev => 
-      prev.includes(blockchain) ? prev.filter(b => b !== blockchain) : [...prev, blockchain]
-    )
+    const newBlockchains = selectedBlockchains.includes(blockchain)
+      ? selectedBlockchains.filter(b => b !== blockchain)
+      : [...selectedBlockchains, blockchain]
+    setSelectedBlockchains(newBlockchains)
+    updateUrlWithFilters(selectedTags, newBlockchains, isOrFilter)
   }
 
   const removeTag = (tag: string) => {
-    setSelectedTags(prev => prev.filter(t => t !== tag))
+    const newTags = selectedTags.filter(t => t !== tag)
+    setSelectedTags(newTags)
+    updateUrlWithFilters(newTags, selectedBlockchains, isOrFilter)
   }
 
   const removeBlockchain = (blockchain: string) => {
-    setSelectedBlockchains(prev => prev.filter(b => b !== blockchain))
+    const newBlockchains = selectedBlockchains.filter(b => b !== blockchain)
+    setSelectedBlockchains(newBlockchains)
+    updateUrlWithFilters(selectedTags, newBlockchains, isOrFilter)
   }
 
-  useEffect(() => {
-    if (selectedTag) {
-      setSelectedTags([selectedTag])
+  const handleSearchInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const query = e.target.value
+    setGlobalSearchQuery(query)
+    
+    const params = new URLSearchParams(window.location.search)
+    
+    if (query) {
+      params.set('q', query)
     } else {
-      setSelectedTags([])
+      params.delete('q')
     }
-  }, [selectedTag])
+    
+    // Preserve existing tags
+    if (selectedTags.length > 0) {
+      params.set('tags', selectedTags.join(','))
+    }
+    
+    // Preserve filter type
+    if (isOrFilter) {
+      params.set('filter', 'or')
+    }
+    
+    // Preserve blockchain filters
+    if (selectedBlockchains.length > 0) {
+      params.set('blockchains', selectedBlockchains.join(','))
+    }
+    
+    const newUrl = params.toString() ? `?${params.toString()}` : '/'
+    router.push(newUrl, { scroll: false })
+  }
 
   return (
     <div>
@@ -158,14 +196,14 @@ export function ProjectGrid({ globalSearchQuery, setGlobalSearchQuery }: Project
           type="text"
           placeholder="Filter by name or description..."
           value={globalSearchQuery}
-          onChange={(e) => setGlobalSearchQuery(e.target.value)}
+          onChange={handleSearchInputChange}
           className="w-full bg-[#2A2D3A] text-white px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-300"
         />
         <div className="flex space-x-4">
           <div className="flex-1">
             <div className="flex items-center justify-between mb-2">
               <label className="text-sm font-medium text-gray-300">Tags</label>
-              <AndOrToggle isAnd={isAndLogic} onToggle={setIsAndLogic} />
+              <AndOrToggle isAnd={!isOrFilter} onToggle={onFilterToggle} />
             </div>
             <Select onValueChange={handleTagSelect}>
               <SelectTrigger className="w-full bg-[#1FD978] text-primary">

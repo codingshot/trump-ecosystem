@@ -40,7 +40,17 @@ export function ProjectCard({ project }: { project: Project }) {
   const handleTagClick = (e: React.MouseEvent, tag: string) => {
     e.preventDefault() // Prevent the Link navigation
     e.stopPropagation() // Prevent bubbling
-    router.push(`/?q=${encodeURIComponent(tag)}`)
+    const params = new URLSearchParams()
+    params.set('tags', tag)
+    router.push(`/?${params.toString()}`)
+  }
+
+  const handleBlockchainClick = (e: React.MouseEvent, blockchain: string) => {
+    e.preventDefault()
+    e.stopPropagation()
+    const params = new URLSearchParams()
+    params.set('blockchains', blockchain)
+    router.push(`/?${params.toString()}`)
   }
 
   return (
@@ -76,7 +86,12 @@ export function ProjectCard({ project }: { project: Project }) {
             </span>
           ))}
           {project.blockchain && (
-            <span className="bg-[#4A5568] text-white text-xs px-2 py-1">
+            <span 
+              className="bg-[#4A5568] text-white text-xs px-2 py-1 cursor-pointer hover:bg-gray-600"
+              onClick={(e) => handleBlockchainClick(e, Array.isArray(project.blockchain) 
+                ? project.blockchain[0] 
+                : project.blockchain)}
+            >
               {Array.isArray(project.blockchain) 
                 ? project.blockchain.join(', ') 
                 : project.blockchain}

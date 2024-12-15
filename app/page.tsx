@@ -8,30 +8,47 @@ import { SearchOverlay } from './components/SearchOverlay'
 import { ToolsSection } from './components/ToolsSection'
 import { useSearchParams, useRouter } from 'next/navigation'
 
+interface ToolsSectionProps {
+  globalSearchQuery: string;
+  setGlobalSearchQuery: (query: string) => void;
+  selectedTags: string[];
+  isOrFilter: boolean;
+}
+
 export default function Home() {
   const [isSearchOpen, setIsSearchOpen] = useState(false)
   const [globalSearchQuery, setGlobalSearchQuery] = useState('')
   const [selectedTags, setSelectedTags] = useState<string[]>([])
   const [isOrFilter, setIsOrFilter] = useState(false)
+  const [selectedBlockchains, setSelectedBlockchains] = useState<string[]>([])
   const searchParams = useSearchParams()
   const router = useRouter()
   
   useEffect(() => {
     const queryParam = searchParams.get('q')
-    if (queryParam) {
-      setGlobalSearchQuery(queryParam)
-    }
-  }, [searchParams])
-
-  useEffect(() => {
     const tagParam = searchParams.get('tags')
     const orParam = searchParams.get('filter') === 'or'
+    const blockchainParam = searchParams.get('blockchains')
     
+    // Handle search query
+    if (queryParam) {
+      setGlobalSearchQuery(queryParam)
+    } else {
+      setGlobalSearchQuery('')
+    }
+    
+    // Handle tags
     if (tagParam) {
       setSelectedTags(tagParam.split(','))
-      setGlobalSearchQuery('')  // Clear the search query when filtering by tag
     } else {
       setSelectedTags([])
+    }
+    
+    // Handle blockchains
+    if (blockchainParam) {
+      setSelectedBlockchains(blockchainParam.split(','))
+    } else {
+      setSelectedBlockchains([])
     }
     
     setIsOrFilter(orParam)
@@ -40,8 +57,32 @@ export default function Home() {
   const handleSearch = (query: string) => {
     setGlobalSearchQuery(query)
     setIsSearchOpen(false)
-    setSelectedTags([])  // Clear tag filter when searching
-    const newUrl = query ? `?q=${encodeURIComponent(query)}` : '/'
+    
+    const params = new URLSearchParams(window.location.search)
+    
+    // Update or remove search query
+    if (query) {
+      params.set('q', query)
+    } else {
+      params.delete('q')
+    }
+    
+    // Keep existing tags if present
+    if (selectedTags.length > 0) {
+      params.set('tags', selectedTags.join(','))
+    }
+    
+    // Keep filter type if OR
+    if (isOrFilter) {
+      params.set('filter', 'or')
+    }
+    
+    // Keep blockchain filters if present
+    if (selectedBlockchains.length > 0) {
+      params.set('blockchains', selectedBlockchains.join(','))
+    }
+    
+    const newUrl = params.toString() ? `?${params.toString()}` : '/'
     router.push(newUrl)
   }
 
@@ -50,25 +91,63 @@ export default function Home() {
       ? selectedTags.filter(t => t !== tag)
       : [...selectedTags, tag]
     
-    updateUrlWithTags(newTags)
+    updateUrlWithFilters(newTags)
   }
 
   const handleFilterToggle = () => {
     const newIsOrFilter = !isOrFilter
     setIsOrFilter(newIsOrFilter)
-    updateUrlWithTags(selectedTags, newIsOrFilter)
+    updateUrlWithFilters(selectedTags, selectedBlockchains, newIsOrFilter)
   }
 
-  const updateUrlWithTags = (tags: string[], orFilter: boolean = isOrFilter) => {
+  const updateUrlWithFilters = (
+    tags: string[], 
+    blockchains: string[] = selectedBlockchains, 
+    orFilter: boolean = isOrFilter
+  ) => {
     const params = new URLSearchParams()
     if (tags.length > 0) {
       params.set('tags', tags.join(','))
     }
+    if (blockchains.length > 0) {
+      params.set('blockchains', blockchains.join(','))
+    }
     if (orFilter) {
       params.set('filter', 'or')
     }
-    const newUrl = tags.length > 0 ? `?${params.toString()}` : '/'
+    const newUrl = params.toString() ? `?${params.toString()}` : '/'
     router.push(newUrl)
+  }
+
+  const handleSearchInputChange = (query: string) => {
+    setGlobalSearchQuery(query)
+    
+    const params = new URLSearchParams(window.location.search)
+    
+    // Update or remove search query
+    if (query) {
+      params.set('q', query)
+    } else {
+      params.delete('q')
+    }
+    
+    // Keep existing tags if present
+    if (selectedTags.length > 0) {
+      params.set('tags', selectedTags.join(','))
+    }
+    
+    // Keep filter type if OR
+    if (isOrFilter) {
+      params.set('filter', 'or')
+    }
+    
+    // Keep blockchain filters if present
+    if (selectedBlockchains.length > 0) {
+      params.set('blockchains', selectedBlockchains.join(','))
+    }
+    
+    const newUrl = params.toString() ? `?${params.toString()}` : '/'
+    router.push(newUrl, { scroll: false })
   }
 
   return (
@@ -92,10 +171,16 @@ export default function Home() {
           </div>
         )}
         <ProjectGrid 
-          globalSearchQuery={globalSearchQuery} 
-          setGlobalSearchQuery={handleSearch}
+          globalSearchQuery={globalSearchQuery}
+          setGlobalSearchQuery={handleSearchInputChange}
           selectedTags={selectedTags}
+          setSelectedTags={setSelectedTags}
+          selectedBlockchains={selectedBlockchains}
+          setSelectedBlockchains={setSelectedBlockchains}
           isOrFilter={isOrFilter}
+          onFilterToggle={handleFilterToggle}
+          updateUrlWithFilters={updateUrlWithFilters}
+          router={router}
         />
         <ToolsSection 
           globalSearchQuery={globalSearchQuery} 
