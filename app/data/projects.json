@@ -326,6 +326,21 @@
     "active": true
   },
   {
+    "name": "higherrrrrrr.fun",
+    "twitter": "higherrrrrrrfun",
+    "description": "base version of pump.fun with evolutionary tokens",
+    "url": "  https://alpha.higherrrrrrr.fun/",
+    "chatLink": "",
+    "profileImage": "https://pbs.twimg.com/profile_images/1864470786381369345/GuAosjLh_400x400.png",
+    "tags": ["bonding-curves", "meme-coins"],
+    "blockchain": ["Base"],
+    "tvl": "",
+    "github": "https://github.com/Thrive-Point-Group/higherrrrrrr-protocol",
+    "contractAddress": "",
+    "relation": " Base version of pump.fun. Introduced Evolutionary Tokens. Traditional tokens remain static from launch, missing the dynamic energy of the communities they represent. We're introducing something different - tokens that evolve and grow with their community. Each price milestone unlocks a new evolution, transforming the token's fundamental properties on-chain. This creates natural momentum as communities work together toward the next evolution, with each new form becoming a shared achievement. How Evolutions Work: Every purchase moves the token closer to its next evolution. As the price reaches new milestones, the token automatically transforms - its name, symbol, and identity evolve through smart contracts:",
+    "active": true
+  },
+  {
     "name": "ape.store",
     "twitter": "apedotstore",
     "description": "Base Version of Pump.fun",
