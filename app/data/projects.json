@@ -236,6 +236,21 @@
     "active": true
   },
   {
+    "name": "dx.fun",
+    "twitter": "dxdotfun",
+    "description": "1 dollar to create a token. Pump fun on base pwoered by DexTools",
+    "url": "https://dx.fun",
+    "chatLink": "https://t.me/dxdotfun",
+    "profileImage": "https://pbs.twimg.com/profile_images/1834623592333529088/x8KO2Srm_400x400.jpg",
+    "tags": ["investment", "bonding-curves"],
+    "blockchain": ["Base"],
+    "tvl": "",
+    "github": "",
+    "contractAddress": "",
+    "relation": "The journey of your token begins with a virtual liquidity pool of 1 ETH which determines its initial price. Once your token's market cap hits the magical number of $69,420, it's automatically listed on Uniswap! Each transaction adjusts the token and ETH amounts in the contract, and once the milestone is reached, the smart contract transfers all collected tokens and ETH to create liquidity on the DEX.",
+    "active": true
+  },
+  {
     "name": "cookie.fun",
     "twitter": "cookiedotfun",
     "description": "AI agent token data",
