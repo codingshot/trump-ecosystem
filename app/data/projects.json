@@ -371,6 +371,21 @@
     "active": true
   },
   {
+    "name": "buzz.fun",
+    "twitter": "buzzdotfun",
+    "description": "buy. create. configure. the newest tokens, your way. seasonal supercharged airdrops for buzz bros. launching soon. Abstract (ZkSync L2) + Ethereum  Version of Pump.fun",
+    "url": "https://ape.store",
+    "chatLink": "https://t.me/buzzdotfun",
+    "profileImage": "https://pbs.twimg.com/profile_images/1870467452007583744/o4_tuWb6_400x400.jpg",
+    "tags": ["bonding-curves", "launchpads"],
+    "blockchain": ["Abstract", "Ethereum"],
+    "tvl": "",
+    "github": "",
+    "contractAddress": "",
+    "relation": "Abstract (ZkSync L2) + Ethereum  Version of Pump.fun",
+    "active": false
+  },
+  {
     "name": "rug.fun",
     "twitter": "rugdotfun",
     "description": "launch memecoins on Base, --- deprecated",
