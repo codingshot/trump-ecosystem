@@ -341,6 +341,21 @@
     "active": true
   },
   {
+    "name": "spore.fun",
+    "twitter": "sporedotfun",
+    "description": "Solana AI Tokens built on Eliza that breed",
+    "url": "https://spore.fun",
+    "chatLink": "",
+    "profileImage": "https://pbs.twimg.com/profile_images/1867725893566971904/GRhgBhRR_400x400.jpg",
+    "tags": ["ai", "meme-coins", "Phala", "launchpad"],
+    "blockchain": ["Solana"],
+    "tvl": "",
+    "github": "",
+    "contractAddress": "",
+    "relation": "AI Agents that breed, on Solana built on Eliza",
+    "active": true
+  },
+  {
     "name": "higherrrrrrr.fun",
     "twitter": "higherrrrrrrfun",
     "description": "base version of pump.fun with evolutionary tokens",
