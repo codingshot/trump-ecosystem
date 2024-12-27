@@ -73,6 +73,21 @@
     "active": true
   },
   {
+    "name": "Clanker",
+    "twitter": "",
+    "description": "create autonomous memecoins for free, get rewarded for posting bangers",
+    "url": "https://www.clanker.world/clanker",
+    "chatLink": "",
+    "profileImage": "https://avatars.githubusercontent.com/u/188466607?s=200&v=4",
+    "tags": ["ai", "launchpad"],
+    "blockchain": ["Base"],
+    "tvl": "",
+    "github": "https://github.com/clanker-devco",
+    "contractAddress": null,
+    "relation": "token launchpad on base via farcaster",
+    "active": true
+  },
+  {
     "name": "Emojicoin",
     "twitter": "emojicoindotfun",
     "description": "pump.fun on aptos for emojis",
