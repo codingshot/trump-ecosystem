@@ -401,6 +401,36 @@
     "active": true
   },
   {
+    "name": "daos.world",
+    "twitter": "daosdotworld",
+    "description": "B",
+    "url": "https://daos.world",
+    "chatLink": "https://t.me/daosworld",
+    "profileImage": "https://pbs.twimg.com/profile_images/1875045606294683648/WnEGoXn3_400x400.jpg",
+    "tags": ["bonding-curves", "meme-coins", "dao", "investment"],
+    "blockchain": ["Base"],
+    "tvl": "",
+    "github": "",
+    "contractAddress": "",
+    "relation": "1. DAO managers raise ETH to start a fund. The manager is free to trade and invest that ETH any way they wish. 2. An ERC20 token is minted for the DAO with 1.1B total supply: 1B to fundraisers and 100M to a 1% univ3 pool. Price of this pool can't drop below amount of ETH raised. 3. The fund has an expiry date, which is when trading halts and the treasury's assets is distributed pro rata to token holders. Managers may extend the expiry date at any time. Technical Details: - The DAO treasury is custodied in a smart contract. The manager is able to call an onlyOwner execute() function on this SC that lets it call any other contract. - Fund managers receive 0.4% of all trading volume on their token, and potentially carry on profits at fund expiry. - The univ3 liquidity NFT is locked away until fund expiry.",
+    "active": true
+  },
+  {
+    "name": "baos.fun",
+    "twitter": "baosdotfun",
+    "description": "Raise BERA for your BAO to farm BGT w/ ai agents on every Berachain protocol | an exclusive edition of @yieldsdotfun",
+    "url": "https://baos.fun",
+    "chatLink": "",
+    "profileImage": "https://pbs.twimg.com/profile_images/1869908142793867264/qZw5g2VW_400x400.jpg",
+    "tags": ["bonding-curves", "launchpads", "ai", "dao", "launchpad"],
+    "blockchain": ["Berachain"],
+    "tvl": "",
+    "github": "",
+    "contractAddress": "",
+    "relation": "Berachain version of daos.fun",
+    "active": false
+  },
+  {
     "name": "buzz.fun",
     "twitter": "buzzdotfun",
     "description": "buy. create. configure. the newest tokens, your way. seasonal supercharged airdrops for buzz bros. launching soon. Abstract (ZkSync L2) + Ethereum  Version of Pump.fun",
