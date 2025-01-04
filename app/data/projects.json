@@ -10,20 +10,6 @@
     "blockchain": ["Solana"],
     "tvl": "",
     "github": "http://github.com/daosfun",
-    "contracts": [
-      {
-        "address": "7YarqDFjkZk8TJxK.....(SOL)",
-        "chain": "Solana",
-        "type": "program"
-      }
-    ],
-    "tokens": [
-      {
-        "symbol": "DAO",
-        "address": "DAo58mxzs7s4XgJ5.....",
-        "chain": "Solana"
-      }
-    ],
     "relation": "Inspired by Pump.fun's bonding curve model and focuses on community-driven token launches.",
     "active": true
   },
