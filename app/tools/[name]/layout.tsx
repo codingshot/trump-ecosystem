@@ -13,6 +13,8 @@ export async function generateMetadata({ params }: { params: { name: string } })
     }
   }
 
+  const faviconUrl = tool.profileImage ? tool.profileImage : 'https://awesomepump.fun/favicon.ico';
+
   return {
     title: `${tool.name} | Awesome Pump Tools`,
     description: tool.description + ' | Awesome Pump is the pump fun ecosystem explorer',
@@ -36,6 +38,9 @@ export async function generateMetadata({ params }: { params: { name: string } })
       title: tool.name + ' | Awesome Pump Tools',
       description: tool.description + ' | Awesome Pump is the pump fun ecosystem explorer',
       images: ['https://awesomepump.fun/meta.jpg'],
+    },
+    icons: {
+      icon: faviconUrl,
     },
   }
 }
