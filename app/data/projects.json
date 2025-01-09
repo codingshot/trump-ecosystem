@@ -6,8 +6,15 @@
     "url": "https://daos.fun",
     "chatLink": "http://t.me/daosfun",
     "profileImage": "https://cdn1.cdn-telegram.org/file/U0cw50t3d9Fk614HOee4ZqqFj2ibiqYdQVZsIK4FBaT_aSxZfdLU5L-jgf6LaSEfET5vluORK_kSBy1sKDlnbXyXrAapDDKhwO7Lrc2NnP8gP2QX-ptd37rVU2zYLzEo-LvNf1J_yG3v535F2_2Ly1ywKztUYGScakW9PnvjDEM759EOhtSI6DuEuAbTpOQjXO5ZWSh78WcGcm45oy0Xy-I8izzo6ZOOLwC9L17QxgfVfxJ4PAF0dFYA5N8HNYGZWdNd0wdj_rMzdHSseFSTKQQDYRJVvzS5JKLJbfc18cqDlO_5N9-CUBSHt2r9MqgVEMf3fFECYDlv5Gb74fjZ5A.jpg",
-    "tags": ["investment", "dao", "bonding-curves", "meme-coins"],
-    "blockchain": ["Solana"],
+    "tags": [
+      "investment",
+      "dao",
+      "bonding-curves",
+      "meme-coins"
+    ],
+    "blockchain": [
+      "Solana"
+    ],
     "tvl": "",
     "github": "http://github.com/daosfun",
     "relation": "Inspired by Pump.fun's bonding curve model and focuses on community-driven token launches.",
@@ -20,8 +27,16 @@
     "url": "https://vvaifu.fun",
     "chatLink": "http://t.me/vvaifu",
     "profileImage": "https://pbs.twimg.com/profile_images/1847300709789687808/x_8DI6pa_400x400.jpg",
-    "tags": ["investment", "bonding-curves", "meme-coins", "nft", "platform-token"],
-    "blockchain": ["Solana"],
+    "tags": [
+      "investment",
+      "bonding-curves",
+      "meme-coins",
+      "nft",
+      "platform-token"
+    ],
+    "blockchain": [
+      "Solana"
+    ],
     "tvl": "",
     "github": "",
     "contractAddress": null,
@@ -35,8 +50,14 @@
     "url": "https://virtuals.io",
     "chatLink": "https://t.me/virtuals",
     "profileImage": "https://pbs.twimg.com/profile_images/1759593486674972672/kh5ynoMH_400x400.jpg",
-    "tags": ["ai", "launchpad", "bonding-curves"],
-    "blockchain": ["Base"],
+    "tags": [
+      "ai",
+      "launchpad",
+      "bonding-curves"
+    ],
+    "blockchain": [
+      "Base"
+    ],
     "tvl": "",
     "github": "",
     "contractAddress": null,
@@ -50,8 +71,13 @@
     "url": "https://meme.cooking",
     "chatLink": "",
     "profileImage": "https://pbs.twimg.com/profile_images/1821495508336087040/TJP-jO6V_400x400.jpg",
-    "tags": ["token", "bonding-curves"],
-    "blockchain": ["NEAR"],
+    "tags": [
+      "token",
+      "bonding-curves"
+    ],
+    "blockchain": [
+      "NEAR"
+    ],
     "tvl": "",
     "github": "",
     "contractAddress": "",
@@ -65,8 +91,13 @@
     "url": "https://www.clank.fun",
     "chatLink": "",
     "profileImage": "https://avatars.githubusercontent.com/u/188466607?s=200&v=4",
-    "tags": ["ai", "launchpad"],
-    "blockchain": ["Base"],
+    "tags": [
+      "ai",
+      "launchpad"
+    ],
+    "blockchain": [
+      "Base"
+    ],
     "tvl": "",
     "github": "https://github.com/clanker-devco",
     "contractAddress": null,
@@ -80,8 +111,13 @@
     "url": "https://www.emojicoin.fun/home",
     "chatLink": "https://discord.gg/econia",
     "profileImage": "https://pbs.twimg.com/profile_images/1853618902875635712/7WBHawWR_400x400.jpg",
-    "tags": ["launchpad", "bonding-curves"],
-    "blockchain": ["Aptos"],
+    "tags": [
+      "launchpad",
+      "bonding-curves"
+    ],
+    "blockchain": [
+      "Aptos"
+    ],
     "tvl": "",
     "github": "",
     "contractAddress": null,
@@ -95,8 +131,13 @@
     "url": "https://hop.fun",
     "chatLink": "",
     "profileImage": "https://cdn1.cdn-telegram.org/file/V_CEmOUt-6T9BoC26JV9p4Q10P71xK3BHbKpJgUbrqrb9UQjPVQ69Emn1NjB2drbnrkMjGX2Jn1itTBY4vL8cB_GBi9gQ31T9hm37FMf3rfyGK5nZYBrt4eLIHmr0y37LbbuBLTO22BL2sJ-krQT9OlqkfwTiVkgT1og9hFzfSON8iMOUPuWanyvdLJ6ryYIrkweQ1x_Hb7ZxFfiOzstyVkDBSJTBLstFbx0xn2GvfpNVvabKynYeM7gGg5sbvKNNv7ydrO6z9Vhf0ew1EFLZnmMk_80j8df2ZDq3BeUmSqNsnlyHGTDw6vl9KtKI9EjP_jb5NdLolbbuHFSvyVQyA.jpg",
-    "tags": ["launchpad", "bonding-curves"],
-    "blockchain": ["Sui"],
+    "tags": [
+      "launchpad",
+      "bonding-curves"
+    ],
+    "blockchain": [
+      "Sui"
+    ],
     "tvl": "",
     "github": "",
     "contractAddress": null,
@@ -110,8 +151,13 @@
     "url": "https://pump.uptos.xyz/",
     "chatLink": "https://t.me/uptosportal",
     "profileImage": "https://pbs.twimg.com/profile_images/1846050271526584320/RY38ukoe_400x400.jpg",
-    "tags": ["launchpad", "bonding-curves"],
-    "blockchain": ["Aptos"],
+    "tags": [
+      "launchpad",
+      "bonding-curves"
+    ],
+    "blockchain": [
+      "Aptos"
+    ],
     "tvl": "",
     "github": "",
     "contractAddress": null,
@@ -125,8 +171,15 @@
     "url": "https://time.fun",
     "chatLink": "",
     "profileImage": "https://pbs.twimg.com/profile_images/1840758823113445376/TOlW_BuG_400x400.jpg",
-    "tags": ["investment", "social", "bonding-curves", "meme-coins"],
-    "blockchain": ["Solana"],
+    "tags": [
+      "investment",
+      "social",
+      "bonding-curves",
+      "meme-coins"
+    ],
+    "blockchain": [
+      "Solana"
+    ],
     "tvl": "",
     "github": "",
     "contractAddress": "",
@@ -140,8 +193,15 @@
     "url": "https://maps.fun",
     "chatLink": "",
     "profileImage": "https://pbs.twimg.com/profile_images/1861645902064295940/cTbnANJb_400x400.jpg",
-    "tags": ["investment", "bonding-curves", "meme-coins", "rwa"],
-    "blockchain": ["Solana"],
+    "tags": [
+      "investment",
+      "bonding-curves",
+      "meme-coins",
+      "rwa"
+    ],
+    "blockchain": [
+      "Solana"
+    ],
     "tvl": "",
     "github": "",
     "contractAddress": "",
@@ -155,8 +215,14 @@
     "url": "https://gaspump.tg",
     "chatLink": "https://t.me/gasPump_chat",
     "profileImage": "https://pbs.twimg.com/profile_images/1799892413143547904/NWsrdslE_400x400.jpg",
-    "tags": ["investment", "telegram", "meme-coins"],
-    "blockchain": ["TON"],
+    "tags": [
+      "investment",
+      "telegram",
+      "meme-coins"
+    ],
+    "blockchain": [
+      "TON"
+    ],
     "tvl": "",
     "github": "",
     "contractAddress": "",
@@ -170,8 +236,14 @@
     "url": "https://beta.mitte.gg/meme",
     "chatLink": "https://discord.com/invite/z92eFjHhEf",
     "profileImage": "https://pbs.twimg.com/profile_images/1818627779321380876/_HMtG1iF_400x400.jpg",
-    "tags": ["nft", "bonding-curves", "meme-coins"],
-    "blockchain": ["NEAR"],
+    "tags": [
+      "nft",
+      "bonding-curves",
+      "meme-coins"
+    ],
+    "blockchain": [
+      "NEAR"
+    ],
     "tvl": "",
     "github": "",
     "contractAddress": "",
@@ -185,8 +257,15 @@
     "url": "https://movepump.com",
     "chatLink": "https://t.me/MovePumpChat",
     "profileImage": "https://movepump.com/images/icons/movepump-logo.svg",
-    "tags": ["launchpad", "bonding-curves", "meme-coins"],
-    "blockchain": ["Sui", "Aptos"],
+    "tags": [
+      "launchpad",
+      "bonding-curves",
+      "meme-coins"
+    ],
+    "blockchain": [
+      "Sui",
+      "Aptos"
+    ],
     "tvl": "",
     "github": "",
     "contractAddress": "",
@@ -200,8 +279,13 @@
     "url": "https://vector.fun",
     "chatLink": "http://t.me/vectordotfun",
     "profileImage": "https://pbs.twimg.com/profile_images/1866882640864784385/i1mXNqzu_400x400.jpg",
-    "tags": ["social", "bonding-curves"],
-    "blockchain": ["Base"],
+    "tags": [
+      "social",
+      "bonding-curves"
+    ],
+    "blockchain": [
+      "Base"
+    ],
     "tvl": "",
     "github": "",
     "relation": "Social base version of pump.fun",
@@ -214,8 +298,15 @@
     "url": "https://vaderai.ai/app",
     "chatLink": "https://t.me/+RvRL6fEpCQY3YTQ0",
     "profileImage": "https://cdn4.cdn-telegram.org/file/BMPnT-N-goi2zZTd4ht0n1UB2-ekZj-rl5hhB2b4NISloWfl_6I7-Ic-sEeSOADEKY9whUjvHMFByqFDrRwsnPavV_26sMHFjroHr7CVisl2c9yxsMNnbtFJbMD6nCDfJbvsl88tEZ9QRsESPeMeyBoZ6krE_dfXY4d0VOTF9VD50P-6tQuEtz8aLaAM-WLN6GlVYolVq1MTtDBTIZSvm1fF_oi_xa4K9P8mKavtT98_5tmpADOQ3eEINwgrQocV9wKxRNk9JEp5okBWmwTv8Qh6E_3ZkS1o_k09p-An7LmZwbGzMVjuZJwQ6-2AXVw9LU_YUU7BoiysNpKn50h4bw.jpg",
-    "tags": ["investment", "bonding-curves", "dao", "ai"],
-    "blockchain": ["Base"],
+    "tags": [
+      "investment",
+      "bonding-curves",
+      "dao",
+      "ai"
+    ],
+    "blockchain": [
+      "Base"
+    ],
     "tvl": "",
     "github": "",
     "relation": "daos.fun on base, investment DAOs that hold virtual agents.",
@@ -228,8 +319,14 @@
     "url": "https://pump.science",
     "chatLink": "https://t.me/pump_science",
     "profileImage": "https://pbs.twimg.com/profile_images/1840773234251161600/Fewrz0s7_400x400.jpg",
-    "tags": ["investment", "bonding-curves", "desci"],
-    "blockchain": ["Solana"],
+    "tags": [
+      "investment",
+      "bonding-curves",
+      "desci"
+    ],
+    "blockchain": [
+      "Solana"
+    ],
     "tvl": "",
     "github": "",
     "contractAddress": "",
@@ -243,8 +340,13 @@
     "url": "https://dx.fun",
     "chatLink": "https://t.me/dxdotfun",
     "profileImage": "https://pbs.twimg.com/profile_images/1834623592333529088/x8KO2Srm_400x400.jpg",
-    "tags": ["investment", "bonding-curves"],
-    "blockchain": ["Base"],
+    "tags": [
+      "investment",
+      "bonding-curves"
+    ],
+    "blockchain": [
+      "Base"
+    ],
     "tvl": "",
     "github": "",
     "contractAddress": "",
@@ -258,8 +360,15 @@
     "url": "https://cookie.fun",
     "chatLink": "",
     "profileImage": "https://pbs.twimg.com/profile_images/1863484151715758080/dQPdhDM4_400x400.png",
-    "tags": ["ai", "analytics", "dev-tooling"],
-    "blockchain": ["Solana", "Base"],
+    "tags": [
+      "ai",
+      "analytics",
+      "dev-tooling"
+    ],
+    "blockchain": [
+      "Solana",
+      "Base"
+    ],
     "tvl": "",
     "github": "",
     "contractAddress": "",
@@ -273,8 +382,14 @@
     "url": "https://linktr.ee/internosaur",
     "chatLink": "",
     "profileImage": "https://pbs.twimg.com/profile_images/1861530427011297280/auEmIc2O_400x400.jpg",
-    "tags": ["ai", "token", "tooling"],
-    "blockchain": ["Solana"],
+    "tags": [
+      "ai",
+      "token",
+      "tooling"
+    ],
+    "blockchain": [
+      "Solana"
+    ],
     "tvl": "",
     "github": "",
     "contractAddress": "",
@@ -288,8 +403,13 @@
     "url": "https://sunpump.meme",
     "chatLink": "https://t.me/officialsunpumpmeme",
     "profileImage": "https://cdn4.cdn-telegram.org/file/exJuSvw07jpXLoSbuyyEkEjHzrNJi-0ev533k3JkzbLRTBWRyAjnoqK1OT-OS19Hyy-nOKFoKUBjUgr0fnRFX6ATxyojxr5NVLUDFWktdVHPcoa25szabOVEdQRHZEbG7KqxOGDU9b_k3Layl05RBId_UCb1JUn1FIbmsGmPzufamxIE7amubOgSwBSeFDc483desdn665XX6OUq7IXD3ZN5HSatVxzZDmY-wYYVqbJcOAcGvBiT1Ftfzft4RarLCsltfZnI35F1N5v0YxdeZxO6on5JWGQfiUlCaM4IqQ_tBAswhJvvDYiygtasc1yb1TcMNR6nwpQyay7Dh10p3A.jpg",
-    "tags": ["bonding-curves", "meme-coins"],
-    "blockchain": ["Tron"],
+    "tags": [
+      "bonding-curves",
+      "meme-coins"
+    ],
+    "blockchain": [
+      "Tron"
+    ],
     "tvl": "",
     "github": "",
     "contractAddress": "",
@@ -303,8 +423,14 @@
     "url": "https://app.hypurr.fun",
     "chatLink": "https://t.me/HypurrFunBot",
     "profileImage": "https://app.hypurr.fun/assets/purrbot.246840f0.png",
-    "tags": ["bonding-curves", "meme-coins", "investment"],
-    "blockchain": ["Hyperliquid"],
+    "tags": [
+      "bonding-curves",
+      "meme-coins",
+      "investment"
+    ],
+    "blockchain": [
+      "Hyperliquid"
+    ],
     "tvl": "",
     "github": "",
     "contractAddress": "",
@@ -318,8 +444,14 @@
     "url": "https://bellum.exchange",
     "chatLink": "https://t.co/bcRyoxMGRv",
     "profileImage": "https://pbs.twimg.com/profile_images/1821633445178830850/i-pVW3p9_400x400.jpg",
-    "tags": ["bonding-curves", "meme-coins", "investment"],
-    "blockchain": ["Avalanche"],
+    "tags": [
+      "bonding-curves",
+      "meme-coins",
+      "investment"
+    ],
+    "blockchain": [
+      "Avalanche"
+    ],
     "tvl": "",
     "github": "",
     "contractAddress": "0x4274f80635183e9bE3c16E1313a16f929B61E00e",
@@ -333,8 +465,14 @@
     "url": "https://etherfun.app",
     "chatLink": "https://discord.com/invite/ethervista",
     "profileImage": "https://pbs.twimg.com/profile_images/1808992707161042946/eVPxjRNv_400x400.jpg",
-    "tags": ["bonding-curves", "meme-coins"],
-    "blockchain": ["Base", "Ethereum"],
+    "tags": [
+      "bonding-curves",
+      "meme-coins"
+    ],
+    "blockchain": [
+      "Base",
+      "Ethereum"
+    ],
     "tvl": "",
     "github": "",
     "contractAddress": "",
@@ -348,8 +486,15 @@
     "url": "https://spore.fun",
     "chatLink": "",
     "profileImage": "https://pbs.twimg.com/profile_images/1867725893566971904/GRhgBhRR_400x400.jpg",
-    "tags": ["ai", "meme-coins", "Phala", "launchpad"],
-    "blockchain": ["Solana"],
+    "tags": [
+      "ai",
+      "meme-coins",
+      "Phala",
+      "launchpad"
+    ],
+    "blockchain": [
+      "Solana"
+    ],
     "tvl": "",
     "github": "",
     "contractAddress": "",
@@ -363,8 +508,13 @@
     "url": "  https://alpha.higherrrrrrr.fun/",
     "chatLink": "",
     "profileImage": "https://pbs.twimg.com/profile_images/1864470786381369345/GuAosjLh_400x400.png",
-    "tags": ["bonding-curves", "meme-coins"],
-    "blockchain": ["Base"],
+    "tags": [
+      "bonding-curves",
+      "meme-coins"
+    ],
+    "blockchain": [
+      "Base"
+    ],
     "tvl": "",
     "github": "https://github.com/Thrive-Point-Group/higherrrrrrr-protocol",
     "contractAddress": "",
@@ -378,8 +528,13 @@
     "url": "https://ape.store",
     "chatLink": "https://t.me/apedotstore",
     "profileImage": "https://cdn4.cdn-telegram.org/file/iSqOfk0Q2GFf-HTVNBIw6_dP5U53p2OaQLa2HEAY8qViiJjb0JBOvqR2ObX3LtfvZLuHhQ-9nTAZTvH-IrmLwhBhgSbRBC1XTCXhQUbNEepp4kQu2A_J1C2RyMwVtNFj4Md2veS9QsZOQrpQN0yeEskuXedal3gVF-H2OHlirZRoWHSt61oclnJPdwzKQaIKYS6IX4IkdP1kG2KquyttTbUScjxP6rWbjGSizoA4zfXFF55V5RY8W68hqiEUxIn7b7VtmtRtDyd5Ysei9BiUHqV39wGq2vqeLmSSU9jXd1bu9KJWl8bIaKfRRAECfGU7qRIQDQy84hDOxz2mwbCk9Q.jpg",
-    "tags": ["bonding-curves", "meme-coins"],
-    "blockchain": ["Base"],
+    "tags": [
+      "bonding-curves",
+      "meme-coins"
+    ],
+    "blockchain": [
+      "Base"
+    ],
     "tvl": "",
     "github": "",
     "contractAddress": "",
@@ -393,8 +548,15 @@
     "url": "https://daos.world",
     "chatLink": "https://t.me/daosworld",
     "profileImage": "https://pbs.twimg.com/profile_images/1875045606294683648/WnEGoXn3_400x400.jpg",
-    "tags": ["bonding-curves", "meme-coins", "dao", "investment"],
-    "blockchain": ["Base"],
+    "tags": [
+      "bonding-curves",
+      "meme-coins",
+      "dao",
+      "investment"
+    ],
+    "blockchain": [
+      "Base"
+    ],
     "tvl": "",
     "github": "",
     "contractAddress": "",
@@ -408,8 +570,16 @@
     "url": "https://baos.fun",
     "chatLink": "",
     "profileImage": "https://pbs.twimg.com/profile_images/1869908142793867264/qZw5g2VW_400x400.jpg",
-    "tags": ["bonding-curves", "launchpads", "ai", "dao", "launchpad"],
-    "blockchain": ["Berachain"],
+    "tags": [
+      "bonding-curves",
+      "launchpads",
+      "ai",
+      "dao",
+      "launchpad"
+    ],
+    "blockchain": [
+      "Berachain"
+    ],
     "tvl": "",
     "github": "",
     "contractAddress": "",
@@ -423,8 +593,14 @@
     "url": "https://buzz.fun",
     "chatLink": "https://t.me/buzzdotfun",
     "profileImage": "https://pbs.twimg.com/profile_images/1870467452007583744/o4_tuWb6_400x400.jpg",
-    "tags": ["bonding-curves", "launchpads"],
-    "blockchain": ["Abstract", "Ethereum"],
+    "tags": [
+      "bonding-curves",
+      "launchpads"
+    ],
+    "blockchain": [
+      "Abstract",
+      "Ethereum"
+    ],
     "tvl": "",
     "github": "",
     "contractAddress": "",
@@ -438,12 +614,56 @@
     "url": "https://rug.fun",
     "chatLink": "http://t.me/",
     "profileImage": "https://pbs.twimg.com/profile_images/1858569423461961728/dvvkbBfO_400x400.jpg",
-    "tags": ["bonding-curves", "meme-coins"],
-    "blockchain": ["Base"],
+    "tags": [
+      "bonding-curves",
+      "meme-coins"
+    ],
+    "blockchain": [
+      "Base"
+    ],
     "tvl": "",
     "github": "",
     "contractAddress": null,
     "relation": "Pump.fun inspired on Base, but with a twist. Rug.fun comes from the Farcaster ecosystem and is relatively interesting in gameplay, similar to horse racing games. Players need to guess the 1st and 10th place correctly to get high odds returns. Each round of the game lasts 12 hours, and players can create tokens or buy tokens. Initially, players can change bet tokens at will without charging additional fees. As time accumulates, the cost of changing tokens increases. Eventually other projects will add liquidity to the No. 1 pool to achieve price growth. The official Twitter account announced on August 15 that it is being update",
     "active": false
+  },
+  {
+    "name": "dev.fun",
+    "twitter": "https://x.com/devfunpump",
+    "description": "turn your ideas into reality with one click and make them instantly tradable on pumpfun",
+    "url": "https://dev.fun",
+    "chatLink": "https://t.me/devfunpump",
+    "profileImage": "https://pbs.twimg.com/profile_images/1876452737535123456/QKg-6I8n_400x400.jpg",
+    "tags": [
+      "bonding-curves",
+      "meme-coins",
+      "dev"
+    ],
+    "blockchain": [
+      "Solana"
+    ],
+    "tvl": "",
+    "github": "",
+    "contractAddress": null,
+    "relation": "Builders and memecoins often struggle to validate their ideas and build strong communities. Apps linked to these coins can drive attention and foster loyalty. dev.fun enables instant app creation, allowing users to test and grow their projects effectively.",
+    "active": true
+  },
+  {
+    "name": "moon.zip",
+    "twitter": "https://x.com/devfunpump",
+    "description": "Launch and discover coins that pump, and are actually fair. Share in platform fees. Coming soon.",
+    "url": "https://moon.zip/",
+    "chatLink": "https://discord.gg/moondotzip",
+    "profileImage": "https://pbs.twimg.com/profile_images/1875812035642138624/adbuDfui_400x400.jpg",
+    "tags": [
+      "meme-coins",
+      "launchpads"
+    ],
+    "blockchain": [],
+    "tvl": "",
+    "github": "",
+    "contractAddress": null,
+    "relation": "",
+    "active": true
   }
 ]
