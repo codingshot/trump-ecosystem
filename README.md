@@ -15,17 +15,19 @@ A comprehensive directory and exploration tool for projects, tools, and innovati
 
 ## 🏗️ Project Structure
 
+```plaintext
 awesome-pump/
 ├── app/
-│ ├── api/
-│ │ └── ai-search/ # AI search API endpoints
-│ ├── components/ # React components
-│ │ ├── ui/ # Base UI components
-│ │ └── ... # Feature components
-│ ├── data/ # JSON data files
-│ └── ... # App routes and layouts
+│   ├── api/
+│   │   └── ai-search/ # AI search API endpoints
+│   ├── components/ # React components
+│   │   ├── ui/ # Base UI components
+│   │   └── ... # Feature components
+│   ├── data/ # JSON data files
+│   └── ... # App routes and layouts
 ├── public/ # Static assets
 └── ... # Config files
+```
 
 
 ## 🚀 Getting Started
