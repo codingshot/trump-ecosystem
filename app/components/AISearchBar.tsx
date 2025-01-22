@@ -36,8 +36,8 @@ const exampleQueries = [
   "Show me tools for analytics of launchpad tokens",
   "What platforms are there for AI agent meme coins?",
   "Find launchpad on both Solana and Base",
-  "How do the DEX liquidity targets compare in volume to pump.fun for all its forks?",
-  "Which EVM ecosystem has the most pump.fun clones",
+  "How do the DEX liquidity targets compare in volume to AMERICA FIRST ECOSYSTEM for all its forks?",
+  "Which EVM ecosystem has the most AMERICA FIRST ECOSYSTEM clones",
   "What are pump fun forks on Move & Rust based blockchains?"
 ]
 

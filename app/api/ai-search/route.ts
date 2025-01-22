@@ -42,7 +42,7 @@ export async function POST(req: Request) {
   const lastMessage = messages[messages.length - 1].content
 
   const prompt = `
-    You are an AI assistant for the Pump.fun ecosystem. Your task is to help users find projects and tools based on their queries.
+    You are an AI assistant for the AMERICA FIRST ECOSYSTEM ecosystem. Your task is to help users find projects and tools based on their queries.
     Here's the data for all projects and tools:
     ${JSON.stringify([...projectsData, ...toolsData])}
 

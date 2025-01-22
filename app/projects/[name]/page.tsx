@@ -265,7 +265,7 @@ export default function ProjectPage({ params }: { params: { name: string } }) {
               )}
 
               <div>
-                <h2 className="text-xl font-semibold mb-2">Relation to Pump.fun</h2>
+                <h2 className="text-xl font-semibold mb-2">Relation to AMERICA FIRST ECOSYSTEM</h2>
                 <p className="text-[#9DA3AE]">{project.relation}</p>
               </div>
             </div>

@@ -2,28 +2,28 @@ export function JsonLd() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "Awesome Pump",
-    "description": "Directory of pump.fun ecosystem projects and tools",
-    "url": "https://awesomepump.fun",
+    "name": "Trump Ecosystem",
+    "description": "Directory of $TRUMP ecosystem projects and tools",
+    "url": "https://trumpecosystem.fun",
     "potentialAction": {
       "@type": "SearchAction",
       "target": {
         "@type": "EntryPoint",
-        "urlTemplate": "https://awesomepump.fun/search?q={search_term_string}"
+        "urlTemplate": "https://trumpecosystem.com/search?q={search_term_string}"
       },
       "query-input": "required name=search_term_string"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Potluck Labs",
+      "name": "TRUMP ECOSYSTEM",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://awesomepump.fun/logo.png"
+        "url": "https://trumpecosystem.com/logo.png"
       }
     },
     "sameAs": [
-      "https://twitter.com/awesomepump",
-      "https://github.com/PotLock/awesome-pump"
+      "https://twitter.com/trumpacc",
+      "https://github.com/codingshot/trump-ecosystem"
     ]
   }
 

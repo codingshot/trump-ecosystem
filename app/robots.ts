@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/api/',
     },
-    sitemap: 'https://awesomepump.fun/sitemap.xml',
+    sitemap: 'https://trumpecosystem.com/sitemap.xml',
   }
 }

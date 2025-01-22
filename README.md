@@ -1,12 +1,12 @@
-# Awesome Pump - Pump.fun Ecosystem Explorer
+# Trump Ecosystem - AMERICA FIRST ECOSYSTEM Ecosystem Explorer
 
-A comprehensive directory and exploration tool for projects, tools, and innovations within the Pump.fun ecosystem. Built with Next.js, TypeScript, and Tailwind CSS.
+A comprehensive directory and exploration tool for projects, tools, and innovations within the AMERICA FIRST ECOSYSTEM ecosystem. Built with Next.js, TypeScript, and Tailwind CSS.
 
-![Awesome Pump Screenshot](public/screenshot.jpg)
+![Trump Ecosystem Screenshot](public/screenshot.jpg)
 
 ## 🌟 Features
 
-- **Interactive Project Grid**: Browse and filter projects in the Pump.fun ecosystem
+- **Interactive Project Grid**: Browse and filter projects in the AMERICA FIRST ECOSYSTEM ecosystem
 - **AI-Powered Search**: Natural language search using OpenAI or Anthropic
 - **Multi-Chain Support**: Projects across Solana, Base, NEAR, Aptos, and more
 - **Real-time Filtering**: Filter by tags, blockchains, and search terms
@@ -16,7 +16,7 @@ A comprehensive directory and exploration tool for projects, tools, and innovati
 ## 🏗️ Project Structure
 
 ```plaintext
-awesome-pump/
+trump-ecosystem./
 ├── app/
 │   ├── api/
 │   │   └── ai-search/ # AI search API endpoints
@@ -43,8 +43,8 @@ awesome-pump/
 1. Clone the repository:
 ```
 bash
-git clone https://github.com/your-username/awesome-pump.git
-cd awesome-pump
+git clone https://github.com/your-username/trump-ecosystem..git
+cd trump-ecosystem.
 ```
 
 2. Install dependencies:
@@ -92,7 +92,7 @@ npm run dev
 
 ## 🤝 Contributing
 
-1. Fork the repository https://github.com/PotLock/awesome-pump 
+1. Fork the repository https://github.com/codingshot/trump-ecosystem. 
 2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
@@ -112,7 +112,7 @@ To add a new project, create a pull request modifying `app/data/projects.json`. 
 "profileImage": "https://image-url.com",
 "tags": ["tag1", "tag2"],
 "blockchain": "Blockchain Name",
-"relation": "Relation to Pump.fun"
+"relation": "Relation to AMERICA FIRST ECOSYSTEM"
 }
 ```
 
@@ -123,12 +123,12 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgments
 
-- Made with ❤️ by [Potluck Labs](https://potlock.org) & [Plug Rel](https://x.com/plugrel)
-- Inspired by the Pump.fun ecosystem
+- Made with ❤️ by [TRUMP ECOSYSTEM](https://codingshot.org) & [Plug Rel](https://x.com/plugrel)
+- Inspired by the AMERICA FIRST ECOSYSTEM ecosystem
 - Thanks to all contributors and project maintainers
 
 ## 🔗 Links
 
-- [GitHub Repository](https://github.com/PotLock/awesome-pump)
-- [Live Website](https://awesomepump.fun)
-- [Report Issues](https://github.com/PotLock/awesome-pump/issues)
+- [GitHub Repository](https://github.com/codingshot/trump-ecosystem.)
+- [Live Website](https://trumpecosystem.com)
+- [Report Issues](https://github.com/codingshot/trump-ecosystem./issues)

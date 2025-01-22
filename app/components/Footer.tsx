@@ -9,18 +9,14 @@ export function Footer() {
           <div className="mb-4 md:mb-0">
             <p className="text-[#9DA3AE]">
               Made with ❤️ by{' '}
-              <a href="https://potlock.org" target="_blank" rel="noopener noreferrer" className="text-[#1FD978] hover:underline">
-                Potluck Labs
-              </a>
-              {' '}&{' '}
-              <a href="https://x.com/plugrel" target="_blank" rel="noopener noreferrer" className="text-[#1FD978] hover:underline">
-                Plug Rel
+              <a href="https://trumpecosyste,com" target="_blank" rel="noopener noreferrer" className="text-[#DA1333] hover:underline">
+                AMERICA FIRST. 
               </a>
             </p>
           </div>
           <div>
           <a
-            href="https://github.com/PotLock/awesome-pump"
+            href="https://github.com/codingshot/trump-ecosystem"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white hover:text-green-300"

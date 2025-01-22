@@ -1,102 +1,25 @@
 [
   {
-    "name": "DexScreener",
-    "twitter": "dexscreener",
-    "description": "Real-time DEX trading charts and analytics platform",
-    "url": "https://dexscreener.com",
-    "chatLink": "",
-    "profileImage": "https://pbs.twimg.com/profile_images/1462287879565201409/5UYqudVs_400x400.jpg",
-    "tags": ["analytics", "trading", "charts", "defi"],
-    "blockchain": ["Multi-chain", "Solana", "NEAR", "Base"],
-    "relation": "Provides real-time trading data, charts, and analytics across multiple blockchains including NEAR, Solana, Base, and buy Pump fun tokens directly"
-  },
-  {
-    "name": "MakeNow.meme",
-    "twitter": "makenowmeme",
-    "description": "Makenow.meme let's anyone make and launch a memecoin directly from their favorite social media for free",
-    "url": "https://makenow.meme",
-    "chatLink": "",
-    "profileImage": "https://pbs.twimg.com/profile_images/1823007043814637568/WqJPGvN__400x400.png",
-    "tags": ["tool", "trading"],
-    "blockchain": ["Solana"],
-    "relation": "Launch a coin directly from socials"
-  },
-  {
-    "name": "ElizaOS",
-    "twitter": "ai16zdao",
-    "description": "Fastest growing github repo, intersection of crypto x ai agents.",
-    "url": "https://elizaos.ai/",
-    "chatLink": "https://discord.gg/ai16z",
-    "profileImage": "https://avatars.githubusercontent.com/u/186240462?s=200&v=4",
-    "tags": ["tool", "ai", "bot", "dev-tooling"],
-    "blockchain": ["Solana", "NEAR", "Base", "Multi-chain"],
-    "relation": "Launch agent with integrations into pump.fun"
-  },
-  {
-    "name": "Rugcheck.xyz",
-    "twitter": "Rugcheckxyz",
-    "description": "Solana's most trusted Anti-Rug tool. Now supporting Token Extensions.",
-    "url": "https://rugcheck.xyz",
-    "chatLink": "",
-    "profileImage": "https://pbs.twimg.com/profile_images/1659290984293756928/VeEo1KYz_400x400.jpg",
-    "tags": ["tools", "security"],
-    "blockchain": ["Solana"],
-    "relation": "Can check if pump.fun tokens are made by ruggers"
-  },
-  {
-    "name": "Raydium",
-    "twitter": "RaydiumProtocol",
-    "description": "An on-chain order book AMM - leading dex on Solana that pump.fun liquidity is seeded on",
-    "url": "https://raydium.io/swap/",
-    "chatLink": "",
-    "profileImage": "https://pbs.twimg.com/profile_images/1742621757230678016/_Av2hYEY_400x400.jpg",
-    "tags": ["dex", "solana"],
-    "blockchain": ["Solana"],
-    "relation": "pump.fun pools launch on rayd"
-  },
-  {
-    "name": "Slingshot",
-    "twitter": "SlingshotCrypto",
-    "description": "Every token, every chain, one app. Make your first deposit with Apple Pay / Venmo!",
-    "url": "https://slingshot.finance/",
-    "chatLink": "",
-    "profileImage": "https://pbs.twimg.com/profile_images/1869115704034967552/6l1lpN7H_400x400.png",
-    "tags": ["solana", "app", "trading"],
-    "blockchain": ["Solana", "Ethereum", "Base"],
-    "relation": "user can trade meme coins more easily from pump"
-  },
-  {
-    "name": "Solana Scripts",
+    "name": "USDC.cool",
     "twitter": "",
-    "description": "open source tools to perform solana defi / trading operations including pump.fun bundler and comment bots",
-    "url": "https://solana-scripts.com/",
-    "chatLink": "https://discord.gg/solana-scripts",
-    "profileImage": "https://solana-scripts.com/img/logo-Photoroom.png",
-    "tags": ["dev-tooling"],
-    "blockchain": ["Solana"],
-    "relation": "An open-source bundler for Pump.Fun. Allows you to create a token and bundle it with 25 buys. Also a comment bot"
+    "description": "",
+    "url": "",
+    "chatLink": "",
+    "profileImage": "",
+    "tags": ["analytics"],
+    "blockchain": [""],
+    "relation": ""
   },
   {
-    "name": "BonkBot",
-    "twitter": "bonkbot_io",
-    "description": "Solana's fastest and most secure Telegram trading bot.",
-    "url": "https://bonkbot.io",
-    "chatLink": "https://t.co/PGuKJcKFhe",
-    "profileImage": "https://pbs.twimg.com/profile_images/1815387457698816000/PyEwzA2J_400x400.jpg",
-    "tags": ["telegram", "bot", "trading"],
-    "blockchain": ["Solana"],
-    "relation": "Trade pump fun tokens"
-  },
-  {
-    "name": "BettearBot",
-    "twitter": "intelnear",
-    "description": "The fastest Telegram trading bot and buybot on NEAR.",
-    "url": "https://t.me/BettearBot",
-    "chatLink": "https://t.me/intearchat",
-    "profileImage": "https://pbs.twimg.com/profile_images/1770460349591937024/6axoBz9g_400x400.jpg",
-    "tags": ["telegram", "bot", "trading", "buybot", "tools", "charts", "defi"],
-    "blockchain": "NEAR",
-    "relation": "Trade meme.cooking tokens or create your own meme, set up buybot for meme.cooking"
+    "name": "USDC.cool",
+    "twitter": "",
+    "description": "",
+    "url": "https://usdc.cool",
+    "chatLink": "",
+    "profileImage": "",
+    "tags": ["analytics"],
+    "blockchain": [""],
+    "relation": ""
   }
 ]
 

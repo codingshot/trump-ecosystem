@@ -1,10 +1,10 @@
 export const DEFAULT_METADATA = {
-  title: 'Awesome Pump | Pump.fun Ecosystem Explorer',
-  description: 'Comprehensive directory of pump.fun ecosystem projects and tools',
-  image: 'https://awesomepump.fun/meta.jpg',
+  title: 'Trump Ecosystem | $TRUMP Ecosystem Explorer',
+  description: 'Comprehensive directory of $TRUMP ecosystem projects and tools',
+  image: 'https://trumpecosystem.fun/meta.jpg',
   type: 'website',
-  siteName: 'Awesome Pump',
-  twitterHandle: '@awesomepump',
+  siteName: 'Trump Ecosystem',
+  twitterHandle: '@trumpecosystem',
   locale: 'en_US'
 }
 

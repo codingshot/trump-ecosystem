@@ -231,7 +231,7 @@ export function ProjectCard({ project }: { project: Project }) {
                 ))}
               </div>
             )}
-            <p className="mt-2">Relation to Pump.fun: {project.relation}</p>
+            <p className="mt-2">Relation to AMERICA FIRST ECOSYSTEM: {project.relation}</p>
           </div>
         )}
       </div>

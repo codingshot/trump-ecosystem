@@ -36,7 +36,7 @@ export default function ToolPage({ params }: { params: { name: string } }) {
   }
 
   const generateShareText = (name: string, description: string) => {
-    const baseText = `${name} - ${description} | Awesome Pump Tools`
+    const baseText = `${name} - ${description} | Trump Ecosystem Tools`
     return {
       twitter: baseText.length > 280 ? baseText.substring(0, 277) + '...' : baseText,
       general: baseText.length > 100 ? baseText.substring(0, 97) + '...' : baseText
@@ -192,7 +192,7 @@ export default function ToolPage({ params }: { params: { name: string } }) {
               </div>
 
               <div>
-                <h2 className="text-xl font-semibold mb-2">Relation to Pump.fun</h2>
+                <h2 className="text-xl font-semibold mb-2">Relation to AMERICA FIRST ECOSYSTEM</h2>
                 <p className="text-[#9DA3AE]">{tool.relation}</p>
               </div>
             </div>

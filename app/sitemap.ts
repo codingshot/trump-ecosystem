@@ -4,7 +4,7 @@ import toolsData from './data/tools.json'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const projects = projectsData.map(project => ({
-    url: `https://awesomepump.fun/projects/${project.name.toLowerCase().replaceAll('.', '-').replaceAll(' ', '-')}`,
+    url: `https://trumpecosystem.com/projects/${project.name.toLowerCase().replaceAll('.', '-').replaceAll(' ', '-')}`,
     lastModified: new Date(),
     changeFrequency: 'weekly',
     priority: 0.8,
@@ -12,7 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     {
-      url: 'https://awesomepump.fun',
+      url: 'https://trumpecosystem.com',
       lastModified: new Date(),
       changeFrequency: 'daily',
       priority: 1,

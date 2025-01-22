@@ -8,24 +8,24 @@ export async function generateMetadata({ params }: { params: { name: string } })
 
   if (!tool) {
     return {
-      title: 'Tool Not Found | Awesome Pump',
-      description: 'The requested tool could not be found in the Pump.fun ecosystem.',
+      title: 'Tool Not Found | Trump Ecosystem',
+      description: 'The requested tool could not be found in the AMERICA FIRST ECOSYSTEM ecosystem.',
     }
   }
 
-  const faviconUrl = tool.profileImage ? tool.profileImage : 'https://awesomepump.fun/favicon.ico';
+  const faviconUrl = tool.profileImage ? tool.profileImage : 'https://trumpecosystem.com/favicon.ico';
 
   return {
-    title: `${tool.name} | Awesome Pump Tools`,
-    description: tool.description + ' | Awesome Pump is the pump fun ecosystem explorer',
+    title: `${tool.name} | Trump Ecosystem Tools`,
+    description: tool.description + ' | Trump Ecosystem is the pump fun ecosystem explorer',
     openGraph: {
-      title: tool.name + ' | Awesome Pump Tools',
-      description: tool.description + ' | Awesome Pump is the pump fun ecosystem explorer',
-      url: `https://awesomepump.fun/tools/${params.name}`,
-      siteName: 'Awesome Pump',
+      title: tool.name + ' | Trump Ecosystem Tools',
+      description: tool.description + ' | Trump Ecosystem is the pump fun ecosystem explorer',
+      url: `https://trumpecosystem.com/tools/${params.name}`,
+      siteName: 'Trump Ecosystem',
       images: [
         {
-          url: 'https://awesomepump.fun/meta.jpg',
+          url: 'https://trumpecosystem.com/meta.jpg',
           width: 1200,
           height: 630,
         },
@@ -35,9 +35,9 @@ export async function generateMetadata({ params }: { params: { name: string } })
     },
     twitter: {
       card: 'summary_large_image',
-      title: tool.name + ' | Awesome Pump Tools',
-      description: tool.description + ' | Awesome Pump is the pump fun ecosystem explorer',
-      images: ['https://awesomepump.fun/meta.jpg'],
+      title: tool.name + ' | Trump Ecosystem Tools',
+      description: tool.description + ' | Trump Ecosystem is the pump fun ecosystem explorer',
+      images: ['https://trumpecosystem.com/meta.jpg'],
     },
     icons: {
       icon: faviconUrl,

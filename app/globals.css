@@ -1,4 +1,8 @@
 :root {
+  --red: #DA1333;
+  --dark-blue: #213875;
+  --navy: #0A0228;
+  --white: #FFFFFF;
   --border: 215 16% 47%;
 }
 
@@ -8,7 +12,7 @@
 
 .typewriter {
   overflow: hidden;
-  border-right: .15em solid #1FD978;
+  border-right: .15em solid #DA1333;
   white-space: pre-wrap;
   margin: 0 auto;
   animation: 
@@ -23,7 +27,7 @@
 
 @keyframes blink-caret {
   from, to { border-color: transparent }
-  50% { border-color: #1FD978 }
+  50% { border-color: #DA1333 }
 }
 
 @keyframes rainbow {
@@ -44,5 +48,73 @@
 
 .rainbow-text:hover {
   text-decoration: underline;
+}
+
+/* Typography */
+.title-lrg {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.subheading {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  color: var(--red);
+}
+
+.body-text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+/* Buttons */
+.btn-red {
+  background-color: var(--red);
+  color: var(--white);
+  border-radius: 5px;
+}
+
+.btn-blue {
+  background-color: var(--dark-blue);
+  color: var(--white);
+  border-radius: 5px;
+}
+
+.btn-white-border {
+  border: 1px solid var(--white);
+  color: var(--white);
+  border-radius: 5px;
+}
+
+/* Cards/Boxes */
+.card {
+  background-color: var(--white);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.card-header-red {
+  background-color: var(--red);
+  color: var(--white);
+}
+
+.card-header-blue {
+  background-color: var(--dark-blue);
+  color: var(--white);
+}
+
+/* Overlays */
+.overlay-dblue-20 {
+  background-color: rgba(37, 52, 122, 0.2);
+}
+
+/* Hover States */
+.hover\:bg-darkBlue:hover {
+  background-color: var(--dark-blue);
+}
+
+.hover\:bg-navy:hover {
+  background-color: var(--navy);
 }
 

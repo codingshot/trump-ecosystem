@@ -1,669 +1,89 @@
 [
   {
-    "name": "DAOs.fun",
-    "twitter": "daosdotfun",
-    "description": "A decentralized investment platform focused on meme coins and community-driven token launches",
-    "url": "https://daos.fun",
-    "chatLink": "http://t.me/daosfun",
-    "profileImage": "https://cdn1.cdn-telegram.org/file/U0cw50t3d9Fk614HOee4ZqqFj2ibiqYdQVZsIK4FBaT_aSxZfdLU5L-jgf6LaSEfET5vluORK_kSBy1sKDlnbXyXrAapDDKhwO7Lrc2NnP8gP2QX-ptd37rVU2zYLzEo-LvNf1J_yG3v535F2_2Ly1ywKztUYGScakW9PnvjDEM759EOhtSI6DuEuAbTpOQjXO5ZWSh78WcGcm45oy0Xy-I8izzo6ZOOLwC9L17QxgfVfxJ4PAF0dFYA5N8HNYGZWdNd0wdj_rMzdHSseFSTKQQDYRJVvzS5JKLJbfc18cqDlO_5N9-CUBSHt2r9MqgVEMf3fFECYDlv5Gb74fjZ5A.jpg",
-    "tags": [
-      "investment",
-      "dao",
-      "bonding-curves",
-      "meme-coins"
-    ],
-    "blockchain": [
-      "Solana"
-    ],
-    "tvl": "",
-    "github": "http://github.com/daosfun",
-    "relation": "Inspired by Pump.fun's bonding curve model and focuses on community-driven token launches.",
-    "active": true
-  },
-  {
-    "name": "vvaifu.fun",
-    "twitter": "vvaifudotfun",
-    "description": "Launch AI agents with tokens on pump.fun",
-    "url": "https://vvaifu.fun",
-    "chatLink": "http://t.me/vvaifu",
-    "profileImage": "https://pbs.twimg.com/profile_images/1847300709789687808/x_8DI6pa_400x400.jpg",
-    "tags": [
-      "investment",
-      "bonding-curves",
-      "meme-coins",
-      "nft",
-      "platform-token"
-    ],
-    "blockchain": [
-      "Solana"
-    ],
-    "tvl": "",
-    "github": "",
-    "contractAddress": null,
-    "relation": "Pump/fun for ai agents on Solana built on Eliza framework",
-    "active": true
-  },
-  {
-    "name": "Virtuals",
-    "twitter": "virtuals_io",
-    "description": "Society of AI Agents",
-    "url": "https://virtuals.io",
-    "chatLink": "https://t.me/virtuals",
-    "profileImage": "https://pbs.twimg.com/profile_images/1759593486674972672/kh5ynoMH_400x400.jpg",
-    "tags": [
-      "ai",
-      "launchpad",
-      "bonding-curves"
-    ],
-    "blockchain": [
-      "Base"
-    ],
-    "tvl": "",
-    "github": "",
-    "contractAddress": null,
-    "relation": "Pump.fun with ai agent kol launchpad on base. They have their own launchpad and agent launchpad app. Vvaifu.fun on Base",
-    "active": true
-  },
-  {
-    "name": "meme.cooking",
-    "twitter": "memedotcooking",
-    "description": "fair launchpad on NEAR",
-    "url": "https://meme.cooking",
-    "chatLink": "",
-    "profileImage": "https://pbs.twimg.com/profile_images/1821495508336087040/TJP-jO6V_400x400.jpg",
-    "tags": [
-      "token",
-      "bonding-curves"
-    ],
-    "blockchain": [
-      "NEAR"
-    ],
-    "tvl": "",
-    "github": "",
-    "contractAddress": "",
-    "relation": "Pump.fun of NEAR",
-    "active": true
-  },
-  {
-    "name": "clank.fun",
+    "name": "$TRUMP MEME Token",
     "twitter": "",
-    "description": "create autonomous memecoins for free, get rewarded for posting bangers. ",
-    "url": "https://www.clank.fun",
+    "description": "",
+    "url": "",
     "chatLink": "",
-    "profileImage": "https://avatars.githubusercontent.com/u/188466607?s=200&v=4",
-    "tags": [
-      "ai",
-      "launchpad"
-    ],
-    "blockchain": [
-      "Base"
-    ],
-    "tvl": "",
-    "github": "https://github.com/clanker-devco",
-    "contractAddress": null,
-    "relation": "Every coin launches as an ERC-20 on Base with a $34.76k marketcap. No bonding curve. Trade on Uniswap immediately. Devs earn ~0.4% of trading volume via LP fees. Launched a coin that trades $1m volume? You earn around $4k in fees. Share trades made on clank.fun and earn 0.5% off every copytrade.",
-    "active": true
-  },
-  {
-    "name": "Emojicoin",
-    "twitter": "emojicoindotfun",
-    "description": "pump.fun on aptos for emojis",
-    "url": "https://www.emojicoin.fun/home",
-    "chatLink": "https://discord.gg/econia",
-    "profileImage": "https://pbs.twimg.com/profile_images/1853618902875635712/7WBHawWR_400x400.jpg",
-    "tags": [
-      "launchpad",
-      "bonding-curves"
-    ],
-    "blockchain": [
-      "Aptos"
-    ],
+    "profileImage": "",
+    "tags": ["Memecoin"],
+    "blockchain": ["Solana"],
     "tvl": "",
     "github": "",
-    "contractAddress": null,
-    "relation": "Pump.fun on Aptos but for emojis assets",
-    "active": true
-  },
-  {
-    "name": "hop.fun",
-    "twitter": "hopaggregator",
-    "description": "pump.fun on Sui",
-    "url": "https://hop.fun",
-    "chatLink": "",
-    "profileImage": "https://cdn1.cdn-telegram.org/file/V_CEmOUt-6T9BoC26JV9p4Q10P71xK3BHbKpJgUbrqrb9UQjPVQ69Emn1NjB2drbnrkMjGX2Jn1itTBY4vL8cB_GBi9gQ31T9hm37FMf3rfyGK5nZYBrt4eLIHmr0y37LbbuBLTO22BL2sJ-krQT9OlqkfwTiVkgT1og9hFzfSON8iMOUPuWanyvdLJ6ryYIrkweQ1x_Hb7ZxFfiOzstyVkDBSJTBLstFbx0xn2GvfpNVvabKynYeM7gGg5sbvKNNv7ydrO6z9Vhf0ew1EFLZnmMk_80j8df2ZDq3BeUmSqNsnlyHGTDw6vl9KtKI9EjP_jb5NdLolbbuHFSvyVQyA.jpg",
-    "tags": [
-      "launchpad",
-      "bonding-curves"
-    ],
-    "blockchain": [
-      "Sui"
-    ],
-    "tvl": "",
-    "github": "",
-    "contractAddress": null,
-    "relation": "Pump.fun on Sui",
-    "active": true
-  },
-  {
-    "name": "Uptos",
-    "twitter": "uptos_apt",
-    "description": "pump.fun on aptos",
-    "url": "https://pump.uptos.xyz/",
-    "chatLink": "https://t.me/uptosportal",
-    "profileImage": "https://pbs.twimg.com/profile_images/1846050271526584320/RY38ukoe_400x400.jpg",
-    "tags": [
-      "launchpad",
-      "bonding-curves"
-    ],
-    "blockchain": [
-      "Aptos"
-    ],
-    "tvl": "",
-    "github": "",
-    "contractAddress": null,
-    "relation": "Pump.fun on Aptos",
-    "active": true
-  },
-  {
-    "name": "Time.fun",
-    "twitter": "timedotfun",
-    "description": "A decentralized investment platform focused on meme coins and community-driven token launches",
-    "url": "https://time.fun",
-    "chatLink": "",
-    "profileImage": "https://pbs.twimg.com/profile_images/1840758823113445376/TOlW_BuG_400x400.jpg",
-    "tags": [
-      "investment",
-      "social",
-      "bonding-curves",
-      "meme-coins"
-    ],
-    "blockchain": [
-      "Solana"
-    ],
-    "tvl": "",
-    "github": "",
-    "contractAddress": "",
-    "relation": "Inspired by Pump.fun's bonding curve model and focuses on paying creators for time.",
-    "active": true
-  },
-  {
-    "name": "maps.fun",
-    "twitter": "mapsdotfun",
-    "description": "A decentralized investment platform focused on meme coins and community-driven token launches",
-    "url": "https://maps.fun",
-    "chatLink": "",
-    "profileImage": "https://pbs.twimg.com/profile_images/1861645902064295940/cTbnANJb_400x400.jpg",
-    "tags": [
-      "investment",
-      "bonding-curves",
-      "meme-coins",
-      "rwa"
-    ],
-    "blockchain": [
-      "Solana"
-    ],
-    "tvl": "",
-    "github": "",
-    "contractAddress": "",
-    "relation": "Inspired by Pump.fun's bonding curve model and focuses buying parts of cities.",
-    "active": true
-  },
-  {
-    "name": "gaspump.tg",
-    "twitter": "gaspump_tv",
-    "description": "A decentralized investment platform focused on meme coins and community-driven token launches",
-    "url": "https://gaspump.tg",
-    "chatLink": "https://t.me/gasPump_chat",
-    "profileImage": "https://pbs.twimg.com/profile_images/1799892413143547904/NWsrdslE_400x400.jpg",
-    "tags": [
-      "investment",
-      "telegram",
-      "meme-coins"
-    ],
-    "blockchain": [
-      "TON"
-    ],
-    "tvl": "",
-    "github": "",
-    "contractAddress": "",
     "relation": "",
     "active": true
   },
   {
-    "name": "mitte.gg",
-    "twitter": "MITTE_gg",
-    "description": "mobile optimized NEAR pump.fun and NFT orderbook",
-    "url": "https://beta.mitte.gg/meme",
-    "chatLink": "https://discord.com/invite/z92eFjHhEf",
-    "profileImage": "https://pbs.twimg.com/profile_images/1818627779321380876/_HMtG1iF_400x400.jpg",
-    "tags": [
-      "nft",
-      "bonding-curves",
-      "meme-coins"
-    ],
-    "blockchain": [
-      "NEAR"
-    ],
-    "tvl": "",
-    "github": "",
-    "contractAddress": "",
-    "relation": "NEAR copy cat feature of pump.fun ",
-    "active": true
-  },
-  {
-    "name": "MovePump",
+    "name": "$TRUMP SWAP",
     "twitter": "",
-    "description": "fail launch token platform on Sui + Aptos where 2,000 SUI / 1,000 APT  on bonding curves moves Dex liquidity to Blue Move",
-    "url": "https://movepump.com",
-    "chatLink": "https://t.me/MovePumpChat",
-    "profileImage": "https://movepump.com/images/icons/movepump-logo.svg",
-    "tags": [
-      "launchpad",
-      "bonding-curves",
-      "meme-coins"
-    ],
-    "blockchain": [
-      "Sui",
-      "Aptos"
-    ],
-    "tvl": "",
-    "github": "",
-    "contractAddress": "",
-    "relation": "Sui / Aptos copy cat feature of pump.fun ",
-    "active": true
-  },
-  {
-    "name": "Vector.fun",
-    "twitter": "vectordotfun",
-    "description": "APE MEMES WITH FRENS • LIVE ON APPLE + GOOGLE PLAY STORES: ",
-    "url": "https://vector.fun",
-    "chatLink": "http://t.me/vectordotfun",
-    "profileImage": "https://pbs.twimg.com/profile_images/1866882640864784385/i1mXNqzu_400x400.jpg",
-    "tags": [
-      "social",
-      "bonding-curves"
-    ],
-    "blockchain": [
-      "Base"
-    ],
-    "tvl": "",
-    "github": "",
-    "relation": "Social base version of pump.fun",
-    "active": true
-  },
-  {
-    "name": "Vader AI Fun",
-    "twitter": "Vader_AI_",
-    "description": "daos.fun on base, investment DAOs that hold virtual agents. ",
-    "url": "https://vaderai.ai/app",
-    "chatLink": "https://t.me/+RvRL6fEpCQY3YTQ0",
-    "profileImage": "https://cdn4.cdn-telegram.org/file/BMPnT-N-goi2zZTd4ht0n1UB2-ekZj-rl5hhB2b4NISloWfl_6I7-Ic-sEeSOADEKY9whUjvHMFByqFDrRwsnPavV_26sMHFjroHr7CVisl2c9yxsMNnbtFJbMD6nCDfJbvsl88tEZ9QRsESPeMeyBoZ6krE_dfXY4d0VOTF9VD50P-6tQuEtz8aLaAM-WLN6GlVYolVq1MTtDBTIZSvm1fF_oi_xa4K9P8mKavtT98_5tmpADOQ3eEINwgrQocV9wKxRNk9JEp5okBWmwTv8Qh6E_3ZkS1o_k09p-An7LmZwbGzMVjuZJwQ6-2AXVw9LU_YUU7BoiysNpKn50h4bw.jpg",
-    "tags": [
-      "investment",
-      "bonding-curves",
-      "dao",
-      "ai"
-    ],
-    "blockchain": [
-      "Base"
-    ],
-    "tvl": "",
-    "github": "",
-    "relation": "daos.fun on base, investment DAOs that hold virtual agents.",
-    "active": true
-  },
-  {
-    "name": "pump.science",
-    "twitter": "pumpdotscience",
-    "description": "pump.fun for desci",
-    "url": "https://pump.science",
-    "chatLink": "https://t.me/pump_science",
-    "profileImage": "https://pbs.twimg.com/profile_images/1840773234251161600/Fewrz0s7_400x400.jpg",
-    "tags": [
-      "investment",
-      "bonding-curves",
-      "desci"
-    ],
-    "blockchain": [
-      "Solana"
-    ],
-    "tvl": "",
-    "github": "",
-    "contractAddress": "",
-    "relation": "Inspired by Pump.fun's bonding curve model but for desci tokens",
-    "active": true
-  },
-  {
-    "name": "dx.fun",
-    "twitter": "dxdotfun",
-    "description": "1 dollar to create a token. Pump fun on base pwoered by DexTools",
-    "url": "https://dx.fun",
-    "chatLink": "https://t.me/dxdotfun",
-    "profileImage": "https://pbs.twimg.com/profile_images/1834623592333529088/x8KO2Srm_400x400.jpg",
-    "tags": [
-      "investment",
-      "bonding-curves"
-    ],
-    "blockchain": [
-      "Base"
-    ],
-    "tvl": "",
-    "github": "",
-    "contractAddress": "",
-    "relation": "The journey of your token begins with a virtual liquidity pool of 1 ETH which determines its initial price. Once your token's market cap hits the magical number of $69,420, it's automatically listed on Uniswap! Each transaction adjusts the token and ETH amounts in the contract, and once the milestone is reached, the smart contract transfers all collected tokens and ETH to create liquidity on the DEX.",
-    "active": true
-  },
-  {
-    "name": "cookie.fun",
-    "twitter": "cookiedotfun",
-    "description": "AI agent token data",
-    "url": "https://cookie.fun",
+    "description": "",
+    "url": "",
     "chatLink": "",
-    "profileImage": "https://pbs.twimg.com/profile_images/1863484151715758080/dQPdhDM4_400x400.png",
-    "tags": [
-      "ai",
-      "analytics",
-      "dev-tooling"
-    ],
-    "blockchain": [
-      "Solana",
-      "Base"
-    ],
+    "profileImage": "",
+    "tags": ["DeFi"],
+    "blockchain": ["Solana", "Bitcoin", "Ethereum", "NEAR"],
     "tvl": "",
     "github": "",
-    "contractAddress": "",
-    "relation": "Tracks bonding curve tokens in pump fun but also virtuals",
+    "relation": "",
     "active": true
   },
   {
-    "name": "$INTERN internosaur",
-    "twitter": "internosaur",
-    "description": "AI agent on twitter that deploy pump fun token",
-    "url": "https://linktr.ee/internosaur",
-    "chatLink": "",
-    "profileImage": "https://pbs.twimg.com/profile_images/1861530427011297280/auEmIc2O_400x400.jpg",
-    "tags": [
-      "ai",
-      "token",
-      "tooling"
-    ],
-    "blockchain": [
-      "Solana"
-    ],
-    "tvl": "",
-    "github": "",
-    "contractAddress": "",
-    "relation": "Agent that deploys token from twitter",
-    "active": true
-  },
-  {
-    "name": "sunpump.meme",
-    "twitter": "sunpumpmeme",
-    "description": "pump.fun on TRON (EVM), when bonding curve reaches $69,420, $12k TRX liquidity burned on Sunwap.",
-    "url": "https://sunpump.meme",
-    "chatLink": "https://t.me/officialsunpumpmeme",
-    "profileImage": "https://cdn4.cdn-telegram.org/file/exJuSvw07jpXLoSbuyyEkEjHzrNJi-0ev533k3JkzbLRTBWRyAjnoqK1OT-OS19Hyy-nOKFoKUBjUgr0fnRFX6ATxyojxr5NVLUDFWktdVHPcoa25szabOVEdQRHZEbG7KqxOGDU9b_k3Layl05RBId_UCb1JUn1FIbmsGmPzufamxIE7amubOgSwBSeFDc483desdn665XX6OUq7IXD3ZN5HSatVxzZDmY-wYYVqbJcOAcGvBiT1Ftfzft4RarLCsltfZnI35F1N5v0YxdeZxO6on5JWGQfiUlCaM4IqQ_tBAswhJvvDYiygtasc1yb1TcMNR6nwpQyay7Dh10p3A.jpg",
-    "tags": [
-      "bonding-curves",
-      "meme-coins"
-    ],
-    "blockchain": [
-      "Tron"
-    ],
-    "tvl": "",
-    "github": "",
-    "contractAddress": "",
-    "relation": "Tron version of pump.fun",
-    "active": true
-  },
-  {
-    "name": "hypurr.fun",
+    "name": "World Liberty Financials",
     "twitter": "",
-    "description": "pump.fun on Hyperliquid with telegram bot for trading, sniping",
-    "url": "https://app.hypurr.fun",
-    "chatLink": "https://t.me/HypurrFunBot",
-    "profileImage": "https://app.hypurr.fun/assets/purrbot.246840f0.png",
-    "tags": [
-      "bonding-curves",
-      "meme-coins",
-      "investment"
-    ],
-    "blockchain": [
-      "Hyperliquid"
-    ],
-    "tvl": "",
-    "github": "",
-    "contractAddress": "",
-    "relation": "Hyperliquid version of pump.fun",
-    "active": true
-  },
-  {
-    "name": "bellum.exchange",
-    "twitter": "BellumExchange",
-    "description": "pump.fun on Avalance (EVM) with staking for community LP tokens.",
-    "url": "https://bellum.exchange",
-    "chatLink": "https://t.co/bcRyoxMGRv",
-    "profileImage": "https://pbs.twimg.com/profile_images/1821633445178830850/i-pVW3p9_400x400.jpg",
-    "tags": [
-      "bonding-curves",
-      "meme-coins",
-      "investment"
-    ],
-    "blockchain": [
-      "Avalanche"
-    ],
-    "tvl": "",
-    "github": "",
-    "contractAddress": "0x4274f80635183e9bE3c16E1313a16f929B61E00e",
-    "relation": "Avalanche version of pump.fun",
-    "active": true
-  },
-  {
-    "name": "etherfun.app",
-    "twitter": "ethervista",
-    "description": "Ethereum + Base Version of Pump.fun by Ethervista",
-    "url": "https://etherfun.app",
-    "chatLink": "https://discord.com/invite/ethervista",
-    "profileImage": "https://pbs.twimg.com/profile_images/1808992707161042946/eVPxjRNv_400x400.jpg",
-    "tags": [
-      "bonding-curves",
-      "meme-coins"
-    ],
-    "blockchain": [
-      "Base",
-      "Ethereum"
-    ],
-    "tvl": "",
-    "github": "",
-    "contractAddress": "",
-    "relation": "EVM / Base / Ethereum version of pump.fun",
-    "active": true
-  },
-  {
-    "name": "spore.fun",
-    "twitter": "sporedotfun",
-    "description": "Solana AI Tokens built on Eliza that breed",
-    "url": "https://spore.fun",
+    "description": "",
+    "url": "",
     "chatLink": "",
-    "profileImage": "https://pbs.twimg.com/profile_images/1867725893566971904/GRhgBhRR_400x400.jpg",
-    "tags": [
-      "ai",
-      "meme-coins",
-      "Phala",
-      "launchpad"
-    ],
-    "blockchain": [
-      "Solana"
-    ],
-    "tvl": "",
-    "github": "",
-    "contractAddress": "",
-    "relation": "AI Agents that breed, on Solana built on Eliza",
-    "active": true
-  },
-  {
-    "name": "higherrrrrrr.fun",
-    "twitter": "higherrrrrrrfun",
-    "description": "base version of pump.fun with evolutionary tokens",
-    "url": "  https://alpha.higherrrrrrr.fun/",
-    "chatLink": "",
-    "profileImage": "https://pbs.twimg.com/profile_images/1864470786381369345/GuAosjLh_400x400.png",
-    "tags": [
-      "bonding-curves",
-      "meme-coins"
-    ],
-    "blockchain": [
-      "Base"
-    ],
-    "tvl": "",
-    "github": "https://github.com/Thrive-Point-Group/higherrrrrrr-protocol",
-    "contractAddress": "",
-    "relation": " Base version of pump.fun. Introduced Evolutionary Tokens. Traditional tokens remain static from launch, missing the dynamic energy of the communities they represent. We're introducing something different - tokens that evolve and grow with their community. Each price milestone unlocks a new evolution, transforming the token's fundamental properties on-chain. This creates natural momentum as communities work together toward the next evolution, with each new form becoming a shared achievement. How Evolutions Work: Every purchase moves the token closer to its next evolution. As the price reaches new milestones, the token automatically transforms - its name, symbol, and identity evolve through smart contracts:",
-    "active": true
-  },
-  {
-    "name": "ape.store",
-    "twitter": "apedotstore",
-    "description": "Base Version of Pump.fun",
-    "url": "https://ape.store",
-    "chatLink": "https://t.me/apedotstore",
-    "profileImage": "https://cdn4.cdn-telegram.org/file/iSqOfk0Q2GFf-HTVNBIw6_dP5U53p2OaQLa2HEAY8qViiJjb0JBOvqR2ObX3LtfvZLuHhQ-9nTAZTvH-IrmLwhBhgSbRBC1XTCXhQUbNEepp4kQu2A_J1C2RyMwVtNFj4Md2veS9QsZOQrpQN0yeEskuXedal3gVF-H2OHlirZRoWHSt61oclnJPdwzKQaIKYS6IX4IkdP1kG2KquyttTbUScjxP6rWbjGSizoA4zfXFF55V5RY8W68hqiEUxIn7b7VtmtRtDyd5Ysei9BiUHqV39wGq2vqeLmSSU9jXd1bu9KJWl8bIaKfRRAECfGU7qRIQDQy84hDOxz2mwbCk9Q.jpg",
-    "tags": [
-      "bonding-curves",
-      "meme-coins"
-    ],
-    "blockchain": [
-      "Base"
-    ],
-    "tvl": "",
-    "github": "",
-    "contractAddress": "",
-    "relation": "Base  version of pump.fun, very low market cap coins, not much traction",
-    "active": true
-  },
-  {
-    "name": "daos.world",
-    "twitter": "daosdotworld",
-    "description": "Users can easily launch and manage their own DAO hedgefund by raising capital on Base and make trades through a trustless smart contract limiting rugpulls. You must still trust the DAO creator.",
-    "url": "https://daos.world",
-    "chatLink": "https://t.me/daosworld",
-    "profileImage": "https://pbs.twimg.com/profile_images/1875045606294683648/WnEGoXn3_400x400.jpg",
-    "tags": [
-      "bonding-curves",
-      "meme-coins",
-      "dao",
-      "investment"
-    ],
-    "blockchain": [
-      "Base"
-    ],
-    "tvl": "",
-    "github": "",
-    "contractAddress": "",
-    "relation": "1. DAO managers raise ETH to start a fund. The manager is free to trade and invest that ETH any way they wish. 2. An ERC20 token is minted for the DAO with 1.1B total supply: 1B to fundraisers and 100M to a 1% univ3 pool. Price of this pool can't drop below amount of ETH raised. 3. The fund has an expiry date, which is when trading halts and the treasury's assets is distributed pro rata to token holders. Managers may extend the expiry date at any time. Technical Details: - The DAO treasury is custodied in a smart contract. The manager is able to call an onlyOwner execute() function on this SC that lets it call any other contract. - Fund managers receive 0.4% of all trading volume on their token, and potentially carry on profits at fund expiry. - The univ3 liquidity NFT is locked away until fund expiry.",
-    "active": true
-  },
-  {
-    "name": "baos.fun",
-    "twitter": "baosdotfun",
-    "description": "Raise BERA for your BAO to farm BGT w/ ai agents on every Berachain protocol | an exclusive edition of @yieldsdotfun",
-    "url": "https://baos.fun",
-    "chatLink": "",
-    "profileImage": "https://pbs.twimg.com/profile_images/1869908142793867264/qZw5g2VW_400x400.jpg",
-    "tags": [
-      "bonding-curves",
-      "launchpads",
-      "ai",
-      "dao",
-      "launchpad"
-    ],
-    "blockchain": [
-      "Berachain"
-    ],
-    "tvl": "",
-    "github": "",
-    "contractAddress": "",
-    "relation": "Berachain version of daos.fun",
-    "active": false
-  },
-  {
-    "name": "buzz.fun",
-    "twitter": "buzzdotfun",
-    "description": "buy. create. configure. the newest tokens, your way. seasonal supercharged airdrops for buzz bros. launching soon. Abstract (ZkSync L2) + Ethereum  Version of Pump.fun",
-    "url": "https://buzz.fun",
-    "chatLink": "https://t.me/buzzdotfun",
-    "profileImage": "https://pbs.twimg.com/profile_images/1870467452007583744/o4_tuWb6_400x400.jpg",
-    "tags": [
-      "bonding-curves",
-      "launchpads"
-    ],
-    "blockchain": [
-      "Abstract",
-      "Ethereum"
-    ],
-    "tvl": "",
-    "github": "",
-    "contractAddress": "",
-    "relation": "Abstract (ZkSync L2) + Ethereum  Version of Pump.fun",
-    "active": false
-  },
-  {
-    "name": "rug.fun",
-    "twitter": "rugdotfun",
-    "description": "launch memecoins on Base, --- deprecated",
-    "url": "https://rug.fun",
-    "chatLink": "http://t.me/",
-    "profileImage": "https://pbs.twimg.com/profile_images/1858569423461961728/dvvkbBfO_400x400.jpg",
-    "tags": [
-      "bonding-curves",
-      "meme-coins"
-    ],
-    "blockchain": [
-      "Base"
-    ],
-    "tvl": "",
-    "github": "",
-    "contractAddress": null,
-    "relation": "Pump.fun inspired on Base, but with a twist. Rug.fun comes from the Farcaster ecosystem and is relatively interesting in gameplay, similar to horse racing games. Players need to guess the 1st and 10th place correctly to get high odds returns. Each round of the game lasts 12 hours, and players can create tokens or buy tokens. Initially, players can change bet tokens at will without charging additional fees. As time accumulates, the cost of changing tokens increases. Eventually other projects will add liquidity to the No. 1 pool to achieve price growth. The official Twitter account announced on August 15 that it is being update",
-    "active": false
-  },
-  {
-    "name": "dev.fun",
-    "twitter": "https://x.com/devfunpump",
-    "description": "turn your ideas into reality with one click and make them instantly tradable on pumpfun",
-    "url": "https://dev.fun",
-    "chatLink": "https://t.me/devfunpump",
-    "profileImage": "https://pbs.twimg.com/profile_images/1876452737535123456/QKg-6I8n_400x400.jpg",
-    "tags": [
-      "bonding-curves",
-      "meme-coins",
-      "dev"
-    ],
-    "blockchain": [
-      "Solana"
-    ],
-    "tvl": "",
-    "github": "",
-    "contractAddress": null,
-    "relation": "Builders and memecoins often struggle to validate their ideas and build strong communities. Apps linked to these coins can drive attention and foster loyalty. dev.fun enables instant app creation, allowing users to test and grow their projects effectively.",
-    "active": true
-  },
-  {
-    "name": "moon.zip",
-    "twitter": "https://x.com/devfunpump",
-    "description": "Launch and discover coins that pump, and are actually fair. Share in platform fees. Coming soon.",
-    "url": "https://moon.zip/",
-    "chatLink": "https://discord.gg/moondotzip",
-    "profileImage": "https://pbs.twimg.com/profile_images/1875812035642138624/adbuDfui_400x400.jpg",
-    "tags": [
-      "meme-coins",
-      "launchpads"
-    ],
+    "profileImage": "",
+    "tags": ["DeFi"],
     "blockchain": [],
     "tvl": "",
     "github": "",
-    "contractAddress": null,
     "relation": "",
     "active": true
+  },
+
+  {
+    "name": "USDC",
+    "twitter": "",
+    "description": "",
+    "url": "",
+    "chatLink": "",
+    "profileImage": "",
+    "tags": ["DeFi"],
+    "blockchain": ["Solana", "Ethereum", "NEAR", "Stellar"],
+    "tvl": "",
+    "github": "",
+    "relation": "",
+    "active": true
+  },
+  {
+    "name": "Microstrategy",
+    "twitter": "",
+    "description": "",
+    "url": "",
+    "chatLink": "",
+    "profileImage": "",
+    "tags": ["Stock"],
+    "blockchain": ["Bitcoin"],
+    "tvl": "",
+    "github": "",
+    "relation": "",
+    "active": true
+  },
+
+  {
+    "name": "$MELANIA MEME",
+    "twitter": "",
+    "description": "",
+    "url": "",
+    "chatLink": "",
+    "profileImage": "",
+    "tags": [],
+    "blockchain": ["Solana"],
+    "tvl": "",
+    "github": "",
+    "contractAddress": "",
+    "relation": "",
+    "active": false
   }
 ]

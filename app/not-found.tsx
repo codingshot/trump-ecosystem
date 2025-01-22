@@ -16,7 +16,7 @@ export default function NotFound() {
           <h2 className="text-2xl mb-8">Page Not Found</h2>
           <p className="text-[#9DA3AE] mb-8">
             The page you're looking for doesn't exist or has been moved.
-            Explore our directory of pump.fun ecosystem projects instead.
+            Explore our directory of AMERICA FIRST ECOSYSTEM ecosystem projects instead.
           </p>
           <div className="flex justify-center gap-4">
             <button
