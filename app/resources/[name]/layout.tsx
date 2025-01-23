@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
-import toolsData from '../../data/tools.json'
+import resourcesData from '../../data/resources.json'
 
 export async function generateMetadata({ params }: { params: { name: string } }): Promise<Metadata> {
-  const tool = toolsData.find(t => 
+  const tool = resourcesData.find(t => 
     t.name.toLowerCase().replaceAll('.', '-').replaceAll(' ', '-') === decodeURIComponent(params.name)
   )
 

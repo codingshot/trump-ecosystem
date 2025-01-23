@@ -3,6 +3,7 @@
 import { useState, useMemo, useEffect } from 'react'
 import { ProjectCard } from './ProjectCard'
 import { AISearchBar } from './AISearchBar'
+import { ResourceCard } from './ResourceCard'
 import { Slider } from './ui/slider'
 import { X } from 'lucide-react'
 import {
@@ -292,7 +293,11 @@ export function ProjectGrid({ globalSearchQuery, setGlobalSearchQuery, selectedT
       {filteredProjects.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredProjects.map((item, index) => (
-            <ProjectCard key={index} project={{ ...item, type: 'project' }} />
+            item.type === 'project' ? (
+              <ProjectCard key={index} project={item} />
+            ) : (
+              <ResourceCard key={index} resource={item} />
+            )
           ))}
         </div>
       ) : (

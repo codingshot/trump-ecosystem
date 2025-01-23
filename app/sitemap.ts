@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next'
 import projectsData from './data/projects.json'
-import toolsData from './data/tools.json'
+import resourcesData from './data/resources.json'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const projects = projectsData.map(project => ({

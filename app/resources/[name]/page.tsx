@@ -7,17 +7,17 @@ import { SearchOverlay } from '../../components/SearchOverlay'
 import { useRouter, useSearchParams } from 'next/navigation'
 import Image from 'next/image'
 import { Twitter, Globe, MessageCircle, Github, Share } from 'lucide-react'
-import toolsData from '../../data/tools.json'
+import resourcesData from '../../data/resources.json'
 import { getExplorerUrl } from '../../utils/chainExplorers'
 
-export default function ToolPage({ params }: { params: { name: string } }) {
+export default function ResourcePage({ params }: { params: { name: string } }) {
   const [isSearchOpen, setIsSearchOpen] = useState(false)
   const [globalSearchQuery, setGlobalSearchQuery] = useState('')
   const searchParams = useSearchParams()
   const router = useRouter()
   const [isSharePopupOpen, setIsSharePopupOpen] = useState(false)
   
-  const tool = toolsData.find(t => 
+  const resource = resourcesData.find(t => 
     t.name.toLowerCase().replaceAll('.', '-').replaceAll(' ', '-') === decodeURIComponent(params.name)
   )
 
@@ -54,7 +54,7 @@ export default function ToolPage({ params }: { params: { name: string } }) {
     return () => document.removeEventListener('mousedown', handleClickOutside)
   }, [isSharePopupOpen])
 
-  if (!tool) {
+  if (!resource) {
     return (
       <div className="min-h-screen bg-primary text-white">
         <Header onSearchClick={() => setIsSearchOpen(true)} />
@@ -87,29 +87,29 @@ export default function ToolPage({ params }: { params: { name: string } }) {
           <div className="bg-[#2A2D3A] p-8 rounded-lg shadow-xl">
             <div className="flex items-center mb-8">
               <Image 
-                src={tool.profileImage} 
-                alt={tool.name} 
+                src={resource.profileImage} 
+                alt={resource.name} 
                 width={100} 
                 height={100} 
                 className="rounded-full"
-                unoptimized={tool.profileImage.startsWith('http')}
+                unoptimized={resource.profileImage.startsWith('http')}
               />
               <div className="ml-6 flex items-center">
                 <div>
-                  <h1 className="text-3xl font-bold mb-2">{tool.name}</h1>
+                  <h1 className="text-3xl font-bold mb-2">{resource.name}</h1>
                   <div className="flex space-x-4">
-                    {tool.twitter && (
-                      <a href={`https://twitter.com/${tool.twitter}`} target="_blank" rel="noopener noreferrer" className="text-[#9DC4F8] hover:text-[#1FD978]">
+                    {resource.twitter && (
+                      <a href={`https://twitter.com/${resource.twitter}`} target="_blank" rel="noopener noreferrer" className="text-[#9DC4F8] hover:text-[#1FD978]">
                         <Twitter size={24} />
                       </a>
                     )}
-                    {tool.url && (
-                      <a href={tool.url} target="_blank" rel="noopener noreferrer" className="text-[#9DC4F8] hover:text-[#1FD978]">
+                    {resource.url && (
+                      <a href={resource.url} target="_blank" rel="noopener noreferrer" className="text-[#9DC4F8] hover:text-[#1FD978]">
                         <Globe size={24} />
                       </a>
                     )}
-                    {tool.chatLink && (
-                      <a href={tool.chatLink} target="_blank" rel="noopener noreferrer" className="text-[#9DC4F8] hover:text-[#1FD978]">
+                    {resource.chatLink && (
+                      <a href={resource.chatLink} target="_blank" rel="noopener noreferrer" className="text-[#9DC4F8] hover:text-[#1FD978]">
                         <MessageCircle size={24} />
                       </a>
                     )}
@@ -126,7 +126,7 @@ export default function ToolPage({ params }: { params: { name: string } }) {
                   <div className="absolute z-10 bg-[#2A2D3A] p-4 rounded-lg shadow-xl share-popup">
                     <div className="flex flex-col space-y-3">
                       <a 
-                        href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(generateShareText(tool.name, tool.description).twitter)}&url=${encodeURIComponent(window.location.href)}`}
+                        href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(generateShareText(resource.name, resource.description).twitter)}&url=${encodeURIComponent(window.location.href)}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center space-x-2 text-[#9DC4F8] hover:text-[#1FD978]"
@@ -135,7 +135,7 @@ export default function ToolPage({ params }: { params: { name: string } }) {
                         <span>Share on Twitter</span>
                       </a>
                       <a 
-                        href={`https://t.me/share/url?url=${encodeURIComponent(window.location.href)}&text=${encodeURIComponent(generateShareText(tool.name, tool.description).general)}`}
+                        href={`https://t.me/share/url?url=${encodeURIComponent(window.location.href)}&text=${encodeURIComponent(generateShareText(resource.name, resource.description).general)}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center space-x-2 text-[#9DC4F8] hover:text-[#1FD978]"
@@ -152,13 +152,13 @@ export default function ToolPage({ params }: { params: { name: string } }) {
             <div className="space-y-6">
               <div>
                 <h2 className="text-xl font-semibold mb-2">Description</h2>
-                <p className="text-[#9DA3AE]">{tool.description}</p>
+                <p className="text-[#9DA3AE]">{resource.description}</p>
               </div>
 
               <div>
                 <h2 className="text-xl font-semibold mb-2">Tags</h2>
                 <div className="flex flex-wrap gap-2">
-                  {tool.tags.map((tag, index) => (
+                  {resource.tags.map((tag, index) => (
                     <span 
                       key={index} 
                       className="bg-[#1FD978] text-primary text-sm px-3 py-1 rounded cursor-pointer hover:bg-[#1bc068]"
@@ -173,8 +173,8 @@ export default function ToolPage({ params }: { params: { name: string } }) {
               <div>
                 <h2 className="text-xl font-semibold mb-2">Supported Blockchains</h2>
                 <div className="flex flex-wrap gap-2">
-                  {Array.isArray(tool.blockchain) 
-                    ? tool.blockchain.map((chain, index) => (
+                  {Array.isArray(resource.blockchain) 
+                    ? resource.blockchain.map((chain, index) => (
                         <span 
                           key={index} 
                           className="bg-[#4A5568] text-white text-sm px-3 py-1 rounded"
@@ -184,7 +184,7 @@ export default function ToolPage({ params }: { params: { name: string } }) {
                       ))
                     : (
                         <span className="bg-[#4A5568] text-white text-sm px-3 py-1 rounded">
-                          {tool.blockchain}
+                          {resource.blockchain}
                         </span>
                       )
                   }
@@ -193,7 +193,7 @@ export default function ToolPage({ params }: { params: { name: string } }) {
 
               <div>
                 <h2 className="text-xl font-semibold mb-2">Relation to AMERICA FIRST ECOSYSTEM</h2>
-                <p className="text-[#9DA3AE]">{tool.relation}</p>
+                <p className="text-[#9DA3AE]">{resource.relation}</p>
               </div>
             </div>
           </div>

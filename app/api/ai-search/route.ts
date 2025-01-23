@@ -2,7 +2,7 @@ import { Configuration, OpenAIApi } from 'openai-edge'
 import { OpenAIStream, StreamingTextResponse } from 'ai'
 import Anthropic from '@anthropic-ai/sdk'
 import projectsData from '../../data/projects.json'
-import toolsData from '../../data/tools.json'
+import resourcesData from '../../data/resources.json'
 
 const openaiConfig = new Configuration({
   apiKey: process.env.OPENAI_API_KEY
@@ -44,7 +44,7 @@ export async function POST(req: Request) {
   const prompt = `
     You are an AI assistant for the AMERICA FIRST ECOSYSTEM ecosystem. Your task is to help users find projects and tools based on their queries.
     Here's the data for all projects and tools:
-    ${JSON.stringify([...projectsData, ...toolsData])}
+    ${JSON.stringify([...projectsData, ...resourcesData])}
 
     User query: ${lastMessage}
 

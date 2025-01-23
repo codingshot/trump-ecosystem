@@ -2,13 +2,13 @@
 
 import { useState, useEffect } from 'react';
 import { Header } from './components/Header'
+import { ResourcesSection } from './components/ResourcesSection'
 import { ProjectGrid } from './components/ProjectGrid'
 import { Footer } from './components/Footer'
 import { SearchOverlay } from './components/SearchOverlay'
-import { ToolsSection } from './components/ToolsSection'
 import { useSearchParams, useRouter } from 'next/navigation'
 
-interface ToolsSectionProps {
+interface ResourcesSectionProps {
   globalSearchQuery: string;
   setGlobalSearchQuery: (query: string) => void;
   selectedTags: string[];
@@ -198,7 +198,7 @@ export default function Home() {
           updateUrlWithFilters={updateUrlWithFilters}
           router={router}
         />
-        <ToolsSection 
+        <ResourcesSection 
           globalSearchQuery={globalSearchQuery} 
           setGlobalSearchQuery={handleSearch}
           selectedTags={selectedTags}

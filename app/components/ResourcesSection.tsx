@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useMemo, useEffect } from 'react'
-import { ToolCard } from './ToolCard'
 import { X } from 'lucide-react'
 import {
   Select,
@@ -10,39 +9,40 @@ import {
   SelectTrigger,
   SelectValue,
 } from "./ui/select"
-import toolsData from '../data/tools.json'
+import resourcesData from '../data/resources.json'
 import { AndOrToggle } from './AndOrToggle'
 import { areStringsEqual } from '../utils/stringUtils'
 import Link from 'next/link'
+import { ResourceCard } from './ResourceCard'
 
-interface ToolsSectionProps {
+interface ResourcesSectionProps {
   globalSearchQuery: string
   setGlobalSearchQuery: (query: string) => void
   selectedTags: string[]
   isOrFilter: boolean
 }
 
-export function ToolsSection({ 
+export function ResourcesSection({ 
   globalSearchQuery, 
   setGlobalSearchQuery, 
   selectedTags: externalSelectedTags,
   isOrFilter 
-}: ToolsSectionProps) {
+}: ResourcesSectionProps) {
   const [internalSelectedTags, setInternalSelectedTags] = useState<string[]>([])
   const [isAndLogic, setIsAndLogic] = useState(true)
 
   const allTags = useMemo(() => {
     const tagSet = new Set<string>()
-    toolsData.forEach(tool => tool.tags.forEach(tag => tagSet.add(tag)))
+    resourcesData.forEach(resource => resource.tags.forEach(tag => tagSet.add(tag)))
     return Array.from(tagSet)
   }, [])
 
-  const filteredTools = toolsData.filter(tool =>
-    (tool.name.toLowerCase().includes(globalSearchQuery.toLowerCase()) ||
-     tool.description.toLowerCase().includes(globalSearchQuery.toLowerCase())) &&
+  const filteredResources = resourcesData.filter(resource =>
+    (resource.name.toLowerCase().includes(globalSearchQuery.toLowerCase()) ||
+     resource.description.toLowerCase().includes(globalSearchQuery.toLowerCase())) &&
     (internalSelectedTags.length === 0 || (isAndLogic
-      ? internalSelectedTags.every(tag => tool.tags.includes(tag))
-      : internalSelectedTags.some(tag => tool.tags.includes(tag))))
+      ? internalSelectedTags.every(tag => resource.tags.includes(tag))
+      : internalSelectedTags.some(tag => resource.tags.includes(tag))))
   )
 
   const handleTagSelect = (tag: string) => {
@@ -65,11 +65,11 @@ export function ToolsSection({
 
   return (
     <section className="mt-12">
-      <h2 className="text-2xl font-medium mb-6 text-white">Tools</h2>
+      <h2 className="text-2xl font-medium mb-6 text-white">Resources</h2>
       <div className="mb-4 space-y-4">
         <input
           type="text"
-          placeholder="Filter tools by name or description..."
+          placeholder="Filter resources by name or description..."
           value={globalSearchQuery}
           onChange={(e) => setGlobalSearchQuery(e.target.value)}
           className="w-full bg-[#2A2D3A] text-white px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-300"
@@ -105,31 +105,31 @@ export function ToolsSection({
           </div>
         </div>
       </div>
-      {filteredTools.length > 0 ? (
+      {filteredResources.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredTools.map((tool, index) => (
+          {filteredResources.map((resource, index) => (
             <Link 
               key={index}
-              href={`/tools/${encodeURIComponent(tool.name.toLowerCase().replaceAll('.', '-').replaceAll(' ', '-'))}`}
+              href={`/resources/${encodeURIComponent(resource.name.toLowerCase().replaceAll('.', '-').replaceAll(' ', '-'))}`}
             >
-              <ToolCard tool={tool} />
+              <ResourceCard resource={resource} />
             </Link>
           ))}
         </div>
       ): (
         <div className="text-center py-16">
           <div className="text-6xl mb-4">🔧</div>
-          <h3 className="text-2xl font-semibold mb-2 text-white">No tools found</h3>
+          <h3 className="text-2xl font-semibold mb-2 text-white">No resources found</h3>
           <p className="text-gray-400">
             Try adjusting your filters or search terms to find more results.
           </p>
           <a
-            href="https://github.com/PotLock/awesome-pump/tree/main/app/data/tools.json"
+            href="https://github.com/codingshot/trump-ecosystem/tree/main/app/data/resources.json"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block mt-4 px-6 py-2 bg-[#1FD978] text-primary hover:bg-green-400 focus:outline-none focus:ring-2 focus:ring-green-300"
           >
-            Submit a Tool
+            Submit a Resource
           </a>
         </div>
       )}
