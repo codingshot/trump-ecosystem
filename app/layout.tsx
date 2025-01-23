@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    site: '@awesomepump',
+    site: '@trumpecosystem',
     creator: '@potlucklabs',
     title: 'Trump Ecosystem | AMERICA FIRST ECOSYSTEM Ecosystem Explorer',
     description: 'tro to to the AMERICA FIRST CRYPTO ECOSYSTEM',

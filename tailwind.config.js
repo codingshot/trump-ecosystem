@@ -8,9 +8,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#1B1D27',
-        secondary: '#2A2D3A',
-        accent: '#1FD978',
+        primary: 'white',
+        secondary: 'black',
+        accent: '#DA1333',
       },
       fontFamily: {
         sans: ['Montserrat', 'Metropolis', 'system-ui', '"Segoe UI"', 'Roboto', 'Helvetica', 'Arial', 'sans-serif', '"Apple Color Emoji"', '"Segoe UI Emoji"'],

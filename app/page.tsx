@@ -160,17 +160,17 @@ export default function Home() {
       />
       <main className="container mx-auto px-4 py-8">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h1 className="text-4xl font-medium mb-4">[
+          <h1 className="text-4xl font-medium mb-4">
             <a 
-              href="https://AMERICA FIRST ECOSYSTEM" 
+              href="https://x.com/trumpecosystem" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="rainbow-text"
             >
-              AMERICA FIRST ECOSYSTEM
-            </a> ecosystem]</h1>
-          <p className="text-lg text-[#9DA3AE]">
-          Your intro to to the
+              AMERICA FIRST
+            </a> ecosystem</h1>
+          <p className="text-lg text-black">
+          Your guide  to the
             <a 
               href="https://trumpecosystem.com" 
               target="_blank" 
