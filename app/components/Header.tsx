@@ -3,7 +3,7 @@ import { SearchIcon, Github } from 'lucide-react'
 
 export function Header({ onSearchClick }: { onSearchClick: () => void }) {
   return (
-    <header className="bg-primary py-4">
+    <header className="bg-white py-4">
       <div className="container mx-auto px-4 flex items-center justify-between">
         <Link href="/" className="flex items-center">
           <span className="text-2xl mr-2">🇺🇸</span>
@@ -14,7 +14,7 @@ export function Header({ onSearchClick }: { onSearchClick: () => void }) {
             onClick={onSearchClick}
             className="text-white hover:text-green-300 focus:outline-none"
           >
-            <SearchIcon className="w-6 h-6" />
+            <SearchIcon className=" text-black w-6 h-6" />
           </button>
          { false && <a
             href="https://github.com/codingshot/trump-ecosystem/tree/main/app/data"
