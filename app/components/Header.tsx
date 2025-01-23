@@ -20,7 +20,7 @@ export function Header({ onSearchClick }: { onSearchClick: () => void }) {
             href="https://github.com/codingshot/trump-ecosystem/tree/main/app/data"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#DA1333] text-primary px-4 py-2 hover:bg-green-400 focus:outline-none focus:ring-2 focus:ring-green-300"
+            className="bg-[#DA1333] text-white px-4 py-2 hover:bg-green-400 focus:outline-none focus:ring-2 focus:ring-green-300"
           >
             Submit Project
           </a>

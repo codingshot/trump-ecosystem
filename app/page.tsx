@@ -151,7 +151,7 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-primary text-white">
+    <div className="min-h-screen bg-white text-black">
       <Header onSearchClick={() => setIsSearchOpen(true)} />
       <SearchOverlay
         isOpen={isSearchOpen}

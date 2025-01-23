@@ -1,7 +1,6 @@
 {
-  "name": "Trump Ecosystem - AMERICA FIRST ECOSYSTEM Ecosystem Explorer",
-  "short_name": "Trump Ecosystem",
-  "description": "Directory of AMERICA FIRST ECOSYSTEM ecosystem projects and tools",
+  "name": "TRUMP Ecosystem",
+  "short_name": "TRUMP",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
@@ -16,8 +15,7 @@
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#1B1D27",
-  "background_color": "#1B1D27",
-  "display": "standalone",
-  "start_url": "/"
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "standalone"
 }

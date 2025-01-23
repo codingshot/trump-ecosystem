@@ -69,7 +69,26 @@ export function ProjectGrid({ globalSearchQuery, setGlobalSearchQuery, selectedT
   const minTVL = Math.min(...tvlValues)
   const maxTVL = Math.max(...tvlValues)
 
-  const filteredProjects = projectsData.filter(item => {
+  const prioritizeProjects = (projects) => {
+    const priorityTags = ["Trump Official", "$TRUMP", "Stablecoins", "Made in America"];
+    
+    return projects.sort((a, b) => {
+      const aPriority = priorityTags.findIndex(tag => a.tags.includes(tag));
+      const bPriority = priorityTags.findIndex(tag => b.tags.includes(tag));
+
+      // If both have the same priority or neither has a priority tag, maintain original order
+      if (aPriority === bPriority) return 0;
+
+      // If one of them has a priority tag, it should come first
+      if (aPriority === -1) return 1;
+      if (bPriority === -1) return -1;
+
+      // Otherwise, sort by the priority index
+      return aPriority - bPriority;
+    });
+  };
+
+  const filteredProjects = prioritizeProjects(projectsData.filter(item => {
     const matchesSearch = (
       item.name.toLowerCase().includes(globalSearchQuery.toLowerCase()) ||
       item.description.toLowerCase().includes(globalSearchQuery.toLowerCase())
@@ -96,7 +115,7 @@ export function ProjectGrid({ globalSearchQuery, setGlobalSearchQuery, selectedT
     )
 
     return matchesSearch && matchesTags && matchesBlockchains
-  })
+  }))
 
   const handleAISearchResult = (description: string, itemName: string) => {
     setAiSearchResult({ description, itemName })
@@ -191,16 +210,16 @@ export function ProjectGrid({ globalSearchQuery, setGlobalSearchQuery, selectedT
           placeholder="Filter by name or description..."
           value={globalSearchQuery}
           onChange={handleSearchInputChange}
-          className="w-full bg-[#2A2D3A] text-white px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-300"
+          className="w-full bg-gray text-white px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-300"
         />
         <div className="flex space-x-4">
           <div className="flex-1">
             <div className="flex items-center justify-between mb-2">
-              <label className="text-sm font-medium text-gray-300">Tags</label>
+              <label className="text-sm font-medium text-black-300">Tags</label>
               <AndOrToggle isAnd={!isOrFilter} onToggle={onFilterToggle} />
             </div>
             <Select onValueChange={handleTagSelect}>
-              <SelectTrigger className="w-full bg-[#1FD978] text-primary">
+              <SelectTrigger className="w-full bg-[#DA1333] text-white">
                 <SelectValue placeholder="Select tags" />
               </SelectTrigger>
               <SelectContent>
@@ -213,7 +232,7 @@ export function ProjectGrid({ globalSearchQuery, setGlobalSearchQuery, selectedT
             </Select>
             <div className="flex flex-wrap gap-2 mt-2">
               {selectedTags.map((tag) => (
-                <span key={tag} className="bg-[#1FD978] text-primary text-xs px-2 py-1 flex items-center">
+                <span key={tag} className="bg-[#DA1333] text-white text-xs px-2 py-1 flex items-center">
                   {tag}
                   <button onClick={() => removeTag(tag)} className="ml-1 focus:outline-none">
                     <X size={12} />
@@ -228,7 +247,7 @@ export function ProjectGrid({ globalSearchQuery, setGlobalSearchQuery, selectedT
               <AndOrToggle isAnd={isBlockchainAndLogic} onToggle={setIsBlockchainAndLogic} />
             </div>
             <Select onValueChange={handleBlockchainSelect}>
-              <SelectTrigger className="w-full bg-[#1FD978] text-primary">
+              <SelectTrigger className="w-full bg-[#DA1333] text-white">
                 <SelectValue placeholder="Select blockchains" />
               </SelectTrigger>
               <SelectContent>
@@ -241,7 +260,7 @@ export function ProjectGrid({ globalSearchQuery, setGlobalSearchQuery, selectedT
             </Select>
             <div className="flex flex-wrap gap-2 mt-2">
               {selectedBlockchains.map((blockchain) => (
-                <span key={blockchain} className="bg-[#1FD978] text-primary text-xs px-2 py-1 flex items-center">
+                <span key={blockchain} className="bg-[#DA1333] text-white text-xs px-2 py-1 flex items-center">
                   {blockchain}
                   <button onClick={() => removeBlockchain(blockchain)} className="ml-1 focus:outline-none">
                     <X size={12} />
@@ -253,7 +272,7 @@ export function ProjectGrid({ globalSearchQuery, setGlobalSearchQuery, selectedT
         </div>
         {tvlValues.length > 0 && (
           <div>
-            <label className="block text-sm font-medium text-gray-300 mb-2">TVL Range (in millions)</label>
+            <label className="block text-sm font-medium text-white-300 mb-2">TVL Range (in millions)</label>
             <Slider
               min={minTVL}
               max={maxTVL}
@@ -284,10 +303,10 @@ export function ProjectGrid({ globalSearchQuery, setGlobalSearchQuery, selectedT
             Try adjusting your filters or search terms to find more results.
           </p>
           <a
-            href="https://github.com/PotLock/awesome-pump/tree/main/app/data/projects.json"
+            href="https://github.com/codingshot/trump-ecosystem/tree/main/app/data/projects.json"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block mt-4 px-6 py-2 bg-[#1FD978] text-primary hover:bg-green-400 focus:outline-none focus:ring-2 focus:ring-green-300"
+            className="inline-block mt-4 px-6 py-2 bg-[#DA1333] text-white hover:bg-green-400 focus:outline-none focus:ring-2 focus:ring-green-300"
           >
             Submit a Project
           </a>

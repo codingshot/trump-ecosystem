@@ -4,6 +4,8 @@
   --navy: #0A0228;
   --white: #FFFFFF;
   --border: 215 16% 47%;
+  --primary-font: 'Montserrat', sans-serif;
+  --secondary-font: 'Metropolis', sans-serif;
 }
 
 @tailwind base;
@@ -15,7 +17,7 @@
   border-right: .15em solid #DA1333;
   white-space: pre-wrap;
   margin: 0 auto;
-  animation: 
+  animation: xw
     typing 3.5s steps(40, end),
     blink-caret .75s step-end infinite;
 }
@@ -42,7 +44,7 @@
 
 .rainbow-text {
   font-weight: bold;
-  animation: rainbow 4s linear infinite;
+  /* animation: rainbow 4s linear infinite; */
   text-decoration: none;
 }
 
@@ -52,19 +54,19 @@
 
 /* Typography */
 .title-lrg {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--primary-font);
   font-weight: 800;
   text-transform: uppercase;
 }
 
 .subheading {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--primary-font);
   font-weight: 500;
   color: var(--red);
 }
 
 .body-text {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--primary-font);
   font-weight: 400;
 }
 
@@ -90,7 +92,7 @@
 /* Cards/Boxes */
 .card {
   background-color: var(--white);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px red(0, 0, 0, 0.1);
   border-radius: 5px;
 }
 
@@ -116,5 +118,9 @@
 
 .hover\:bg-navy:hover {
   background-color: var(--navy);
+}
+
+.some-ui-element {
+  font-family: var(--secondary-font);
 }
 

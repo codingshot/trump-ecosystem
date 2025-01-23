@@ -13,7 +13,7 @@ module.exports = {
         accent: '#1FD978',
       },
       fontFamily: {
-        sans: ['system-ui', '"Segoe UI"', 'Roboto', 'Helvetica', 'Arial', 'sans-serif', '"Apple Color Emoji"', '"Segoe UI Emoji"'],
+        sans: ['Montserrat', 'Metropolis', 'system-ui', '"Segoe UI"', 'Roboto', 'Helvetica', 'Arial', 'sans-serif', '"Apple Color Emoji"', '"Segoe UI Emoji"'],
       },
       keyframes: {
         shake: {

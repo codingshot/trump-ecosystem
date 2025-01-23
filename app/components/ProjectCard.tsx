@@ -97,8 +97,8 @@ export function ProjectCard({ project }: { project: Project }) {
   }
 
   return (
-    <div className={`bg-[#2A2D3A] overflow-hidden shadow-lg transition-all duration-300 hover:border hover:border-white ${
-      animate ? 'animate-shake bg-yellow-400' : ''
+    <div className={`bg-[#4f67a6] overflow-hidden shadow-lg transition-all duration-300 hover:border hover:border-white ${
+      animate ? 'animate-shake bg-[#DA1333]' : ''
     }`}>
       <div className="p-4">
         <Link href={`/${project.type === 'tool' ? 'tools' : 'projects'}/${encodeURIComponent(project.name.toLowerCase().replaceAll('.', '-').replaceAll(' ', '-'))}`}>
@@ -112,9 +112,9 @@ export function ProjectCard({ project }: { project: Project }) {
                 className="rounded-full"
                 unoptimized={project.profileImage.startsWith('http')}
               />
-              <h3 className="ml-4 text-lg font-medium">{project.name}</h3>
+              <h3 className="ml-4 text-lg text-white font-medium">{project.name}</h3>
             </div>
-            <p className="text-sm text-[#9DA3AE] mb-4">{project.description}</p>
+            <p className="text-sm text-white mb-4">{project.description}</p>
           </div>
         </Link>
         
@@ -122,24 +122,21 @@ export function ProjectCard({ project }: { project: Project }) {
           {project.tags.map((tag, index) => (
             <span 
               key={index} 
-              className="bg-[#1FD978] text-primary text-xs px-2 py-1 cursor-pointer hover:bg-green-400"
+              className="bg-[#DA1333] text-white text-xs px-2 py-1 cursor-pointer hover:bg-blue-400"
               onClick={(e) => handleTagClick(e, tag)}
             >
               {tag}
             </span>
           ))}
-          {project.blockchain && (
+          {project.blockchain && Array.isArray(project.blockchain) && project.blockchain.map((chain, index) => (
             <span 
+              key={index} 
               className="bg-[#4A5568] text-white text-xs px-2 py-1 cursor-pointer hover:bg-gray-600"
-              onClick={(e) => handleBlockchainClick(e, Array.isArray(project.blockchain) 
-                ? project.blockchain[0] 
-                : project.blockchain)}
+              onClick={(e) => handleBlockchainClick(e, chain)}
             >
-              {Array.isArray(project.blockchain) 
-                ? project.blockchain.join(', ') 
-                : project.blockchain}
+              {chain}
             </span>
-          )}
+          ))}
         </div>
         <div className="flex space-x-4 mb-4">
           {project.twitter && (
@@ -178,7 +175,7 @@ export function ProjectCard({ project }: { project: Project }) {
         </div>
         <button
           onClick={handleMoreInfoClick}
-          className="text-[#1FD978] hover:underline focus:outline-none"
+          className="text-white hover:underline focus:outline-none"
         >
           {showMore ? 'Less Info' : 'More Info'}
         </button>
