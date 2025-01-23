@@ -6,11 +6,11 @@
     "url": "",
     "chatLink": "",
     "profileImage": "",
-    "tags": ["Memecoin"],
+    "tags": ["Memecoin", "Made in America"],
     "blockchain": ["Solana"],
     "tvl": "",
     "github": "",
-    "relation": "",
+    "relation": "Trump's official meme coin launched on Solana before inaguration",
     "active": true
   },
   {
@@ -20,25 +20,25 @@
     "url": "",
     "chatLink": "",
     "profileImage": "",
-    "tags": ["DeFi"],
+    "tags": ["DeFi", "Made in America"],
     "blockchain": ["Solana", "Bitcoin", "Ethereum", "NEAR"],
     "tvl": "",
     "github": "",
-    "relation": "",
+    "relation": "Reskinned version of NEAR Intents that let you swap any asset on any Chain into $TRUMP + $MELIAN & vice versa",
     "active": true
   },
   {
-    "name": "World Liberty Financials",
+    "name": "World Liberty Financial",
     "twitter": "",
     "description": "",
     "url": "",
     "chatLink": "",
     "profileImage": "",
-    "tags": ["DeFi"],
-    "blockchain": [],
+    "tags": ["DeFi", "Made in America"],
+    "blockchain": ["Ethereum"],
     "tvl": "",
     "github": "",
-    "relation": "",
+    "relation": "TRUMP's DeFi project that resembles an Aave fork.",
     "active": true
   },
 
@@ -49,11 +49,11 @@
     "url": "",
     "chatLink": "",
     "profileImage": "",
-    "tags": ["DeFi"],
+    "tags": ["Stablecoins", "Made in America"],
     "blockchain": ["Solana", "Ethereum", "NEAR", "Stellar"],
     "tvl": "",
     "github": "",
-    "relation": "",
+    "relation": "American backed stablecoin. Issued natively on many chains.",
     "active": true
   },
   {
@@ -63,11 +63,25 @@
     "url": "",
     "chatLink": "",
     "profileImage": "",
-    "tags": ["Stock"],
+    "tags": ["Stock", "TradFi", "Made in America"],
     "blockchain": ["Bitcoin"],
     "tvl": "",
     "github": "",
     "relation": "",
+    "active": true
+  },
+  {
+    "name": "GIVETH",
+    "twitter": "",
+    "description": "",
+    "url": "",
+    "chatLink": "",
+    "profileImage": "",
+    "tags": ["Stock", "TradFi", "Made in America"],
+    "blockchain": ["Solana", "Etheruem", "Arbitrum"],
+    "tvl": "",
+    "github": "",
+    "relation": "Can do donations in $TRUMP on Solana. Also American founder.",
     "active": true
   },
 
@@ -78,12 +92,12 @@
     "url": "",
     "chatLink": "",
     "profileImage": "",
-    "tags": [],
+    "tags": ["Made in America"],
     "blockchain": ["Solana"],
     "tvl": "",
     "github": "",
     "contractAddress": "",
-    "relation": "",
+    "relation": "First lady's Meme coin launched shortly after $TRUMP launch pre-inaguration",
     "active": false
   }
 ]
