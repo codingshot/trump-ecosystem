@@ -10,6 +10,36 @@ import { Twitter, Globe, MessageCircle, Github, Share } from 'lucide-react'
 import projectsData from '../../data/projects.json'
 import { getExplorerUrl } from '../../utils/chainExplorers'
 
+interface Contract {
+  type: string;
+  chain: string;
+  address: string;
+}
+
+interface Token {
+  symbol: string;
+  chain: string;
+  address: string;
+}
+
+interface Project {
+  name: string;
+  twitter: string;
+  description: string;
+  url: string;
+  chatLink: string;
+  profileImage: string;
+  tags: string[];
+  blockchain: string[];
+  tvl: string;
+  github: string;
+  relation: string;
+  active: boolean;
+  contracts?: Contract[];
+  tokens?: Token[];
+  contractAddress?: string;
+}
+
 export default function ProjectPage({ params }: { params: { name: string } }) {
   console.log('URL params.name:', params.name)
   console.log('Looking for project with name pattern:', decodeURIComponent(params.name))
@@ -26,7 +56,7 @@ export default function ProjectPage({ params }: { params: { name: string } }) {
   
   const project = projectsData.find(p => 
     p.name.toLowerCase().replaceAll('.', '-').replaceAll(' ', '-') === decodeURIComponent(params.name)
-  )
+  ) as Project;
 
   useEffect(() => {
     const queryParam = searchParams.get('q')
