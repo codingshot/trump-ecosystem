@@ -1,7 +1,7 @@
 export const DEFAULT_METADATA = {
   title: 'Trump Ecosystem | $TRUMP Ecosystem Explorer',
   description: 'Comprehensive directory of $TRUMP ecosystem projects and tools',
-  image: 'https://trumpecosystem.fun/meta.jpg',
+  image: 'https://trumpecosystem.com/meta.jpg',
   type: 'website',
   siteName: 'Trump Ecosystem',
   twitterHandle: '@trumpecosystem',

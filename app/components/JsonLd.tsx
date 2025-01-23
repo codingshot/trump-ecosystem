@@ -4,7 +4,7 @@ export function JsonLd() {
     "@type": "WebSite",
     "name": "Trump Ecosystem",
     "description": "Directory of $TRUMP ecosystem projects and tools",
-    "url": "https://trumpecosystem.fun",
+    "url": "https://trumpecosystem.com",
     "potentialAction": {
       "@type": "SearchAction",
       "target": {

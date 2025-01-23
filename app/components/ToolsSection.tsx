@@ -65,7 +65,7 @@ export function ToolsSection({
 
   return (
     <section className="mt-12">
-      <h2 className="text-2xl font-medium mb-6">Tools</h2>
+      <h2 className="text-2xl font-medium mb-6 text-white">Tools</h2>
       <div className="mb-4 space-y-4">
         <input
           type="text"
@@ -119,7 +119,7 @@ export function ToolsSection({
       ): (
         <div className="text-center py-16">
           <div className="text-6xl mb-4">🔧</div>
-          <h3 className="text-2xl font-semibold mb-2">No tools found</h3>
+          <h3 className="text-2xl font-semibold mb-2 text-white">No tools found</h3>
           <p className="text-gray-400">
             Try adjusting your filters or search terms to find more results.
           </p>

@@ -1,25 +1,25 @@
 [
   {
     "name": "USDC.cool",
-    "twitter": "",
-    "description": "",
-    "url": "",
-    "chatLink": "",
-    "profileImage": "",
-    "tags": ["analytics"],
-    "blockchain": [""],
-    "relation": ""
-  },
-  {
-    "name": "USDC.cool",
-    "twitter": "",
-    "description": "",
+    "twitter": "https://x.com/usdc_cool",
+    "description": "The real-time $USDC dashboard across all chains and bridges",
     "url": "https://usdc.cool",
     "chatLink": "",
-    "profileImage": "",
+    "profileImage": "https://pbs.twimg.com/profile_images/1537519262507606016/7xAeutqL_400x400.jpg",
     "tags": ["analytics"],
-    "blockchain": [""],
-    "relation": ""
+    "blockchain": ["Agnostic", "Stellar", "Celo", "Solana", "Ethereum", "Arbitrum", "Avalanche", "Polygon", "Noble", "Optimism", "Algorand", "ZKSync", "Tron", "Hedera"],
+    "relation": "Lets you USDC stablecoin statistics on every chains"
+  },
+  {
+    "name": "Made in America Coins",
+    "twitter": "https://x.com/coingecko",
+    "description": "CoinGecko Made in America List",
+    "url": "https://www.coingecko.com/en/categories/made-in-usa",
+    "chatLink": "",
+    "profileImage": "https://pbs.twimg.com/profile_images/1604796574415978496/SIffz3a6_400x400.jpg",
+    "tags": ["analytics"],
+    "blockchain": ["Agnostic"],
+    "relation": "Aggregates all coins made in America"
   }
 ]
 

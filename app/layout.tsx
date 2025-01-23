@@ -6,10 +6,10 @@ import { JsonLd } from './components/JsonLd'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://trumpecosystem.fun'),
+  metadataBase: new URL('https://trumpecosystem.com'),
   title: {
-    default: 'Trump Ecosystem | $TRUMP Ecosystem Explorer & Tools Directory',
-    template: '%s | Trump Ecosystem'
+    default: 'Trump Ecosystem | $TRUMP + American Crypto Ecosystem Explorer & Tools Directory',
+    template: '%s | $TRUMP Ecosystem'
   },
   description: 'Comprehensive directory of $TRUMP ecosystem projects, tools, forks, and innovations across Solana, Base, NEAR, and more. Explore DeFi tools, analytics platforms, and meme coin launchpads.',
   keywords: 'AMERICA FIRST ECOSYSTEM, ecosystem, blockchain, defi, meme coins, bonding curves, uptos, meme.cooking, solana defi, pumpfun, das.fun, time.fun, movepump, etherfun, rug.fun, ethervista, internosaur, dexscreener, raydium, rugcheck, solana meme coins, base defi, near defi, token launchpad',

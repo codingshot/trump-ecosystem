@@ -45,8 +45,8 @@ export function ToolCard({ tool }: { tool: Tool }) {
   }
 
   return (
-    <div className={`bg-[#2A2D3A] overflow-hidden shadow-lg transition-all duration-300 hover:border hover:border-white ${
-      animate ? 'animate-shake bg-yellow-400' : ''
+    <div className={`bg-[#2A2D3A] overflow-hidden shadow-lg transition-all duration-300 hover:border hover:border-[#1FD978] ${
+      animate ? 'animate-shake bg-[#1FD978]' : ''
     }`}>
       <div className="p-4">
         <Link href={`/tools/${encodeURIComponent(tool.name.toLowerCase().replaceAll('.', '-').replaceAll(' ', '-'))}`}>
@@ -60,7 +60,7 @@ export function ToolCard({ tool }: { tool: Tool }) {
                 className="rounded-full"
                 unoptimized={tool.profileImage.startsWith('http')}
               />
-              <h3 className="ml-4 text-lg font-medium">{tool.name}</h3>
+              <h3 className="ml-4 text-lg font-medium text-white">{tool.name}</h3>
             </div>
             <p className="text-sm text-[#9DA3AE] mb-4">{tool.description}</p>
           </div>
@@ -70,7 +70,7 @@ export function ToolCard({ tool }: { tool: Tool }) {
           {tool.tags.map((tag, index) => (
             <span 
               key={index} 
-              className="bg-[#1FD978] text-primary text-xs px-2 py-1 cursor-pointer hover:bg-green-400"
+              className="bg-[#1FD978] text-primary text-xs px-2 py-1 cursor-pointer hover:bg-[#1bc068]"
               onClick={(e) => handleTagClick(e, tag)}
             >
               {tag}
