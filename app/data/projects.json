@@ -563,5 +563,75 @@
     "github": "",
     "relation": "Can do donations in $TRUMP on Solana. Also American founder.",
     "active": true
-  }
+  },
+{
+  "name": "Koinly",
+  "twitter": "https://twitter.com/koinly",
+  "description": "Koinly is a comprehensive crypto tax software that supports over 23,000 cryptocurrencies, 170 blockchains, and 400 exchanges. It offers portfolio tracking and tax optimization features.",
+  "url": "https://koinly.io",
+  "chatLink": "",
+  "profileImage": "https://koinly.io/assets/images/koinly-logo.svg",
+  "tags": ["Tax", "Portfolio Tracking", "Crypto Accounting"],
+  "blockchain": ["Multiple"],
+  "tvl": "",
+  "github": "",
+  "relation": "Simplifying crypto tax reporting and portfolio management for US users",
+  "active": true
+},
+{
+  "name": "CoinLedger",
+  "twitter": "https://twitter.com/CoinLedger",
+  "description": "CoinLedger offers easy crypto tax calculation and integrates with TurboTax. It supports multiple exchanges and wallets, providing comprehensive tax reports.",
+  "url": "https://coinledger.io",
+  "chatLink": "",
+  "profileImage": "https://coinledger.io/images/coinledger-logo.svg",
+  "tags": ["Tax", "Crypto Reporting", "TurboTax Integration"],
+  "blockchain": ["Multiple"],
+  "tvl": "",
+  "github": "",
+  "relation": "Streamlining crypto tax reporting for US taxpayers with TurboTax integration",
+  "active": true
+},
+{
+  "name": "ZenLedger",
+  "twitter": "https://twitter.com/ZenLedger",
+  "description": "ZenLedger is a user-friendly platform for calculating cryptocurrency, DeFi, and NFT-related taxes. It integrates seamlessly with TurboTax and supports multiple exchanges and blockchains.",
+  "url": "https://www.zenledger.io",
+  "chatLink": "",
+  "profileImage": "https://www.zenledger.io/wp-content/themes/zenledger/assets/img/logo.svg",
+  "tags": ["Tax", "DeFi", "NFT"],
+  "blockchain": ["Multiple"],
+  "tvl": "",
+  "github": "",
+  "relation": "Providing comprehensive crypto tax solutions for US users, including DeFi and NFT support",
+  "active": true
+},
+{
+  "name": "TokenTax",
+  "twitter": "https://twitter.com/TokenTax",
+  "description": "TokenTax is a crypto tax software and full-service accounting firm offering advanced reconciliation services from crypto-savvy tax professionals.",
+  "url": "https://tokentax.co",
+  "chatLink": "",
+  "profileImage": "https://tokentax.co/static/images/tokentax-logo.svg",
+  "tags": ["Tax", "Accounting", "Professional Services"],
+  "blockchain": ["Multiple"],
+  "tvl": "",
+  "github": "",
+  "relation": "Offering comprehensive crypto tax services and professional accounting support for US crypto investors",
+  "active": true
+},
+{
+  "name": "Givepact",
+  "twitter": "https://twitter.com/givepact",
+  "description": "Givepact is a platform that enables cryptocurrency donations to US nonprofits, supporting over 30 cryptocurrencies and facilitating direct donations to any 501(c)(3) organization.",
+  "url": "https://www.givepact.io",
+  "chatLink": "",
+  "profileImage": "https://www.givepact.io/assets/images/givepact-logo.png",
+  "tags": ["Crypto Donations", "Nonprofit", "Charity"],
+  "blockchain": ["Multiple"],
+  "tvl": "",
+  "github": "",
+  "relation": "Facilitating crypto donations to US nonprofits and providing potential tax benefits for donors",
+  "active": true
+}
 ]

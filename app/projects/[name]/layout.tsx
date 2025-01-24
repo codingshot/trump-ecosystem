@@ -15,10 +15,10 @@ export async function generateMetadata({ params }: { params: { name: string } })
 
   return {
     title: `${project.name} | Trump Ecosystem`,
-    description: project.description + ' | Trump Ecosystem is the pump fun ecosystem explorer',
+    description: project.description + ' | Trump Ecosystem is the American FIrst Crypto ecosystem explore',
     openGraph: {
       title: project.name + ' | Trump Ecosystem',
-      description: project.description + ' | Trump Ecosystem is the pump fun ecosystem explorer',
+      description: project.description + ' | Trump Ecosystem is the American FIrst Crypto ecosystem explorer',
       url: `https://trumpecosystem.com/projects/${params.name}`,
       siteName: 'Trump Ecosystem',
       images: [
